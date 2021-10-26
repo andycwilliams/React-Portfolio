@@ -1,14 +1,11 @@
 import React from "react";
+// import Img from "../placeholder.png";
 
 const Home = () => {
   return (
     <>
       <p>Portrait</p>
-      <img
-        src="public/img/placeholder.png"
-        class="img-fluid"
-        alt="Portrait placeholder"
-      />
+      {/* <img src="placeholder.png" class="img-fluid" alt="Portrait placeholder" /> */}
       <section id="hero" class="d-flex align-items-center">
         <div
           class="container d-flex flex-column align-items-center"
