@@ -7,9 +7,10 @@ const Nav = () => {
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li>
-            <a class="active" href="index.html">
+            {/* <a class="active" href="index.html">
               Home
-            </a>
+            </a> */}
+            <a href="index.html">Home</a>
           </li>
           <li>
             <a href="about.html">About</a>
