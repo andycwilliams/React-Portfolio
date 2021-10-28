@@ -14,7 +14,7 @@ const Portfolio = () => {
             <div>
               <div>
                 <img
-                  src="assets/img/Klettersteig.png"
+                  src="../../public/img/Klettersteig.png"
                   class="img-fluid"
                   alt="Klettersteig screenshot"
                 />
@@ -40,6 +40,7 @@ const Portfolio = () => {
                     >
                       <i class="bx bx-link"></i>
                     </a>
+                    <p>Description</p>
                   </div>
                 </div>
               </div>
@@ -50,7 +51,7 @@ const Portfolio = () => {
                 <img
                   src="assets/img/ProfileGenerator.png"
                   class="img-fluid"
-                  alt="Placeholder image"
+                  alt="Placeholder"
                 />
                 <div>
                   <h4>Profile Generator</h4>
@@ -74,6 +75,7 @@ const Portfolio = () => {
                     >
                       <i class="bx bx-link"></i>
                     </a>
+                    <p>Description</p>
                   </div>
                 </div>
               </div>
@@ -84,7 +86,7 @@ const Portfolio = () => {
                 <img
                   src="assets/img/EmployeeTracker.png"
                   class="img-fluid"
-                  alt="Placeholder image"
+                  alt="Placeholder"
                 />
                 <div>
                   <h4>Employee Tracker CMS</h4>
@@ -108,6 +110,7 @@ const Portfolio = () => {
                     >
                       <i class="bx bx-link"></i>
                     </a>
+                    <p>Description</p>
                   </div>
                 </div>
               </div>
@@ -142,6 +145,7 @@ const Portfolio = () => {
                     >
                       <i class="bx bx-link"></i>
                     </a>
+                    <p>Description</p>
                   </div>
                 </div>
               </div>

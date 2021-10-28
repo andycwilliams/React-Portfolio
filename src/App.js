@@ -10,8 +10,10 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    // <div className="App">
+    <div>
+      {/* <header className="App-header"> */}
+      <header>
         <Nav />
         <Home />
         <About />

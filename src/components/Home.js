@@ -7,11 +7,9 @@ const Home = () => {
       <p>Portrait</p>
       {/* <img src="placeholder.png" class="img-fluid" alt="Portrait placeholder" /> */}
       <section>
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-          <h1 class="text-light">Andy Williams</h1>
-          <h2 class="text-light">
-            Full-stack developer based in Portland, Oregon
-          </h2>
+        <div>
+          <h1>Andy Williams</h1>
+          <h2>Full-stack developer based in Portland, Oregon</h2>
           {/* <a href="about.html" class="btn-about">
             About Me
           </a> */}
