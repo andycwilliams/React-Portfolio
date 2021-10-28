@@ -1,6 +1,7 @@
 import React from "react";
 
 const Portfolio = () => {
+  const imgStyle = { width: "300px", height: "300px" };
   return (
     <>
       <section>
@@ -14,9 +15,10 @@ const Portfolio = () => {
             <div>
               <div>
                 <img
-                  src="../../public/img/Klettersteig.png"
+                  src="/img/Klettersteig.png"
                   class="img-fluid"
                   alt="Klettersteig screenshot"
+                  style={imgStyle}
                 />
                 <div>
                   <h4>Klettersteig</h4>
@@ -29,8 +31,9 @@ const Portfolio = () => {
                       data-gallery="portfolioGallery"
                       class="portfolio-lightbox"
                       title="Web 3"
+                      style={{ width: "100%", height: "10px" }}
                     >
-                      <i class="bx bx-plus"></i>
+                      {/* <i class="bx bx-plus"></i> */}
                     </a>
                     <a
                       href="portfolio-details.html"
@@ -49,9 +52,10 @@ const Portfolio = () => {
             <div>
               <div>
                 <img
-                  src="assets/img/ProfileGenerator.png"
+                  src="img/ProfileGenerator.png"
                   class="img-fluid"
                   alt="Placeholder"
+                  style={imgStyle}
                 />
                 <div>
                   <h4>Profile Generator</h4>
@@ -84,9 +88,10 @@ const Portfolio = () => {
             <div>
               <div>
                 <img
-                  src="assets/img/EmployeeTracker.png"
+                  src="img/EmployeeTracker.png"
                   class="img-fluid"
                   alt="Placeholder"
+                  style={imgStyle}
                 />
                 <div>
                   <h4>Employee Tracker CMS</h4>
@@ -119,9 +124,10 @@ const Portfolio = () => {
             <div>
               <div>
                 <img
-                  src="assets/img/PersonalLibrary.png"
+                  src="img/PersonalLibrary.png"
                   class="img-fluid"
                   alt="Presonal Library screenshot"
+                  style={imgStyle}
                 />
                 <div>
                   <h4>Personal Library</h4>
