@@ -1,55 +1,57 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Portfolio = () => {
-  const imgStyle = { width: "300px", height: "300px" };
+  const imgStyle = { width: "200px", height: "200px" };
   return (
     <>
       <section>
-        <div>
-          <div>
-            <h2>Portfolio</h2>
-            <p>Select projects.</p>
-          </div>
+        <Container fluid="md">
+          <h2>Portfolio</h2>
+          <p>Select projects.</p>
+          <Row>
+            <Col>TEST</Col>
+          </Row>
+        </Container>
 
-          <div>
-            <div>
+        <Container fluid="md">
+          <Row>
+            <Col>
+              <img
+                src="/img/Klettersteig.png"
+                class="img-fluid"
+                alt="Klettersteig screenshot"
+                style={imgStyle}
+              />
               <div>
-                <img
-                  src="/img/Klettersteig.png"
-                  class="img-fluid"
-                  alt="Klettersteig screenshot"
-                  style={imgStyle}
-                />
+                <h4>Klettersteig</h4>
+                <p href="https://github.com/Windowmac/Klettersteig">
+                  Group Project
+                </p>
                 <div>
-                  <h4>Klettersteig</h4>
-                  <p href="https://github.com/Windowmac/Klettersteig">
-                    Group Project
-                  </p>
-                  <div>
-                    <a
-                      href="assets/img/portfolio/portfolio-2.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="Web 3"
-                      style={{ width: "100%", height: "10px" }}
-                    >
-                      {/* <i class="bx bx-plus"></i> */}
-                    </a>
-                    <a
-                      href="portfolio-details.html"
-                      class="portfolio-details-lightbox"
-                      data-glightbox="type: external"
-                      title="Portfolio Details"
-                    >
-                      <i class="bx bx-link"></i>
-                    </a>
-                    <p>Description</p>
-                  </div>
+                  <a
+                    href="assets/img/portfolio/portfolio-2.jpg"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 3"
+                    style={{ width: "100%", height: "10px" }}
+                  >
+                    {/* <i class="bx bx-plus"></i> */}
+                  </a>
+                  <a
+                    href="portfolio-details.html"
+                    class="portfolio-details-lightbox"
+                    data-glightbox="type: external"
+                    title="Portfolio Details"
+                  >
+                    <i class="bx bx-link"></i>
+                  </a>
+                  <p>Description</p>
                 </div>
               </div>
-            </div>
+            </Col>
 
-            <div>
+            <Col>
               <div>
                 <img
                   src="img/ProfileGenerator.png"
@@ -83,9 +85,10 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <div>
                 <img
                   src="img/EmployeeTracker.png"
@@ -119,9 +122,9 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Col>
 
-            <div>
+            <Col>
               <div>
                 <img
                   src="img/PersonalLibrary.png"
@@ -155,9 +158,9 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
     </>
   );

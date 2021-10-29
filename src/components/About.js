@@ -1,4 +1,5 @@
 import React from "react";
+// import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
@@ -20,20 +21,16 @@ const About = () => {
           <div>
             <ul>
               <li>
-                <i></i>
                 <strong>Location: </strong>Portland, OR
               </li>
               <li>
-                <i></i>
                 <strong>Phone: </strong>‪(971) 470-0584‬
               </li>
               <li>
-                <i></i>
                 <strong>Age: </strong>
-                <a id="ageGet">0</a>
+                <span id="ageGet">0</span>
               </li>
               <li>
-                <i></i>
                 <strong>Freelance: </strong>Available
               </li>
             </ul>
@@ -41,22 +38,18 @@ const About = () => {
           <div>
             <ul>
               <li>
-                <i></i>
                 <strong>Degree: </strong>B. A.
               </li>
               <li>
-                <i></i>
                 <strong>Certificates: </strong>MERN
               </li>
               <li>
-                <i></i>
                 <strong>GitHub: </strong>
                 <a href="https://github.com/andycwilliams">
                   https://github.com/andycwilliams
                 </a>
               </li>
               <li>
-                <i></i>
                 <strong>Email: </strong>
                 <a href="mailto: andywilliamscoding@gmail.com">
                   andywilliamscoding@gmail.com

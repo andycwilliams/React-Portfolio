@@ -5,16 +5,16 @@ import { Container, Row, Col } from "react-bootstrap";
 const Home = () => {
   return (
     <>
-      <Container fluid>
+      <Container fluid="md">
         <h1>Andy Williams</h1>
         <h2>Full-stack developer based in Portland, Oregon</h2>
         <Row>
-          <Col>1 of 1</Col>
+          <Col>ABOUT ME BUTTON</Col>
         </Row>
       </Container>
       <p>Portrait</p>
       {/* <img src="placeholder.png" class="img-fluid" alt="Portrait placeholder" /> */}
-      <section>
+      {/* <section>
         <div>
           <h1>Andy Williams</h1>
           <h2>Full-stack developer based in Portland, Oregon</h2>
@@ -22,7 +22,7 @@ const Home = () => {
             About Me
           </a>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
