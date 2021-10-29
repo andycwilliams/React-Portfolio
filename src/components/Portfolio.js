@@ -35,9 +35,7 @@ const Portfolio = () => {
                     class="portfolio-lightbox"
                     title="Web 3"
                     style={{ width: "100%", height: "10px" }}
-                  >
-                    {/* <i class="bx bx-plus"></i> */}
-                  </a>
+                  ></a>
                   <a
                     href="portfolio-details.html"
                     class="portfolio-details-lightbox"
@@ -46,7 +44,87 @@ const Portfolio = () => {
                   >
                     <i class="bx bx-link"></i>
                   </a>
-                  <p>Description</p>
+                  <p class="card-text">An app that does something.</p>
+                  <a
+                    href="https://github.com/Windowmac/Klettersteig"
+                    class="card-link"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="https://sheltered-badlands-95600.herokuapp.com/"
+                    class="card-link"
+                  >
+                    Deployed Link
+                  </a>
+                  <div class="card" style={{ width: "18rem" }}>
+                    <div class="card-body">
+                      <h5 class="card-title">Productivity Tracker</h5>
+                      <img
+                        src="../assets/placeholder.png"
+                        alt="Project placeholder"
+                        class="rounded"
+                      ></img>
+                      <h6 class="card-subtitle mb-2 text-muted">
+                        Solo Project
+                      </h6>
+                      <p class="card-text">An app that.</p>
+                      <a
+                        href="https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5"
+                        class="card-link"
+                      >
+                        GitHub
+                      </a>
+                      <a href="#https://www.google.com" class="card-link">
+                        Deployed Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
+            <Col>
+              <img
+                src="/img/Klettersteig.png"
+                class="img-fluid"
+                alt="Klettersteig screenshot"
+                style={imgStyle}
+              />
+              <div>
+                <h4>Klettersteig</h4>
+                <p href="https://github.com/Windowmac/Klettersteig">
+                  Group Project
+                </p>
+                <div>
+                  <a
+                    href="assets/img/portfolio/portfolio-2.jpg"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 3"
+                    style={{ width: "100%", height: "10px" }}
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    class="portfolio-details-lightbox"
+                    data-glightbox="type: external"
+                    title="Portfolio Details"
+                  >
+                    <i class="bx bx-link"></i>
+                  </a>
+                  <p class="card-text">An app that does something.</p>
+                  <a
+                    href="https://github.com/Windowmac/Klettersteig"
+                    class="card-link"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="https://sheltered-badlands-95600.herokuapp.com/"
+                    class="card-link"
+                  >
+                    Deployed Link
+                  </a>
                 </div>
               </div>
             </Col>
@@ -154,7 +232,17 @@ const Portfolio = () => {
                     >
                       <i class="bx bx-link"></i>
                     </a>
-                    <p>Description</p>
+                    <h6 class="card-subtitle mb-2 text-muted">Group Project</h6>
+                    <p class="card-text">An app that does something.</p>
+                    <a
+                      href="https://github.com/bleufox/Personal-Library"
+                      class="card-link"
+                    >
+                      GitHub
+                    </a>
+                    <a href="#https://www.google.com" class="card-link">
+                      Deployed Link
+                    </a>
                   </div>
                 </div>
               </div>
@@ -167,3 +255,5 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+// ----------------------------------------------------------------
