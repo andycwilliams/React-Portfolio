@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <Container fluid="md">
         <img
-          src="/img/placeholder.png"
+          src="/img/Placeholder.png"
           class="img-fluid"
           alt="Portrait of developer"
           style={{ width: "200px", height: "200px" }}
