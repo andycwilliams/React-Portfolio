@@ -1,27 +1,44 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const Navbar = () => {
+const Navigation = () => {
   return (
     <>
-      <Nav defaultActiveKey="/home" as="ul">
+      <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar.Brand>&e</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/Home">Home</Nav.Link>
+          <Nav.Link href="/About">About</Nav.Link>
+          <Nav.Link href="/Portfolio">Portfolio</Nav.Link>
+          <Nav.Link href="/Resume">Resume</Nav.Link>
+          <Nav.Link href="/Contact">Contact</Nav.Link>
+        </Nav>
+      </Navbar>
+      {/* <Nav defaultActiveKey="/home" as="ul">
         <Nav.Item as="li">
           <Nav.Link href="/home">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-1">About</Nav.Link>
+          <Nav.Link eventKey="/about">About</Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-2">Resume</Nav.Link>
+          <Nav.Link eventKey="/resume">Resume</Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-2">Portfolio</Nav.Link>
+          <Nav.Link eventKey="/portfolio">Portfolio</Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-2">Contact</Nav.Link>
+          <Nav.Link eventKey="/contact">Contact</Nav.Link>
         </Nav.Item>
-      </Nav>
-      {/* <ul>
+      </Nav> */}
+      {/* <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route component={NoMatch} />
+      </Switch> */}
+      <ul>
         <li>
           <a href="index.html">Home</a>
         </li>
@@ -48,9 +65,9 @@ const Navbar = () => {
         >
           <i class="bi bi-linkedin"></i>
         </a>
-      </div> */}
+      </div>
     </>
   );
 };
 
-export default Navbar;
+export default Navigation;
