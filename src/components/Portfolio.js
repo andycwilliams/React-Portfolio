@@ -22,7 +22,6 @@ const Portfolio = () => {
                     alt="Productivity Tracker screenshot"
                     style={imgStyle}
                   />
-
                   <h5 class="card-title">Productivity Tracker</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Solo Project</h6>
                   <p class="card-text">An app that.</p>
@@ -154,6 +153,29 @@ const Portfolio = () => {
                     href="https://github.com/bleufox/Personal-Library"
                     class="card-link"
                   >
+                    Deployed Link
+                  </a>
+                </div>
+              </div>
+            </Col>
+
+            <Col>
+              <div class="card" style={{ width: "18rem" }}>
+                <div class="card-body">
+                  <img
+                    src="/img/Placeholder.png"
+                    class="img-fluid"
+                    alt="Placeholder"
+                    style={imgStyle}
+                  />
+
+                  <h5 class="card-title">Placeholder</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Project</h6>
+                  <p class="card-text">An app that.</p>
+                  <a href="https://github.com/andycwilliams" class="card-link">
+                    GitHub
+                  </a>
+                  <a href="https://github.com/andycwilliams" class="card-link">
                     Deployed Link
                   </a>
                 </div>

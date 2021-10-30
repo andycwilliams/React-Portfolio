@@ -8,6 +8,7 @@ const Resume = () => {
         <Row>
           <Col>
             <h4>Resume</h4>
+            <p>Resume stuff</p>
           </Col>
         </Row>
       </Container>
