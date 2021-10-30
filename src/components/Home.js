@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
 const Home = () => {
   return (
@@ -12,9 +12,11 @@ const Home = () => {
           style={{ width: "200px", height: "200px" }}
         />
         <h1>Andy Williams</h1>
-        <h2>Full-stack developer based in Portland, Oregon</h2>
+        <h3>Full-stack developer based in Portland, Oregon</h3>
         <Row>
-          <Col>ABOUT ME BUTTON</Col>
+          <Col>
+            <Button>ABOUT ME BUTTON</Button>
+          </Col>
         </Row>
       </Container>
     </>

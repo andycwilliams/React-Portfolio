@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Button, Card, Container, Row, Col } from "react-bootstrap";
 
 const Portfolio = () => {
   const imgStyle = { width: "200px", height: "200px" };
@@ -13,7 +13,28 @@ const Portfolio = () => {
 
         <Container fluid="md">
           <Row>
-            <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="/img/Placeholder.png" />
+              <Card.Body>
+                <Card.Title>Productivity Tracker</Card.Title>
+                <h6 class="card-subtitle mb-2 text-muted">Solo Project</h6>
+                <Card.Text>App description.</Card.Text>
+                <Button
+                  variant="primary"
+                  href="https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5"
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5"
+                >
+                  Deployed
+                </Button>
+              </Card.Body>
+            </Card>
+            {/* 
+            <Col fluid>
               <div class="card" style={{ width: "18rem" }}>
                 <div class="card-body">
                   <img
@@ -39,9 +60,29 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </Col> */}
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="/img/Klettersteig.png" />
+              <Card.Body>
+                <Card.Title>Klettersteig</Card.Title>
+                <h6 class="card-subtitle mb-2 text-muted">Group Project</h6>
+                <Card.Text>App description.</Card.Text>
+                <Button
+                  variant="primary"
+                  href="https://github.com/Windowmac/Klettersteig"
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://sheltered-badlands-95600.herokuapp.com/"
+                >
+                  Deployed
+                </Button>
+              </Card.Body>
+            </Card>
 
-            <Col>
+            {/* <Col fluid>
               <div class="card" style={{ width: "18rem" }}>
                 <div class="card-body">
                   <img
@@ -68,9 +109,29 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </Col> */}
 
-            <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="/img/ProfileGenerator.png" />
+              <Card.Body>
+                <Card.Title>Profile Generator</Card.Title>
+                <h6 class="card-subtitle mb-2 text-muted">Solo Project</h6>
+                <Card.Text>App description.</Card.Text>
+                <Button
+                  variant="primary"
+                  href="https://github.com/andycwilliams/ProfileGen-Week10Homework"
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://github.com/andycwilliams/ProfileGen-Week10Homework"
+                >
+                  Deployed
+                </Button>
+              </Card.Body>
+            </Card>
+            {/* <Col fluid>
               <div class="card" style={{ width: "18rem" }}>
                 <div class="card-body">
                   <img
@@ -97,11 +158,31 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
 
           <Row>
-            <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="/img/EmployeeTracker.png" />
+              <Card.Body>
+                <Card.Title>Employee Tracker</Card.Title>
+                <h6 class="card-subtitle mb-2 text-muted">Solo Project</h6>
+                <Card.Text>App description.</Card.Text>
+                <Button
+                  variant="primary"
+                  href="https://github.com/andycwilliams/EmployeeTracker-Week12Homework"
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://github.com/andycwilliams/EmployeeTracker-Week12Homework"
+                >
+                  Deployed
+                </Button>
+              </Card.Body>
+            </Card>
+            {/* <Col fluid>
               <div class="card" style={{ width: "18rem" }}>
                 <div class="card-body">
                   <img
@@ -128,9 +209,29 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </Col> */}
 
-            <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="/img/PersonalLibrary.png" />
+              <Card.Body>
+                <Card.Title>Personal Library</Card.Title>
+                <h6 class="card-subtitle mb-2 text-muted">Group Project</h6>
+                <Card.Text>App description.</Card.Text>
+                <Button
+                  variant="primary"
+                  href="https://github.com/bleufox/Personal-Library"
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://github.com/bleufox/Personal-Library"
+                >
+                  Deployed
+                </Button>
+              </Card.Body>
+            </Card>
+            {/* <Col fluid>
               <div class="card" style={{ width: "18rem" }}>
                 <div class="card-body">
                   <img
@@ -157,9 +258,29 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </Col> */}
 
-            <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="/img/Placeholder.png" />
+              <Card.Body>
+                <Card.Title>Placeholder</Card.Title>
+                <h6 class="card-subtitle mb-2 text-muted">Solo Project</h6>
+                <Card.Text>App description.</Card.Text>
+                <Button
+                  variant="primary"
+                  href="https://github.com/bleufox/Personal-Library"
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="secondary"
+                  href="https://github.com/bleufox/Personal-Library"
+                >
+                  Deployed
+                </Button>
+              </Card.Body>
+            </Card>
+            {/* <Col fluid>
               <div class="card" style={{ width: "18rem" }}>
                 <div class="card-body">
                   <img
@@ -180,7 +301,7 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>
