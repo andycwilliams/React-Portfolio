@@ -38,7 +38,7 @@ const Navigation = () => {
         <Route path="/about" component={About} />
         <Route component={NoMatch} />
       </Switch> */}
-      <ul>
+      {/* <ul>
         <li>
           <a href="index.html">Home</a>
         </li>
@@ -54,7 +54,7 @@ const Navigation = () => {
         <li>
           <a href="contact.html">Contact</a>
         </li>
-      </ul>
+      </ul> */}
       <div class="header-social-links">
         <a href="https://github.com/andycwilliams" class="github">
           <i class="bi bi-github"></i>

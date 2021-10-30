@@ -32,7 +32,10 @@ const Portfolio = () => {
                   >
                     GitHub
                   </a>
-                  <a href="https://www.google.com" class="card-link">
+                  <a
+                    href="https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5"
+                    class="card-link"
+                  >
                     Deployed Link
                   </a>
                 </div>
@@ -87,7 +90,10 @@ const Portfolio = () => {
                   >
                     GitHub
                   </a>
-                  <a href="" class="card-link">
+                  <a
+                    href="https://github.com/andycwilliams/ProfileGen-Week10Homework"
+                    class="card-link"
+                  >
                     Deployed Link
                   </a>
                 </div>
@@ -115,7 +121,10 @@ const Portfolio = () => {
                   >
                     GitHub
                   </a>
-                  <a href="" class="card-link">
+                  <a
+                    href="https://github.com/andycwilliams/EmployeeTracker-Week12Homework"
+                    class="card-link"
+                  >
                     Deployed Link
                   </a>
                 </div>
@@ -141,7 +150,10 @@ const Portfolio = () => {
                   >
                     GitHub
                   </a>
-                  <a href="" class="card-link">
+                  <a
+                    href="https://github.com/bleufox/Personal-Library"
+                    class="card-link"
+                  >
                     Deployed Link
                   </a>
                 </div>
