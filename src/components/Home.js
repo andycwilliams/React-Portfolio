@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+// import bg from "../img/Redwoods.jpg";
 import "../App.css";
 
 const Home = () => {
