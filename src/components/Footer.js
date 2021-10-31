@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer id="footer">
+      <footer id="footer" bg="dark" expand="lg" variant="dark">
         <div class="container">
           <div class="copyright">
             &copy; Copyright{" "}

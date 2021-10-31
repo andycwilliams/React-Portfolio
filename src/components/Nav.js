@@ -15,57 +15,25 @@ const Navigation = () => {
           <Nav.Link href="/Resume">Resume</Nav.Link>
           <Nav.Link href="/Contact">Contact</Nav.Link>
         </Nav>
+        {/* <i class="bi bi-linkedin"></i>
+        <i class="bi-github" role="img" aria-label="GitHub"></i> */}
+        <div class="header-social-links">
+          <a
+            href="https://github.com/andycwilliams"
+            class="github"
+            style={{ fontSize: "20px" }}
+          >
+            <i class="bi bi-github"></i>GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/andrewcharleswilliams/"
+            class="linkedin"
+            style={{ fontSize: "20px" }}
+          >
+            <i class="bi bi-linkedin" width="1000" height="1000"></i>LinkedIn
+          </a>
+        </div>{" "}
       </Navbar>
-      {/* <Nav defaultActiveKey="/home" as="ul">
-        <Nav.Item as="li">
-          <Nav.Link href="/home">Home</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link eventKey="/about">About</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link eventKey="/resume">Resume</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link eventKey="/portfolio">Portfolio</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link eventKey="/contact">Contact</Nav.Link>
-        </Nav.Item>
-      </Nav> */}
-      {/* <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route component={NoMatch} />
-      </Switch> */}
-      {/* <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="resume.html">Resume</a>
-        </li>
-        <li>
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul> */}
-      <div class="header-social-links">
-        <a href="https://github.com/andycwilliams" class="github">
-          <i class="bi bi-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/andrewcharleswilliams/"
-          class="linkedin"
-        >
-          <i class="bi bi-linkedin"></i>
-        </a>
-      </div>
     </>
   );
 };
