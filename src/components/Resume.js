@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Resume = () => {
   return (
@@ -9,9 +10,12 @@ const Resume = () => {
         <Row className="justify-content-md-center">
           <Col md="auto">
             <h2>Resume</h2>
-            <a href="../Resume.pdf" download>
+            {/* <a href="src/Resume.pdf" download>
               Click to download
-            </a>
+            </a> */}
+            <Link to="/Resume.pdf" target="_blank" download>
+              Download
+            </Link>
           </Col>
         </Row>
         <br></br>
