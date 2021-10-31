@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const Footer = () => {
   return (
     <>
-      <Container>
+      <Container id="footer">
         <Row className="justify-content-md-center">
           <Col md="auto">
             <div class="copyright">
