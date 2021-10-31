@@ -10,13 +10,7 @@ const Home = () => {
         <Container fluid="md">
           <Row className="justify-content-md-center">
             <Col md="auto">
-              <div
-                style={{
-                  // display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div>
                 <img
                   src="/img/Placeholder.png"
                   class="img-fluid"
