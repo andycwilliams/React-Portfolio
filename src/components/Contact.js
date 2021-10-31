@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <>
       <Container>
-        <Row>
-          <Col>
+        <Row className="justify-content-md-center">
+          <Col md="auto">
             <h4>Contact</h4>
           </Col>
         </Row>

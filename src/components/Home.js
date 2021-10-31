@@ -8,8 +8,8 @@ const Home = () => {
     <>
       <div className="backgroundImg">
         <Container fluid="md">
-          <Row>
-            <Col>
+          <Row className="justify-content-md-center">
+            <Col md="auto">
               <div
                 style={{
                   // display: "flex",
