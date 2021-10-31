@@ -39,4 +39,6 @@
 
 .backgroundImg {
   background-image: url(/src/img/Redwoods.jpg);
+  width: 100vw;
+  height: 100vh;
 }

@@ -7,6 +7,9 @@ const Home = () => {
   return (
     <>
       <div className="backgroundImg">
+        <br></br>
+        <br></br>
+        <br></br>
         <Container fluid="md">
           <Row className="justify-content-md-center">
             <Col md="auto">
