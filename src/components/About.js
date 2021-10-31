@@ -4,17 +4,22 @@ import { Col, Container, Row } from "react-bootstrap";
 const About = () => {
   return (
     <>
+      <br></br>
       <Container fluid="md">
-        <div>
-          <h2>About</h2>
-          <p>
-            Classically-trained cellist. Wrote and produced music on the latest
-            music-making programs (Cubase, Kontakt), experienced with
-            digital-based creativity and commerce. Content creator for writing
-            company for 5 years. Wide range of skills developed from a diverse
-            career. Transitioning into tech.
-          </p>
-        </div>
+        <Row className="justify-content-md-center">
+          <Col md="auto">
+            <h2>About</h2>
+          </Col>
+          <Col md="auto">
+            <p>
+              Classically-trained cellist. Wrote and produced music on the
+              latest music-making programs (Cubase, Kontakt), experienced with
+              digital-based creativity and commerce. Content creator for writing
+              company for 5 years. Wide range of skills developed from a diverse
+              career. Transitioning into tech.
+            </p>
+          </Col>
+        </Row>
         <div>
           <h3>Full-Stack Developer &amp; Artist</h3>
           <p>Certified MERN developer from the University of Oregon.</p>

@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const Contact = () => {
   return (
     <>
+      <br></br>
       <Container>
         <Row className="justify-content-md-center">
           <Col md="auto">

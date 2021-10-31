@@ -1,50 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Document, Page } from "react-pdf";
 
 const Resume = () => {
-  const [numPages, setNumPages] = useState(null);
-
   return (
     <>
+      <br></br>
       <Container>
-        <Row>
-          <Col>
-            <h4>Resume</h4>
-            <div>
-              <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">
-                Download
-              </a>
-            </div>
-            <div>
-              <Document
-                file="https://docs.google.com/document/d/1FaNgv2zT53WuWUjClzNN6jMa-ClH24IIrQFVslUQwxU/edit?usp=sharing"
-                onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-                style={{ width: "100%" }}
-              >
-                {Array.apply(null, Array(numPages))
-                  .map((x, i) => i + 1)
-                  .map((page) => (
-                    <Page pageNumber={page} size="A4" />
-                  ))}
-              </Document>
-            </div>
+        <Row className="justify-content-md-center">
+          <Col md="auto">
+            <h2>Resume</h2>
+            <a href="../Resume.pdf" download>
+              Click to download
+            </a>
           </Col>
         </Row>
+        <br></br>
         <div class="row">
           <div class="col-lg-6">
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Andy Williams</h4>
               <p>
-                <em>
-                  Front and back end developer utilizing my diverse background
-                  to expand accessibility and sustainability in tech. Earned a
-                  certificate in full-stack MERN development from the University
-                  of Oregon. My problem-solving, creativity, adaptability,
-                  efficiency help me keep up with the ever-changing tech
-                  landscape.
-                </em>
+                Front and back end developer utilizing my diverse background to
+                expand accessibility and sustainability in tech. Earned a
+                certificate in full-stack MERN development from the University
+                of Oregon. My problem-solving, creativity, adaptability,
+                efficiency help me keep up with the ever-changing tech
+                landscape.
               </p>
               <p>
                 <ul>
