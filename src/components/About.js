@@ -11,12 +11,28 @@ const About = () => {
             <h2>About</h2>
           </Col>
           <Col md="auto">
+            <h2>Bio</h2>
             <p>
+              Certified MERN developer based in Portland, Oregon. Front and back
+              end developer utilizing my diverse background to expand
+              accessibility and sustainability in tech. Earned a certificate in
+              full-stack MERN development from the University of Oregon. My
+              problem-solving, creativity, adaptability, efficiency help me keep
+              up with the ever-changing tech landscape.<br></br>
               Classically-trained cellist. Wrote and produced music on the
               latest music-making programs (Cubase, Kontakt), experienced with
               digital-based creativity and commerce. Content creator for writing
               company for 5 years. Wide range of skills developed from a diverse
               career. Transitioning into tech.
+            </p>
+            <h3>TECHNICAL SKILLS</h3>
+            <p>
+              <strong>Languages:</strong> JavaScript ES6+, CSS3, HTML5, SQL,
+              NoSQL<br></br>
+              <strong>Applications:</strong> GitHub, MongoDB, MySQL, Insomnia,
+              Heroku <br></br>
+              <strong>Tools:</strong>
+              Express, React, Node, Handlebars, Query, Bootstrap, Materialize
             </p>
           </Col>
         </Row>
