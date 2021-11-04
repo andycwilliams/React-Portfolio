@@ -27,7 +27,7 @@ const Home = () => {
                     <Card.Text>
                       Full-stack developer based in Portland, Oregon
                     </Card.Text>
-                    <Button>About Me</Button>
+                    <Button href="about">About Me</Button>
                   </Card.Body>
                 </Card>
               </Fade>

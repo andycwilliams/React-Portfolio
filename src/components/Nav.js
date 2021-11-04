@@ -14,20 +14,29 @@ const Navigation = () => {
           <Nav.Link href="/Resume">Resume</Nav.Link>
           <Nav.Link href="/Contact">Contact</Nav.Link>
         </Nav>
-        <div class="header-social-links">
+        <div class="header-social-links" style={{ color: "white" }}>
           <a
             href="https://github.com/andycwilliams"
             class="github"
-            style={{ color: "lightgrey", fontSize: "20px" }}
+            style={{ color: "white" }}
           >
-            <i class="bi bi-github"></i>GitHub{" "}
-          </a>
+            <i class="bi bi-github"></i> GitHub
+          </a>{" "}
+          |{" "}
           <a
             href="https://www.linkedin.com/in/andrewcharleswilliams/"
             class="linkedin"
-            style={{ color: "lightgrey", fontSize: "20px" }}
+            style={{ color: "white" }}
           >
-            <i class="bi bi-linkedin" width="1000" height="1000"></i>LinkedIn
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://stackoverflow.com/users/15759272/andy"
+            class="stackoverflow"
+            style={{ color: "white" }}
+          >
+            <i class="bi bi-stack-overflow"></i> Stack Overflow
           </a>
         </div>
       </Navbar>
