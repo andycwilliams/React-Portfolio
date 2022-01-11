@@ -1,6 +1,7 @@
 # React-Portfolio
 
-React version of portfolio
+Personal portfolio built using React. Contains bio, resume, list of projects, and contact pages.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [Deployed Link](https://andywilliams-portfolio.herokuapp.com/)
