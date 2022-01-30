@@ -2,6 +2,14 @@
 
 Personal portfolio built using React. Contains bio, resume, list of projects, and contact pages.
 
+TO-DO:
+- Update React code, display more features
+- More interactive and descriptive portfolio page
+- More dynamic and compelling to read
+- Complete contact form
+- Finish README (add screenshot, deploy, etc.)
+- More photos/visuals (CSS)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [Deployed Link](https://andywilliams-portfolio.herokuapp.com/)
