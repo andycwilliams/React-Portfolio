@@ -25,21 +25,21 @@ const Portfolio = () => {
       <Container fluid="md">
         <Row className="justify-content-md-center">
           <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="/img/Placeholder.png" />
+            <Card.Img variant="top" src="/img/GameStore.png" />
             <Card.Body>
-              <Card.Title>Productivity Tracker</Card.Title>
-              <Card.Subtitle>Solo Project</Card.Subtitle>
+              <Card.Title>Game Store</Card.Title>
+              <Card.Subtitle>Group Project</Card.Subtitle>
               <Card.Text>App description.</Card.Text>
               <ButtonGroup aria-label="Basic example">
                 <Button
                   variant="primary"
-                  href="https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5"
+                  href="https://github.com/andycwilliams/Game-Store-Front-End"
                 >
                   GitHub
                 </Button>
                 <Button
                   variant="secondary"
-                  href="https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5"
+                  href="https://venerable-banoffee-a2f55f.netlify.app/"
                 >
                   Deployed
                 </Button>
@@ -69,78 +69,9 @@ const Portfolio = () => {
               </ButtonGroup>
             </Card.Body>
           </Card>
-
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="/img/ProfileGenerator.png" />
-            <Card.Body>
-              <Card.Title>Profile Generator</Card.Title>
-              <Card.Subtitle>Solo Project</Card.Subtitle>
-              <Card.Text>App description.</Card.Text>
-              <ButtonGroup aria-label="Basic example">
-                <Button
-                  variant="primary"
-                  href="https://github.com/andycwilliams/ProfileGen-Week10Homework"
-                >
-                  GitHub
-                </Button>
-                <Button
-                  variant="secondary"
-                  href="https://github.com/andycwilliams/ProfileGen-Week10Homework"
-                >
-                  Deployed
-                </Button>
-              </ButtonGroup>
-            </Card.Body>
-          </Card>
         </Row>
 
         <Row className="justify-content-md-center">
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="/img/EmployeeTracker.png" />
-            <Card.Body>
-              <Card.Title>Employee Tracker</Card.Title>
-              <Card.Subtitle>Solo Project</Card.Subtitle>
-              <Card.Text>App description.</Card.Text>
-              <ButtonGroup aria-label="Basic example">
-                <Button
-                  variant="primary"
-                  href="https://github.com/andycwilliams/EmployeeTracker-Week12Homework"
-                >
-                  GitHub
-                </Button>
-                <Button
-                  variant="secondary"
-                  href="https://github.com/andycwilliams/EmployeeTracker-Week12Homework"
-                >
-                  Deployed
-                </Button>
-              </ButtonGroup>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="/img/PersonalLibrary.png" />
-            <Card.Body>
-              <Card.Title>Personal Library</Card.Title>
-              <Card.Subtitle>Group Project</Card.Subtitle>
-              <Card.Text>App description.</Card.Text>
-              <ButtonGroup aria-label="Basic example">
-                <Button
-                  variant="primary"
-                  href="https://github.com/bleufox/Personal-Library"
-                >
-                  GitHub
-                </Button>
-                <Button
-                  variant="secondary"
-                  href="https://github.com/bleufox/Personal-Library"
-                >
-                  Deployed
-                </Button>
-              </ButtonGroup>
-            </Card.Body>
-          </Card>
-
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="/img/Placeholder.png" />
             <Card.Body>

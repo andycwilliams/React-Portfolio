@@ -8,7 +8,7 @@ const Navigation = () => {
       <Navbar bg="dark" expand="lg" variant="dark">
         <Navbar.Brand>&e</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/Home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/About">About</Nav.Link>
           <Nav.Link href="/Portfolio">Portfolio</Nav.Link>
           <Nav.Link href="/Resume">Resume</Nav.Link>

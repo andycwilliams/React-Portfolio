@@ -35,18 +35,29 @@ const Resume = () => {
               <p>
                 <ul>
                   <li>Portland, OR</li>
-                  <li>(971) 470-0584‬</li>
-                  <li>awilliamscoding@gmail.com</li>
+                  <li>( 541) 729-3612‬</li>
+                  <li>andywilliamscoding@gmail.com</li>
                 </ul>
               </p>
             </div>
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>MERN Certification</h4>
+              <h4>Java Certificate</h4>
+              <h5>2022</h5>
+              <p>
+                <em>Southern Methodist University</em>
+              </p>
+              <p>
+                Back end development at the Southern Methodist University Java
+                Boot Camp.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>MERN Certificate</h4>
               <h5>2021</h5>
               <p>
-                <em>University of Oregon, Eugene, OR</em>
+                <em>University of Oregon</em>
               </p>
               <p>
                 Full-stack development at the University of Oregon's Coding Boot
