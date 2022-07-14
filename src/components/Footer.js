@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <br></br>
-      <Container id="footer">
+      <Container class="bg-light text-center text-lg-start">
         <Row className="justify-content-md-center">
           <Col md="auto">
             <div class="copyright">

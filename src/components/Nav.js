@@ -30,14 +30,14 @@ const Navigation = () => {
           >
             <i class="bi bi-linkedin"></i> LinkedIn
           </a>{" "}
-          |{" "}
+          {/* |{" "}
           <a
             href="https://stackoverflow.com/users/15759272/andy"
             class="stackoverflow"
             style={{ color: "white" }}
           >
             <i class="bi bi-stack-overflow"></i> Stack Overflow
-          </a>
+          </a> */}
         </div>
       </Navbar>
     </>
