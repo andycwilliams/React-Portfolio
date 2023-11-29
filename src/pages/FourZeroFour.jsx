@@ -1,7 +1,5 @@
-import React from "react";
-
 const FourZeroFour = () => {
-  return <div>FourZeroFour</div>;
+  return <>Uh oh</>;
 };
 
 export default FourZeroFour;
