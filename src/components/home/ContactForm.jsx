@@ -48,7 +48,7 @@ const ContactForm = () => {
   return (
     <Box
       sx={{
-        marginTop: 5,
+        // marginTop: 5,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -62,7 +62,7 @@ const ContactForm = () => {
         noValidate
         ref={form}
         onSubmit={handleContactFormSubmit}
-        sx={{ mt: 3 }}
+        // sx={{ mt: 3 }}
       >
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -109,7 +109,13 @@ const ContactForm = () => {
             />
           </Grid>
         </Grid>
-        <Button type="submit" fullWidth variant="contained" sx={{ my: 3 }}>
+        <Button
+          type="submit"
+          // disabled={formCompleted}
+          fullWidth
+          variant="contained"
+          sx={{ my: 3 }}
+        >
           Send
         </Button>
       </Box>

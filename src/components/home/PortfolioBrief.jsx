@@ -94,7 +94,7 @@ const PortfolioBrief = () => {
           )
         )}
       </Grid>
-      <Button>Go to Portfolio</Button>
+      {/* <Button>Go to Portfolio</Button> */}
     </Box>
   );
 };

@@ -25,7 +25,14 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { sageWisdom } from "../home/index";
 
 const Quote = () => {
-  return <Box>sageWisdom</Box>;
+  const item = sageWisdom[Math.floor(Math.random() * sageWisdom.length)];
+
+  return (
+    <Box>
+      <Typography variant="body1">{item.text}</Typography>
+      <Typography variant="body2">{item.author}</Typography>
+    </Box>
+  );
 };
 
 export default Quote;

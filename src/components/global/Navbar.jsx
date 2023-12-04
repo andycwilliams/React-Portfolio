@@ -27,7 +27,6 @@ import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
 const pages = ["Home", "Portfolio"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -41,16 +40,18 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar
-    // position="static"
-    >
-      <Container
+    <Box
+      sx={{
+        flexGrow: 1,
+        // display: "flex",
+      }}
       // maxWidth="xl"
-      >
+    >
+      <AppBar position="static">
         <Toolbar
         // disableGutters
         >
-          {/* Desktop */}
+          {/* Desktop Main */}
           <Typography
             variant="h6"
             noWrap
@@ -58,21 +59,47 @@ const Navbar = () => {
             href="/"
             sx={{
               // mr: 2,
-              display: { xs: "none", md: "flex" },
+              display: { xs: "none", sm: "flex" },
               // fontFamily: "monospace",
               // fontWeight: 700,
-              // letterSpacing: ".3rem",
-              // color: "inherit",
+              letterSpacing: ".2rem",
+              color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            Andy
           </Typography>
 
+          <Box sx={{ flexGrow: 1 }} />
+
+          {/* Desktop Tabs */}
           <Box
             sx={{
               // flexGrow: 1,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "none", sm: "flex" },
+              // flexDirection: { sm: "flex-end" },
+            }}
+          >
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{
+                  // my: 2,
+                  color: "white",
+                  display: "block",
+                }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+
+          {/* Mobile Menu */}
+          <Box
+            sx={{
+              // flexGrow: 1,
+              display: { xs: "flex", sm: "none" },
             }}
           >
             <IconButton
@@ -100,7 +127,7 @@ const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", sm: "none" },
               }}
             >
               {pages.map((page) => (
@@ -110,6 +137,8 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
+
+          {/* Mobile Main */}
           <Typography
             variant="h5"
             noWrap
@@ -117,36 +146,20 @@ const Navbar = () => {
             href="/"
             sx={{
               // mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "flex", sm: "none" },
               // flexGrow: 1,
               // fontFamily: "monospace",
               // fontWeight: 700,
-              // letterSpacing: ".3rem",
-              // color: "inherit",
+              letterSpacing: ".2rem",
+              color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            Andy
           </Typography>
-          <Box
-            sx={{
-              // flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
         </Toolbar>
-      </Container>
-    </AppBar>
+      </AppBar>
+    </Box>
   );
 };
 
