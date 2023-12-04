@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Material UI Imports
-import { ThemeProvider } from "@mui/material/styles";
+import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 // Custom Imports
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -16,7 +17,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <>
+    <Container>
       <CssBaseline />
       <ThemeProvider theme={getTheme(darkMode ? "dark" : "light")}>
         <BrowserRouter darkMode={darkMode} setDarkMode={setDarkMode}>
@@ -31,7 +32,7 @@ const App = () => {
           <Footer />
         </BrowserRouter>
       </ThemeProvider>
-    </>
+    </Container>
   );
 };
 

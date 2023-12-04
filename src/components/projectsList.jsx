@@ -8,7 +8,7 @@ const projects = [
     role: "UI Developer",
     description:
       "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
-    logo: "/assets/PassLogo.png",
+    logo: "/assets/Pass_logo.png",
     date: "In development/January 2023 to current",
     links: [
       {

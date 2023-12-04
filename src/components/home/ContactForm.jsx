@@ -43,9 +43,6 @@ const ContactForm = () => {
         console.log(result.text);
       }, console.error());
     e.target.reset();
-    // setTimeout(() => {
-    //   setShowContactFormModal(false);
-    // }, 2000);
   };
 
   return (

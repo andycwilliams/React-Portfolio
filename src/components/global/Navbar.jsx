@@ -1,29 +1,47 @@
 // Material UI Imports
-import Avatar from "@mui/material/Avatar";
+import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
-const FourZeroFour = () => {
-  return <Box>Uh oh</Box>;
+const Navbar = () => {
+  return (
+    <AppBar>
+      me andy
+      <List>
+        <ListItem
+          // sx={hamburgerMenuTextStyle}
+          component={Link}
+          to="/"
+          // onClick={handleClose}
+        >
+          Home
+        </ListItem>
+        <ListItem
+          // sx={hamburgerMenuTextStyle}
+          component={Link}
+          to="/portfolio"
+          // onClick={handleClose}
+        >
+          Portfolio
+        </ListItem>
+      </List>
+    </AppBar>
+  );
 };
 
-export default FourZeroFour;
+export default Navbar;

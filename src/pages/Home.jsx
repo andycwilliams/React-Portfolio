@@ -17,64 +17,23 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Custom Imports
-import ContactForm from "../components/ContactForm";
-import projects from "../components/projects";
+import {
+  Bio,
+  ContactForm,
+  Hero,
+  PortfolioBrief,
+  Quote,
+} from "../components/home";
 
 const Home = () => {
   return (
-    <Container>
-      <Box>
-        <Typography variant="h1">Andy</Typography>
-        <Typography variant="subtitle">Head image or something</Typography>
-      </Box>
-      <Box>
-        <Typography variant="h2">Bio</Typography>
-        <Typography variant="p">
-          My name is Andy I do stuff sometimes
-        </Typography>
-      </Box>
-      <Box>
-        <Typography>Featured Projects</Typography>
-        <Grid>
-          {projects.map(
-            ({ title, description, role, logo, date, links, techStack }) => (
-              <Card key={title ?? null}>
-                <CardContent>
-                  <Typography>{title ?? null}</Typography>
-                  <Chip label={role ?? null} />
-                  {/* <CardMedia>{logo ?? null}</CardMedia> */}
-                  <Typography>Description</Typography>
-                  <Typography>{description ?? null}</Typography>
-                  {/* <Stack>{links ?? null}</Stack> */}
-                  <Typography>Technology used</Typography>
-                  <Typography>{techStack ?? null}</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button>Learn More</Button>
-                </CardActions>
-              </Card>
-            )
-          )}
-          {/* <Card>
-            <CardContent>
-              <Typography>PASS</Typography>
-              <Chip label={"UI Developer"} />
-              <CardMedia>Logo/screenshot</CardMedia>
-              <Stack>Links: GitHub, Deployed...</Stack>
-              https://passsmartwallet-967e217a2652.herokuapp.com/
-              https://github.com/codeforpdx/PASS
-              <Typography>Technology used:</Typography>
-            </CardContent>
-            <CardActions>
-              <Button>Learn More</Button>
-              https://github.com/codeforpdx
-            </CardActions>
-          </Card> */}
-        </Grid>
-        <Button>Go to Portfolio</Button>
-      </Box>
+    <Box>
+      <Hero />
+      <Bio />
+      <Quote />
+      <PortfolioBrief />
       <ContactForm />
-    </Container>
+    </Box>
   );
 };
 

@@ -22,8 +22,10 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
-const FourZeroFour = () => {
-  return <Box>Uh oh</Box>;
-};
+const Quote = () => {
+  return (
+    <div>Quote</div>
+  )
+}
 
-export default FourZeroFour;
+export default Quote

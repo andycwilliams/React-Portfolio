@@ -22,8 +22,13 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
-const FourZeroFour = () => {
-  return <Box>Uh oh</Box>;
+const Hero = () => {
+  return (
+    <Box>
+      <Typography variant="h1">Andy</Typography>
+      <Typography variant="subtitle">Head image or something</Typography>
+    </Box>
+  );
 };
 
-export default FourZeroFour;
+export default Hero;
