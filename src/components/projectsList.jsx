@@ -8,7 +8,7 @@ const projects = [
     role: "UI Developer",
     description:
       "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
-    logo: "/assets/Pass_logo.png",
+    logo: "/assets/PASS_logo.png",
     date: "In development/January 2023 to current",
     links: [
       {
@@ -20,7 +20,27 @@ const projects = [
         icon: <PublicIcon />,
       },
     ],
-    techStack: "SOLID, React, Vite, JSDocs, Material UI, NPM, ES Lint",
+    techStack:
+      "SOLID, React, Vite, JSDocs, Material UI, NPM, ES Lint (Vitest?)",
+  },
+  {
+    title: "CODE PDX Website",
+    projectSize: "Group",
+    role: "Front-end Developer",
+    description: "Website for CODE PDX built from the ground up.",
+    logo: "",
+    date: "2023 (to present?)",
+    links: [
+      {
+        href: "https://github.com/codeforpdx/codepdx_website",
+        icon: <GitHubIcon />,
+      },
+      {
+        href: "https://codeforpdx.github.io/codepdx_website/",
+        icon: <PublicIcon />,
+      },
+    ],
+    techStack: "React, Material UI, ES Lint, emailjs, etc? (Vitest?)",
   },
   {
     title: "other",

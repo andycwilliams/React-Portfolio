@@ -6,8 +6,8 @@ import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 // Custom Imports
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/global/Navbar";
+import Footer from "./components/global/Footer";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import FourZeroFour from "./pages/FourZeroFour";

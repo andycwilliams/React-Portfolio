@@ -1,3 +1,6 @@
+// React Imports
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Material UI Imports
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
@@ -35,7 +38,18 @@ const PortfolioBrief = () => {
               <CardContent>
                 <Typography>{title ?? null}</Typography>
                 <Chip label={role ?? null} />
-                <CardMedia>{logo ?? null}</CardMedia>
+                <CardMedia
+                  component="img"
+                  image={logo ?? null}
+                  alt={`${title} logo`}
+                  // sx={{
+                  //   mx: "auto",
+                  //   objectFit: "contain",
+                  //   maxWidth: "90%",
+                  //   height: "70px",
+                  //   mb: "15%",
+                  // }}
+                />
                 <Typography>Description</Typography>
                 <Typography>{description ?? null}</Typography>
                 <Typography>Completion date: {date ?? null}</Typography>
@@ -44,12 +58,12 @@ const PortfolioBrief = () => {
                 >
                   {links.map(({ href, icon }) => (
                     <Link
-                      component={ReactRouterLink}
+                      // component={ReactRouterLink}
                       key={href}
                       to={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={linkStyle}
+                      // sx={linkStyle}
                     >
                       {icon}
                     </Link>
