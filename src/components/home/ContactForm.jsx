@@ -73,7 +73,6 @@ const ContactForm = () => {
               fullWidth
               id="name"
               label="Name"
-              autoFocus
             />
           </Grid>
           <Grid item xs={12}>

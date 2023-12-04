@@ -20,63 +20,77 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Custom Imports
-import projects from "../projectsList";
+import projects from "../global/projectsList";
 
 const PortfolioBrief = () => {
   return (
     <Box>
-      <Typography>Featured Projects</Typography>
-      <Grid>
+      <Typography variant="h2">Featured Projects</Typography>
+      <Grid container spacing={{ xs: 1, md: 3 }}>
         {projects.map(
-          ({ title, description, role, logo, date, links, techStack }) => (
-            <Card key={title ?? null}>
-              <CardContent>
-                <Typography>{title ?? null}</Typography>
-                <Chip label={role ?? null} />
-                <CardMedia
-                  component="img"
-                  image={logo ?? null}
-                  alt={`${title} logo`}
-                  // sx={{
-                  //   mx: "auto",
-                  //   objectFit: "contain",
-                  //   maxWidth: "90%",
-                  //   height: "70px",
-                  //   mb: "15%",
-                  // }}
-                />
-                <Typography>Description</Typography>
-                <Typography>{description ?? null}</Typography>
-                <Typography>Completion date: {date ?? null}</Typography>
-                <Stack
-                // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
-                >
-                  {links.map(({ href, icon }) => (
-                    <Link
-                      // component={ReactRouterLink}
-                      key={href}
-                      to={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      // sx={linkStyle}
-                    >
-                      {icon}
-                    </Link>
-                  ))}
-                </Stack>
-
-                <Typography>Technology used</Typography>
-                <Typography>{techStack ?? null}</Typography>
-              </CardContent>
-              <CardActions>
-                <Button>Learn More</Button>
-              </CardActions>
-            </Card>
+          ({
+            title,
+            projectSize,
+            description,
+            role,
+            logo,
+            date,
+            links,
+            techStack,
+          }) => (
+            <Grid item key={title ?? null} xs={12} md={4}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h4" component="h3">
+                    {title ?? null}
+                  </Typography>
+                  <Chip label={role ?? null} />
+                  <CardMedia
+                    component="img"
+                    image={logo ?? null}
+                    alt={`${title} logo`}
+                    sx={{
+                      // mx: "auto",
+                      objectFit: "contain",
+                      // maxWidth: "90%",
+                      height: "70px",
+                      // mb: "15%",
+                    }}
+                  />
+                  <Typography>Description</Typography>
+                  <Typography>{description ?? null}</Typography>
+                  <Typography>Completion date</Typography>
+                  <Typography>{date ?? null}</Typography>
+                  <Stack
+                  // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
+                  >
+                    {links.map(({ href, icon }) => (
+                      <Link
+                        // component={ReactRouterLink}
+                        key={href}
+                        to={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        // sx={linkStyle}
+                      >
+                        {icon}
+                      </Link>
+                    ))}
+                  </Stack>
+                  <Typography>Technology used</Typography>
+                  <Typography>{techStack ?? null}</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button>Learn More</Button>
+                </CardActions>
+              </Card>
+            </Grid>
           )
         )}
       </Grid>

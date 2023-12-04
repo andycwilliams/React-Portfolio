@@ -8,7 +8,7 @@ const projects = [
     role: "UI Developer",
     description:
       "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
-    logo: "/assets/PASS_logo.png",
+    logo: "/assets/logos/PASS_logo.png",
     date: "In development/January 2023 to current",
     links: [
       {
@@ -28,7 +28,7 @@ const projects = [
     projectSize: "Group",
     role: "Front-end Developer",
     description: "Website for CODE PDX built from the ground up.",
-    logo: "",
+    logo: "/assets/logos/Rose_logo.png",
     date: "2023 (to present?)",
     links: [
       {

@@ -21,11 +21,11 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
+// Custom Imports
+import { sageWisdom } from "../home/index";
 
 const Quote = () => {
-  return (
-    <div>Quote</div>
-  )
-}
+  return <Box>sageWisdom</Box>;
+};
 
-export default Quote
+export default Quote;
