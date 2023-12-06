@@ -1,18 +1,13 @@
 # React-Portfolio
 
-Personal portfolio built using React. Contains bio, resume, list of projects, and contact pages.
-
-TO-DO:
-- Update React code, display more features
-- More interactive and descriptive portfolio page
-- More dynamic and compelling to read
-- Complete contact form
-- Finish README (add screenshot, deploy, etc.)
-- More photos/visuals (CSS)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/github/license/andycwilliams/React-Portfolio)](https://github.com/andycwilliams/React-Portfolio/LICENSE)
+[![Commits](https://img.shields.io/github/commit-activity/m/andycwilliams/React-Portfolio)](https://github.com/andycwilliams/React-Portfolio/commits/Master)
+![Top Language](https://img.shields.io/github/languages/top/andycwilliams/React-Portfolio)
+![Latest Commit](https://img.shields.io/github/last-commit/andycwilliams/React-Portfolio)
 
 [Deployed Link](https://andywilliams-portfolio.herokuapp.com/)
+
+Personal portfolio built using React. Contains bio, resume, list of projects, and contact form.
 
 <!-- ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshot.png?raw=true "Screenshot of deployed application") -->
 
@@ -43,6 +38,6 @@ Guidelines
 
 Andy Williams
 
-- [Email](mailto:awilliamscoding@gmail.com)
+- [Email](mailto:andywilliamscoding@gmail.com)
 - [GitHub](https://github.com/andycwilliams)
 - [LinkedIn](https://www.linkedin.com/in/andrewcharleswilliams/)

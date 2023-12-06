@@ -26,7 +26,71 @@ const Bio = () => {
   return (
     <Box>
       <Typography variant="h2">Bio</Typography>
-      <Typography variant="p">My name is Andy I do stuff sometimes</Typography>
+      <Typography variant="subtitle1">
+        My name is Andy I do stuff sometimes
+      </Typography>
+      <Typography variant="subtitle2">
+        My name is Andy I do stuff sometimes
+      </Typography>
+      <Typography variant="body1">
+        My name is Andy I do stuff sometimes
+      </Typography>
+      <Typography variant="body2">
+        My name is Andy I do stuff sometimes
+      </Typography>
+      <Typography variant="caption">
+        My name is Andy I do stuff sometimes
+      </Typography>
+      <Typography variant="body1">MERN stack</Typography>
+      <Typography>
+        University of Oregon Continuing and Professional Education Boot
+        CampsUniversity of Oregon Continuing and Professional Education Boot
+        Camps
+      </Typography>
+      <Typography>
+        Full Stack Web Developer, Computer ProgrammingFull Stack Web Developer,
+        Computer Programming
+      </Typography>
+      Apr 2021 - Oct 2021Apr 2021 - Oct 2021
+      <Typography>
+        Comprehensive 24-week program for strong foundational skills in web
+        applications, object-oriented programming, Javascript, MongoDB, Express,
+        React, Node.js, MySQL, NoSQL, Git, jQuery, and more.
+      </Typography>
+      <Typography>
+        MySQL · GitHub · Responsive Web Design · Front-End Development ·
+        React.js · NoSQL · Node.js · Cascading Style Sheets (CSS) ·
+        Object-Oriented Programming (OOP) · MERN Stack · Back-End Web
+        Development · REST APIs · HTML5 · GraphQL · Full-Stack Development ·
+        Code Review · Programming · Microservices · JavaScript · Web Development
+        · Teamwork · MongoDB
+      </Typography>
+      <Typography>
+        Cognizant Java Full Stack Boot CampCognizant Java Full Stack Boot Camp
+        SMU Continuing & Professional EducationSMU Continuing & Professional
+        Education
+      </Typography>
+      Issued Jun 2022Issued Jun 2022
+      <Typography>
+        Back-End Web Development · React.js · Microservices · Web Development ·
+        HTML5 · Spring Framework · Web Design · Full-Stack Development · REST
+        APIs · Software Development · Problem Solving · Easily Adaptable ·
+        Programming · Digital Literacy · GitHub · Java · Object-Oriented
+        Programming (OOP) · Spring MVC · MySQL · Spring Boot
+      </Typography>
+      <Typography>
+        <Typography>Skills</Typography>
+        <h3>Front End Languages</h3>
+        JavaScript ES6+, HTML5, CSS3, React, Material UI, Bootstrap, Materialize
+        <h3>Back End Languages</h3>
+        Java, MongoDB, Express.js, Node.js, REST API, MySQL, NoSQL, Spring
+        Framework, Maven, JPA, Firebase
+        <h3>Tools</h3>
+        Docker, Spring, Heroku, Netlify, Apollo, RabbitMQ GraphQL, Insomnia,
+        Postman, RabbitMQ, MySQL Workbench
+        <h3>Other</h3>
+        Figma
+      </Typography>
     </Box>
   );
 };
