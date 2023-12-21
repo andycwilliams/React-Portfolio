@@ -1,5 +1,6 @@
 // React Imports
 import { useState } from "react";
+// React Router Dom Imports
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Material UI Imports
 import Avatar from "@mui/material/Avatar";
@@ -24,7 +25,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Custom Imports
+// Data Imports
 import projects from "../global/projectsList";
 
 const Portfolio = () => {

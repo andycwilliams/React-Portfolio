@@ -22,7 +22,7 @@ import dayjs from "dayjs";
 // Social Media links
 const socialMediaLinks = [];
 
-function Copyright() {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="text.secondary">
       {"Copyright ©"}
@@ -32,6 +32,8 @@ function Copyright() {
       </Link>{" "}
       {/* {new Date().getFullYear()} */}
       {"."}
+      Icons by <Link href="https://icons8.com">Icons8</Link>
+      {/* <a target="_blank" href="https://icons8.com/icon/38272/css3">CSS</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
     </Typography>
   );
 }

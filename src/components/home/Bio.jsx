@@ -22,6 +22,9 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
+// TODO: Add icons from Icons8
+// https://icons8.com/icons/set/css
+
 const Bio = () => {
   return (
     <Box>
@@ -81,15 +84,16 @@ const Bio = () => {
       <Typography>
         <Typography>Skills</Typography>
         <h3>Front End Languages</h3>
-        JavaScript ES6+, HTML5, CSS3, React, Material UI, Bootstrap, Materialize
+        JavaScript ES6+, HTML5, CSS3, React, Material UI, Bootstrap, //
+        Materialize
         <h3>Back End Languages</h3>
         Java, MongoDB, Express.js, Node.js, REST API, MySQL, NoSQL, Spring
-        Framework, Maven, JPA, Firebase
+        Framework, Maven, JPA, // Firebase
         <h3>Tools</h3>
-        Docker, Spring, Heroku, Netlify, Apollo, RabbitMQ GraphQL, Insomnia,
-        Postman, RabbitMQ, MySQL Workbench
-        <h3>Other</h3>
-        Figma
+        Git, Docker, Spring, Heroku, Netlify, Apollo, // RabbitMQ, GraphQL,
+        Insomnia, Postman, MySQL Workbench
+        <h3>Other/to sort</h3>
+        Figma, // Kubernetes
       </Typography>
     </Box>
   );

@@ -18,7 +18,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Other Imports
+// Dependency Imports
 import axios from "axios";
 
 // https://github.com/codeforpdx/codepdx_website

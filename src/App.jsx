@@ -1,16 +1,18 @@
 // React Imports
 import { useState } from "react";
+// React Router Dom Imports
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Material UI Imports
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
-// Custom Imports
-import Navbar from "./components/global/Navbar";
+// Component Imports
 import Footer from "./components/global/Footer";
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
 import FourZeroFour from "./pages/FourZeroFour";
+import Home from "./pages/Home";
+import Navbar from "./components/global/Navbar";
+import Portfolio from "./pages/Portfolio";
+// Theme Imports
 import getTheme from "./theme";
 
 const App = () => {

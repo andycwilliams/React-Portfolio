@@ -16,7 +16,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Custom Imports
+// Component Imports
 import {
   Bio,
   ContactForm,

@@ -25,7 +25,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Custom Imports
+// Data Imports
 import projects from "../global/projectsList";
 
 const PortfolioBrief = () => {

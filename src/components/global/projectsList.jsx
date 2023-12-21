@@ -1,3 +1,4 @@
+// Material UI Icons
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PublicIcon from "@mui/icons-material/Public";
 
@@ -9,7 +10,7 @@ const projects = [
     description:
       "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
     logo: "/assets/logos/PASS_logo.png",
-    date: "In development/January 2023 to current",
+    date: "",
     links: [
       {
         href: "https://github.com/codeforpdx/PASS",
@@ -29,7 +30,7 @@ const projects = [
     role: "Front-end Developer",
     description: "Website for CODE PDX built from the ground up.",
     logo: "/assets/logos/Rose_logo.png",
-    date: "2023 (to present?)",
+    date: "",
     links: [
       {
         href: "https://github.com/codeforpdx/codepdx_website",
@@ -40,22 +41,42 @@ const projects = [
         icon: <PublicIcon />,
       },
     ],
-    techStack: "React, Material UI, ES Lint, emailjs, etc? (Vitest?)",
+    techStack: "React, Material UI, ES Lint, EmailJS, etc? (Vitest?)",
   },
   {
-    title: "other",
+    title: "The Fearless Eater",
     projectSize: "Solo",
     role: "Full-stack Developer",
+    description:
+      "Web page for a fictional restaurant. Fully responsive with functioning contact form.",
+    logo: "",
+    date: "",
+    links: [
+      {
+        href: "https://github.com/andycwilliams/The-Fearless-Eater",
+        icon: <GitHubIcon />,
+      },
+      {
+        href: "/",
+        icon: <PublicIcon />,
+      },
+    ],
+    techStack: "React, Bootstrap 5, EmailJS",
+  },
+  {
+    title: "",
+    projectSize: "",
+    role: "",
     description: ".",
     logo: "",
     date: "",
     links: [
       {
-        href: "https://github.com/codeforpdx/PASS",
+        href: "",
         // icon: <GitHubIcon />,
       },
       {
-        href: "https://passsmartwallet-967e217a2652.herokuapp.com/",
+        href: "",
         // icon: <PublicIcon />,
       },
     ],
