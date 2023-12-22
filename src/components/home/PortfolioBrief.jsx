@@ -39,7 +39,7 @@ const PortfolioBrief = () => {
             projectSize,
             description,
             role,
-            logo,
+            image,
             date,
             links,
             techStack,
@@ -51,10 +51,11 @@ const PortfolioBrief = () => {
                     {title ?? null}
                   </Typography>
                   <Chip label={role ?? null} />
+                  <Chip label={projectSize ?? null} />
                   <CardMedia
                     component="img"
-                    image={logo ?? null}
-                    alt={`${title} logo`}
+                    image={image ?? null}
+                    alt={`${title} image`}
                     sx={{
                       // mx: "auto",
                       objectFit: "contain",

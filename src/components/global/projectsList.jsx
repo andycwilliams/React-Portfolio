@@ -9,7 +9,7 @@ const projects = [
     role: "UI Developer",
     description:
       "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
-    logo: "/assets/logos/PASS_logo.png",
+    image: "/assets/logos/PASS_logo.png",
     date: "",
     links: [
       {
@@ -21,15 +21,14 @@ const projects = [
         icon: <PublicIcon />,
       },
     ],
-    techStack:
-      "SOLID, React, Vite, JSDocs, Material UI, NPM, ES Lint (Vitest?)",
+    techStack: ["SOLID", "React", "Vite", "JSDocs", "MUI", "NPM", "ES Lint"],
   },
   {
     title: "CODE PDX Website",
     projectSize: "Group",
     role: "Front-end Developer",
     description: "Website for CODE PDX built from the ground up.",
-    logo: "/assets/logos/Rose_logo.png",
+    image: "/assets/logos/Rose_logo.png",
     date: "",
     links: [
       {
@@ -41,7 +40,7 @@ const projects = [
         icon: <PublicIcon />,
       },
     ],
-    techStack: "React, Material UI, ES Lint, EmailJS, etc? (Vitest?)",
+    techStack: ["React", "Material UI", "ES Lint", "EmailJS", "etc? (Vitest?)"],
   },
   {
     title: "The Fearless Eater",
@@ -49,7 +48,7 @@ const projects = [
     role: "Full-stack Developer",
     description:
       "Web page for a fictional restaurant. Fully responsive with functioning contact form.",
-    logo: "",
+    image: "",
     date: "",
     links: [
       {
@@ -61,26 +60,84 @@ const projects = [
         icon: <PublicIcon />,
       },
     ],
-    techStack: "React, Bootstrap 5, EmailJS",
+    techStack: ["React", "Bootstrap 5", "EmailJS"],
+  },
+  {
+    title: "Your Horoscope",
+    projectSize: "Solo",
+    role: "Full-stack Developer",
+    description:
+      "Your daily horoscope. Or for whenever you want. The stars provide! Infallible and always true and 100% accurate. Made with vanilla HTML, CSS, and JavaScript, which are also infallible.",
+    image: "",
+    date: "2022",
+    links: [
+      {
+        href: "",
+        icon: <GitHubIcon />,
+      },
+      {
+        href: "",
+        icon: <PublicIcon />,
+      },
+    ],
+    techStack: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "",
     projectSize: "",
     role: "",
     description: ".",
-    logo: "",
+    image: "",
     date: "",
     links: [
       {
         href: "",
-        // icon: <GitHubIcon />,
+        icon: <GitHubIcon />,
       },
       {
         href: "",
-        // icon: <PublicIcon />,
+        icon: <PublicIcon />,
       },
     ],
-    techStack: "",
+    techStack: ["", "", ""],
+  },
+  {
+    title: "",
+    projectSize: "",
+    role: "",
+    description: ".",
+    image: "",
+    date: "",
+    links: [
+      {
+        href: "",
+        icon: <GitHubIcon />,
+      },
+      {
+        href: "",
+        icon: <PublicIcon />,
+      },
+    ],
+    techStack: ["", "", ""],
+  },
+  {
+    title: "",
+    projectSize: "",
+    role: "",
+    description: ".",
+    image: "",
+    date: "",
+    links: [
+      {
+        href: "",
+        icon: <GitHubIcon />,
+      },
+      {
+        href: "",
+        icon: <PublicIcon />,
+      },
+    ],
+    techStack: ["", "", ""],
   },
 ];
 
