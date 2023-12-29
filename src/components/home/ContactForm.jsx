@@ -26,6 +26,9 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // emailjs Imports
 import emailjs from "@emailjs/browser";
 
+const { REACT_APP_API_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_SERVICE_ID } =
+  process.env;
+
 const ContactForm = () => {
   const form = useRef();
 
@@ -33,11 +36,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_co2agxf",
-        "template_20pnwni",
+      .send(
+        `${REACT_APP_SERVICE_ID}`,
+        `${REACT_APP_TEMPLATE_ID}`,
         form.current,
-        "AkBl59Ya3226OfPyQ"
+        `${REACT_APP_API_KEY}`
       )
       .then((result) => {
         console.log(result.text);

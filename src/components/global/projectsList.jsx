@@ -65,7 +65,7 @@ const projects = [
   {
     title: "Your Horoscope",
     projectSize: "Solo",
-    role: "Full-stack Developer",
+    role: "Front-end Developer",
     description:
       "Your daily horoscope. Or for whenever you want. The stars provide! Infallible and always true and 100% accurate. Made with vanilla HTML, CSS, and JavaScript, which are also infallible.",
     image: "",
@@ -83,10 +83,11 @@ const projects = [
     techStack: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "",
-    projectSize: "",
-    role: "",
-    description: ".",
+    title: "Your Advanced Horoscope",
+    projectSize: "Solo",
+    role: "Full-stack Developer",
+    description:
+      "Your advanced daily horoscope. Or for whenever you want. The advanced stars* provide! Doubly infallible and even more always true and 200% accurate. \n\n\n\n*AI",
     image: "",
     date: "",
     links: [
