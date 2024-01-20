@@ -56,7 +56,7 @@ const projects = [
         icon: <GitHubIcon />,
       },
       {
-        href: "/",
+        href: "https://andycwilliams.github.io/The-Fearless-Eater/",
         icon: <PublicIcon />,
       },
     ],
@@ -72,22 +72,22 @@ const projects = [
     date: "2022",
     links: [
       {
-        href: "",
+        href: "https://github.com/andycwilliams/Your-Horoscope/",
         icon: <GitHubIcon />,
       },
       {
-        href: "",
+        href: "https://andycwilliams.github.io/Your-Horoscope/",
         icon: <PublicIcon />,
       },
     ],
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["HTML", "CSS", "JavaScript", "W3"],
   },
+
   {
-    title: "Your Advanced Horoscope",
+    title: "To-Do App",
     projectSize: "Solo",
-    role: "Full-stack Developer",
-    description:
-      "Your advanced daily horoscope. Or for whenever you want. The advanced stars* provide! Doubly infallible and even more always true and 200% accurate. \n\n\n\n*AI",
+    role: "Full-Stack Developer",
+    description: "No portfolio is complete without a to-do app.",
     image: "",
     date: "",
     links: [
@@ -100,26 +100,7 @@ const projects = [
         icon: <PublicIcon />,
       },
     ],
-    techStack: ["", "", ""],
-  },
-  {
-    title: "",
-    projectSize: "",
-    role: "",
-    description: ".",
-    image: "",
-    date: "",
-    links: [
-      {
-        href: "",
-        icon: <GitHubIcon />,
-      },
-      {
-        href: "",
-        icon: <PublicIcon />,
-      },
-    ],
-    techStack: ["", "", ""],
+    techStack: ["HTML", "SASS", "JavaScript", "Express", "Node"],
   },
   {
     title: "",
@@ -143,3 +124,24 @@ const projects = [
 ];
 
 export default projects;
+
+// {
+//   title: "Your Advanced Horoscope",
+//   projectSize: "Solo",
+//   role: "Full-stack Developer",
+//   description:
+//     "Your advanced daily horoscope. Or for whenever you want. The advanced stars* provide! Doubly infallible and even more always true and 200% accurate. \n\n\n\n*AI",
+//   image: "",
+//   date: "",
+//   links: [
+//     {
+//       href: "",
+//       icon: <GitHubIcon />,
+//     },
+//     {
+//       href: "",
+//       icon: <PublicIcon />,
+//     },
+//   ],
+//   techStack: ["", "", ""],
+// },

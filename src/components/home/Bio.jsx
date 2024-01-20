@@ -36,7 +36,7 @@ const Bio = () => {
         My name is Andy I do stuff sometimes
       </Typography>
       <Typography variant="body1">
-        My name is Andy I do stuff sometimes
+        Born in Silicon Valley, raised in Silicon Forest
       </Typography>
       <Typography variant="body2">
         My name is Andy I do stuff sometimes
