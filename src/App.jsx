@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 // Component Imports
+import Bio from "./pages/Bio";
 import Footer from "./components/global/Footer";
 import FourZeroFour from "./pages/FourZeroFour";
 import Home from "./pages/Home";
@@ -19,7 +20,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Container>
+    <>
       <CssBaseline />
       <ThemeProvider theme={getTheme(darkMode ? "dark" : "light")}>
         <BrowserRouter darkMode={darkMode} setDarkMode={setDarkMode}>
@@ -27,6 +28,7 @@ const App = () => {
           <main>
             <Routes>
               <Route exact path="/" element={<Home />} />
+              <Route exact path="/bio" element={<Bio />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="*" element={<FourZeroFour />} />
             </Routes>
@@ -34,7 +36,7 @@ const App = () => {
           <Footer />
         </BrowserRouter>
       </ThemeProvider>
-    </Container>
+    </>
   );
 };
 

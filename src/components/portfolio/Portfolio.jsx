@@ -40,9 +40,9 @@ const Portfolio = () => {
                 <Typography>{title ?? null}</Typography>
                 <Chip label={role ?? null} />
                 <CardMedia>{logo ?? null}</CardMedia>
-                <Typography>Description</Typography>
+                {/* <Typography>Description</Typography> */}
                 <Typography>{description ?? null}</Typography>
-                <Typography>Completion date: {date ?? null}</Typography>
+                {/* <Typography>Completion date: {date ?? null}</Typography> */}
                 <Stack
                 // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
                 >

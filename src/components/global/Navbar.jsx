@@ -26,7 +26,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
-const pages = ["Home", "Portfolio"];
+const pages = ["Home", "Bio", "Portfolio"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -41,13 +41,17 @@ const Navbar = () => {
 
   return (
     <Box
-      sx={{
-        flexGrow: 1,
-        // display: "flex",
-      }}
+      sx={
+        {
+          // flexGrow: 1,
+          // display: "flex",
+        }
+      }
       // maxWidth="xl"
     >
-      <AppBar position="static">
+      <AppBar
+      // position="static"
+      >
         <Toolbar
         // disableGutters
         >

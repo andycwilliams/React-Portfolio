@@ -16,27 +16,60 @@ import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Other Imports
-import dayjs from "dayjs";
+
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Social Media links
-const socialMediaLinks = [];
+const socialMediaLinks = [
+  {
+    href: "https://github.com/andycwilliams",
+    icon: <GitHubIcon />,
+    ariaLabel: "Github",
+  },
+  {
+    href: "https://www.linkedin.com/in/andrewcharleswilliams/",
+    icon: <LinkedInIcon />,
+    ariaLabel: "Linked In",
+  },
+];
+
+const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
+  <Link
+    // component={ReactRouterLink}
+    key={href}
+    href={href}
+    aria-label={`You can find me on ${ariaLabel} here`}
+    target="_blank"
+    rel="noopener"
+    // sx={{
+    //   color: "#000",
+    //   display: "flex",
+    //   py: "25px",
+    //   "&:hover": {
+    //     color: "secondary.main",
+    //   },
+    // }}
+  >
+    {icon}
+  </Link>
+));
 
 const Copyright = () => {
   return (
-    <Typography variant="body2" color="text.secondary">
-      {"Copyright ©"}
-      {dayjs().year()}
-      <Link color="inherit" href="/">
-        This website itself
-      </Link>{" "}
-      {/* {new Date().getFullYear()} */}
-      {"."}
-      Icons by <Link href="https://icons8.com">Icons8</Link>
-      {/* <a target="_blank" href="https://icons8.com/icon/38272/css3">CSS</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+    <Typography variant="body2" color="text.secondary" align="center">
+      &copy; {new Date().getFullYear()} This website itself | Icons by{" "}
+      <Link
+        href="https://icons8.com"
+        color="inherit"
+        underline="hover"
+        target="_blank"
+      >
+        Icons8
+      </Link>
     </Typography>
   );
-}
+};
 
 const Footer = () => {
   return (
@@ -45,19 +78,11 @@ const Footer = () => {
         display: "flex",
         flexDirection: "column",
         // minHeight: "100vh",
-        // color: "inherit",
+        color: "inherit",
       }}
     >
-      <Container
-      // component="main"
-      // sx={{ mt: 8, mb: 2 }}
-      // maxWidth="sm"
-      >
-        <Typography
-          variant="h4"
-          component="h2"
-          // gutterBottom
-        >
+      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+        <Typography variant="h4" component="h2" gutterBottom>
           Footer
         </Typography>
 
@@ -67,22 +92,26 @@ const Footer = () => {
       </Container>
       <Box
         component="footer"
-        // sx={{
-        //   py: 3,
-        //   px: 2,
-        //   mt: "auto",
-        //   backgroundColor: (theme) =>
-        //     theme.palette.mode === "light"
-        //       ? theme.palette.grey[200]
-        //       : theme.palette.grey[800],
-        // }}
+        sx={{
+          py: 3,
+          // px: 2,
+          // mt: "auto",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+        }}
       >
-        <Container
-        // maxWidth="sm"
-        >
-          {/* <Typography variant="body1">
+        <Container maxWidth="sm">
+          <Typography variant="body1">
             My sticky footer can be found here.
-          </Typography> */}
+          </Typography>
+          <Stack
+            direction="row"
+            // spacing={{ xs: 2, sm: 3 }}
+          >
+            {renderSocialLinks}
+          </Stack>
           <Copyright />
         </Container>
       </Box>

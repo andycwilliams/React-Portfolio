@@ -67,10 +67,10 @@ const PortfolioBrief = () => {
                       // mb: "15%",
                     }}
                   />
-                  <Typography>Description</Typography>
+                  {/* <Typography>Description</Typography> */}
                   <Typography>{description ?? null}</Typography>
-                  <Typography>Completion date</Typography>
-                  <Typography>{date ?? null}</Typography>
+                  {/* <Typography>Completion date</Typography> */}
+                  {/* <Typography>{date ?? null}</Typography> */}
                   <Stack
                   // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
                   >

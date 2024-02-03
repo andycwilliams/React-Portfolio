@@ -21,25 +21,34 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-import heroBackgroundImage from "/assets/images/heroBackground.jpg";
 
-const Hero = () => {
+// TODO: Add icons from Icons8
+// https://icons8.com/icons/set/css
+
+const BioBrief = () => {
+  const handleResumeDownload = () => {};
+
   return (
-    <div
-      style={{
-        backgroundImage: `url(${heroBackgroundImage})`,
-        backgroundSize: "cover",
-        height: "700px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "white",
-        textAlign: "center",
-      }}
-    >
-      <Typography>Andy</Typography>
-    </div>
+    <Box>
+      {/* Bio */}
+      <Typography variant="h2" gutterBottom>
+        My name is Andy I do stuff sometimes
+      </Typography>
+      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+        Full-stack Developer
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Born in Silicon Valley, raised in Silicon Forest.
+      </Typography>
+      <Typography variant="body1" paragraph>
+        When I'm not doing that, I'm playing music, volunteering for open-source
+        projects, or learning some cool new tech.
+      </Typography>
+      <Typography variant="body1">
+        Always looking forward to what's next!
+      </Typography>
+    </Box>
   );
 };
 
-export default Hero;
+export default BioBrief;

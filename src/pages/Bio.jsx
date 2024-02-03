@@ -26,6 +26,8 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // https://icons8.com/icons/set/css
 
 const Bio = () => {
+  const handleResumeDownload = () => {};
+
   return (
     <Box>
       {/* Bio */}
@@ -58,9 +60,6 @@ const Bio = () => {
               Camps
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              Full Stack Web Developer, Computer Programming
-            </Typography>
-            <Typography variant="subtitle2" color="textSecondary">
               University of Oregon, Apr 2021 - Oct 2021
             </Typography>
             <Typography variant="subtitle2" color="textSecondary">
@@ -80,27 +79,35 @@ const Bio = () => {
           </ListItem>
 
           <ListItem sx={{ display: "block" }}>
-            <Typography variant="h3">High School Diploma</Typography>
+            <Typography variant="h5">
+              Cognizant Java Full Stack Boot Camp
+            </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              Example High School, Graduation Date: June 20XX
+              Southern Methodist University Continuing & Professional Education
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              April 2022 - Jun 2022
+            </Typography>
+            <Typography variant="subtitle2" color="textSecondary">
+              Intensive 7-week program for Java, microservices,
+              containerization, test-driven development, cloud-native
+              architecture, data structures, encryption, Agile methodologies,
+              Kubernetes, as well as continuous integration and continuous
+              delivery.
+            </Typography>
+            <Typography variant="subtitle2" color="textSecondary">
+              Back-End Web Development · React.js · Microservices · Web
+              Development · HTML5 · Spring Framework · Web Design · Full-Stack
+              Development · REST APIs · Software Development · Problem Solving ·
+              Easily Adaptable · Programming · Digital Literacy · GitHub · Java
+              · Object-Oriented Programming (OOP) · Spring MVC · MySQL · Spring
+              Boot
             </Typography>
           </ListItem>
         </List>
       </div>
       {/*  */}
-      <Typography>
-        Cognizant Java Full Stack Boot CampCognizant Java Full Stack Boot Camp
-        SMU Continuing & Professional EducationSMU Continuing & Professional
-        Education
-      </Typography>
-      April 2022 - Jun 2022
-      <Typography>
-        Back-End Web Development · React.js · Microservices · Web Development ·
-        HTML5 · Spring Framework · Web Design · Full-Stack Development · REST
-        APIs · Software Development · Problem Solving · Easily Adaptable ·
-        Programming · Digital Literacy · GitHub · Java · Object-Oriented
-        Programming (OOP) · Spring MVC · MySQL · Spring Boot
-      </Typography>
+
       <div>
         <Typography variant="h3" gutterBottom>
           Skills
@@ -145,6 +152,13 @@ const Bio = () => {
           </ListItem>
         </List>
       </div>
+      <Button
+        variant="contained"
+        // color="primary"
+        onClick={handleResumeDownload}
+      >
+        Download
+      </Button>
     </Box>
   );
 };
