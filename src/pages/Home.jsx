@@ -29,9 +29,9 @@ const Home = () => {
   return (
     <Box>
       <Hero />
-      {/* <Bio /> */}
-      {/* <Quote /> */}
-      {/* <PortfolioBrief /> */}
+      <Bio />
+      <Quote />
+      <PortfolioBrief />
       {/* <ContactForm /> */}
     </Box>
   );

@@ -34,17 +34,20 @@ const PortfolioBrief = () => {
       <Typography variant="h2">Featured Projects</Typography>
       <Grid container spacing={{ xs: 1, md: 3 }}>
         {projects.map(
-          ({
-            title,
-            projectSize,
-            description,
-            role,
-            image,
-            date,
-            links,
-            techStack,
-          }) => (
-            <Grid item key={title ?? null} xs={12} md={4}>
+          (
+            {
+              title,
+              projectSize,
+              description,
+              role,
+              image,
+              date,
+              links,
+              techStack,
+            },
+            index
+          ) => (
+            <Grid item key={index} xs={12} md={4}>
               <Card>
                 <CardContent>
                   <Typography variant="h4" component="h3">
@@ -71,10 +74,10 @@ const PortfolioBrief = () => {
                   <Stack
                   // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
                   >
-                    {links.map(({ href, icon }) => (
+                    {links.map(({ href, icon }, index) => (
                       <Link
                         // component={ReactRouterLink}
-                        key={href}
+                        key={index}
                         to={href}
                         target="_blank"
                         rel="noopener noreferrer"
