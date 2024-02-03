@@ -29,10 +29,10 @@ const Home = () => {
   return (
     <Box>
       <Hero />
-      <Bio />
-      <Quote />
-      <PortfolioBrief />
-      <ContactForm />
+      {/* <Bio /> */}
+      {/* <Quote /> */}
+      {/* <PortfolioBrief /> */}
+      {/* <ContactForm /> */}
     </Box>
   );
 };

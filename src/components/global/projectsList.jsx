@@ -92,11 +92,11 @@ const projects = [
     date: "",
     links: [
       {
-        href: "",
+        href: "https://github.com/andycwilliams/To-Do-App/",
         icon: <GitHubIcon />,
       },
       {
-        href: "",
+        href: "https://andycwilliams.github.io/To-Do-App/",
         icon: <PublicIcon />,
       },
     ],

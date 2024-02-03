@@ -11,4 +11,4 @@ app.use(express.json());
 
 app.use("*", (req, res) => res.send("Hello"));
 
-export default app;
+module.exports = app; // Use module.exports to export the app object
