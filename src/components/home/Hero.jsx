@@ -22,6 +22,35 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 import heroBackgroundImage from "/assets/images/heroBackground.jpg";
+// Material UI Icons Imports
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
+// Social Media links
+const socialMediaLinks = [
+  {
+    href: "https://github.com/andycwilliams",
+    icon: <GitHubIcon />,
+    ariaLabel: "Github",
+  },
+  {
+    href: "https://www.linkedin.com/in/andrewcharleswilliams/",
+    icon: <LinkedInIcon />,
+    ariaLabel: "Linked In",
+  },
+];
+
+const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
+  <Link
+    key={href}
+    href={href}
+    aria-label={`You can find me on ${ariaLabel} here`}
+    target="_blank"
+    rel="noopener"
+  >
+    {icon}
+  </Link>
+));
 
 const Hero = () => {
   return (
@@ -38,6 +67,12 @@ const Hero = () => {
       }}
     >
       <Typography>Andy</Typography>
+      <Stack
+        direction="row"
+        // spacing={{ xs: 2, sm: 3 }}
+      >
+        {renderSocialLinks}
+      </Stack>
     </div>
   );
 };

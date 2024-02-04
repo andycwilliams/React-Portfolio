@@ -16,7 +16,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-
+// Material UI Icons Imports
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -36,20 +36,11 @@ const socialMediaLinks = [
 
 const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
   <Link
-    // component={ReactRouterLink}
     key={href}
     href={href}
     aria-label={`You can find me on ${ariaLabel} here`}
     target="_blank"
     rel="noopener"
-    // sx={{
-    //   color: "#000",
-    //   display: "flex",
-    //   py: "25px",
-    //   "&:hover": {
-    //     color: "secondary.main",
-    //   },
-    // }}
   >
     {icon}
   </Link>

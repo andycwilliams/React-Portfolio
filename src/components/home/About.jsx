@@ -25,11 +25,11 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // TODO: Add icons from Icons8
 // https://icons8.com/icons/set/css
 
-const BioBrief = () => {
+const About = () => {
   const handleResumeDownload = () => {};
 
   return (
-    <Box>
+    <Box id="about-section">
       {/* Bio */}
       <Typography variant="h2" gutterBottom>
         My name is Andy I do stuff sometimes
@@ -51,4 +51,4 @@ const BioBrief = () => {
   );
 };
 
-export default BioBrief;
+export default About;

@@ -87,7 +87,8 @@ const projects = [
     title: "To-Do App",
     projectSize: "Solo",
     role: "Full-Stack Developer",
-    description: "No portfolio is complete without a to-do app.",
+    description:
+      "The requisite to-do app. No portfolio is presentable without one.",
     image: "",
     date: "",
     links: [
@@ -102,46 +103,25 @@ const projects = [
     ],
     techStack: ["HTML", "SASS", "JavaScript", "Express", "Node"],
   },
-  {
-    title: "",
-    projectSize: "",
-    role: "",
-    description: ".",
-    image: "",
-    date: "",
-    links: [
-      {
-        href: "",
-        icon: <GitHubIcon />,
-      },
-      {
-        href: "",
-        icon: <PublicIcon />,
-      },
-    ],
-    techStack: ["", "", ""],
-  },
+  // {
+  //   title: "",
+  //   projectSize: "",
+  //   role: "",
+  //   description: ".",
+  //   image: "",
+  //   date: "",
+  //   links: [
+  //     {
+  //       href: "",
+  //       icon: <GitHubIcon />,
+  //     },
+  //     {
+  //       href: "",
+  //       icon: <PublicIcon />,
+  //     },
+  //   ],
+  //   techStack: ["", "", ""],
+  // },
 ];
 
 export default projects;
-
-// {
-//   title: "Your Advanced Horoscope",
-//   projectSize: "Solo",
-//   role: "Full-stack Developer",
-//   description:
-//     "Your advanced daily horoscope. Or for whenever you want. The advanced stars* provide! Doubly infallible and even more always true and 200% accurate. \n\n\n\n*AI",
-//   image: "",
-//   date: "",
-//   links: [
-//     {
-//       href: "",
-//       icon: <GitHubIcon />,
-//     },
-//     {
-//       href: "",
-//       icon: <PublicIcon />,
-//     },
-//   ],
-//   techStack: ["", "", ""],
-// },

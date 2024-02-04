@@ -18,7 +18,7 @@ import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Component Imports
 import {
-  BioBrief,
+  About,
   ContactForm,
   Hero,
   PortfolioBrief,
@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <BioBrief />
+      <About />
       <Quote />
       <PortfolioBrief />
       <ContactForm />
