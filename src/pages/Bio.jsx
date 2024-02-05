@@ -29,137 +29,128 @@ const Bio = () => {
   const handleResumeDownload = () => {};
 
   return (
-    <Box>
-      {/* Bio */}
-      <Typography variant="h2" gutterBottom>
-        My name is Andy I do stuff sometimes
-      </Typography>
-      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-        Full-stack Developer
-      </Typography>
-      <Typography variant="body1" paragraph>
-        Born in Silicon Valley, raised in Silicon Forest.
-      </Typography>
-      <Typography variant="body1" paragraph>
-        When I'm not doing that, I'm playing music, volunteering for open-source
-        projects, or learning some cool new tech.
-      </Typography>
-      <Typography variant="body1">
-        Always looking forward to what's next!
-      </Typography>
-      {/* Education history */}
-      <div>
-        <Typography variant="h3" gutterBottom>
-          Education
+    <>
+      <Box>
+        <Typography variant="h2" gutterBottom>
+          My name is Andy I do stuff sometimes
         </Typography>
-
-        <List sx={{ display: "flex", flexDirection: "column" }}>
-          <ListItem sx={{ display: "block" }}>
-            <Typography variant="h5">
-              University of Oregon Continuing and Professional Education Boot
-              Camps
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              University of Oregon, Apr 2021 - Oct 2021
-            </Typography>
-            <Typography variant="subtitle2" color="textSecondary">
-              Comprehensive 24-week program for strong foundational skills in
-              web applications, object-oriented programming, Javascript,
-              MongoDB, Express, React, Node.js, MySQL, NoSQL, Git, jQuery, and
-              more.
-            </Typography>
-            <Typography variant="subtitle2" color="textSecondary">
-              MySQL · GitHub · Responsive Web Design · Front-End Development ·
-              React.js · NoSQL · Node.js · Cascading Style Sheets (CSS) ·
-              Object-Oriented Programming (OOP) · MERN Stack · Back-End Web
-              Development · REST APIs · HTML5 · GraphQL · Full-Stack Development
-              · Code Review · Programming · Microservices · JavaScript · Web
-              Development · Teamwork · MongoDB
-            </Typography>
-          </ListItem>
-
-          <ListItem sx={{ display: "block" }}>
-            <Typography variant="h5">
-              Cognizant Java Full Stack Boot Camp
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              Southern Methodist University Continuing & Professional Education
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              April 2022 - Jun 2022
-            </Typography>
-            <Typography variant="subtitle2" color="textSecondary">
-              Intensive 7-week program for Java, microservices,
-              containerization, test-driven development, cloud-native
-              architecture, data structures, encryption, Agile methodologies,
-              Kubernetes, as well as continuous integration and continuous
-              delivery.
-            </Typography>
-            <Typography variant="subtitle2" color="textSecondary">
-              Back-End Web Development · React.js · Microservices · Web
-              Development · HTML5 · Spring Framework · Web Design · Full-Stack
-              Development · REST APIs · Software Development · Problem Solving ·
-              Easily Adaptable · Programming · Digital Literacy · GitHub · Java
-              · Object-Oriented Programming (OOP) · Spring MVC · MySQL · Spring
-              Boot
-            </Typography>
-          </ListItem>
-        </List>
-      </div>
-      {/*  */}
-
-      <div>
-        <Typography variant="h3" gutterBottom>
-          Skills
+        <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+          Full-stack Developer
         </Typography>
-        <List>
-          <ListItem>
-            <Typography variant="subtitle">Front End Languages</Typography>
-            <Typography>
-              JavaScript ES6+, HTML5, CSS3, React, Material UI, Bootstrap,
-              Materialize
-            </Typography>
-          </ListItem>
+        <Typography variant="body1" paragraph>
+          Born in Silicon Valley, raised in Silicon Forest.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          When I'm not doing that, I'm playing music, volunteering for
+          open-source projects, or learning some cool new tech.
+        </Typography>
+        <Typography variant="body1">
+          Always looking forward to what's next!
+        </Typography>
+        {/* Education history */}
+        <div>
+          <Typography variant="h3" gutterBottom>
+            Education
+          </Typography>
 
-          <ListItem>
-            <Typography variant="subtitle">Back End Languages</Typography>
-            <Typography>
-              Java, MongoDB, Express.js, Node.js, REST API, MySQL, NoSQL, Spring
-              Framework, Maven, JPA, Firebase
-            </Typography>
-          </ListItem>
+          <List sx={{ display: "flex", flexDirection: "column" }}>
+            <ListItem sx={{ display: "block" }}>
+              <Typography variant="h5">
+                Cognizant Java Full Stack Boot Camp
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                Southern Methodist University Continuing & Professional
+                Education
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                April 2022 - Jun 2022
+              </Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                Intensive 7-week program for Java, microservices,
+                containerization, test-driven development, cloud-native
+                architecture, data structures, encryption, Agile methodologies,
+                Kubernetes, as well as continuous integration and continuous
+                delivery.
+              </Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                Back-End Web Development · React.js · Microservices · Web
+                Development · HTML5 · Spring Framework · Web Design · Full-Stack
+                Development · REST APIs · Software Development · Problem Solving
+                · Easily Adaptable · Programming · Digital Literacy · GitHub ·
+                Java · Object-Oriented Programming (OOP) · Spring MVC · MySQL ·
+                Spring Boot
+              </Typography>
+            </ListItem>
+            <ListItem sx={{ display: "block" }}>
+              <Typography variant="h5">
+                University of Oregon Continuing and Professional Education Boot
+                Camps
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                University of Oregon, Apr 2021 - Oct 2021
+              </Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                Comprehensive 24-week program for strong foundational skills in
+                web applications, object-oriented programming, Javascript,
+                MongoDB, Express, React, Node.js, MySQL, NoSQL, Git, jQuery, and
+                more.
+              </Typography>
+              <Typography variant="subtitle2" color="textSecondary">
+                MySQL · GitHub · Responsive Web Design · Front-End Development ·
+                React.js · NoSQL · Node.js · Cascading Style Sheets (CSS) ·
+                Object-Oriented Programming (OOP) · MERN Stack · Back-End Web
+                Development · REST APIs · HTML5 · GraphQL · Full-Stack
+                Development · Code Review · Programming · Microservices ·
+                JavaScript · Web Development · Teamwork · MongoDB
+              </Typography>
+            </ListItem>
+          </List>
+        </div>
+        {/*  */}
+        <div>
+          <Typography variant="h3" gutterBottom>
+            Skills
+          </Typography>
+          <List>
+            <ListItem>
+              <Typography variant="subtitle">Front End Languages</Typography>
+              <Typography>
+                JavaScript ES6+, HTML5, CSS3, React, Material UI, Bootstrap,
+                Materialize
+              </Typography>
+            </ListItem>
 
-          <ListItem>
-            <Typography variant="subtitle">Tools</Typography>
-            <Typography>
-              Git, Docker, Spring, Heroku, Netlify, Apollo, RabbitMQ, GraphQL,
-              Insomnia, Postman, MySQL Workbench
-            </Typography>
-          </ListItem>
+            <ListItem>
+              <Typography variant="subtitle">Back End Languages</Typography>
+              <Typography>
+                Java, MongoDB, Express.js, Node.js, REST API, MySQL, NoSQL,
+                Spring Framework, Maven, JPA, Firebase
+              </Typography>
+            </ListItem>
 
-          <ListItem>
-            <Typography variant="subtitle">Other/to sort: </Typography>
-            <Typography>Figma, Kubernetes</Typography>
-          </ListItem>
-        </List>
-      </div>
-      {/* Work history */}
-      <div>
-        <List>
-          <ListItem>
-            <Typography variant="subtitle">Job</Typography>
-            <Typography>Description</Typography>
-          </ListItem>
-        </List>
-      </div>
-      <Button
-        variant="contained"
-        // color="primary"
-        onClick={handleResumeDownload}
-      >
-        Download
-      </Button>
-    </Box>
+            <ListItem>
+              <Typography variant="subtitle">Tools</Typography>
+              <Typography>
+                Git, Docker, Spring, Heroku, Netlify, Apollo, RabbitMQ, GraphQL,
+                Insomnia, Postman, MySQL Workbench
+              </Typography>
+            </ListItem>
+
+            <ListItem>
+              <Typography variant="subtitle">Other/to sort: </Typography>
+              <Typography>Figma, Kubernetes</Typography>
+            </ListItem>
+          </List>
+        </div>
+        <Button
+          variant="contained"
+          // color="primary"
+          onClick={handleResumeDownload}
+        >
+          Download
+        </Button>
+      </Box>
+    </>
   );
 };
 

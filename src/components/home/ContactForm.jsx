@@ -57,6 +57,7 @@ const ContactForm = () => {
 
   return (
     <Box
+      id="contact-section"
       sx={{
         // marginTop: 5,
         display: "flex",

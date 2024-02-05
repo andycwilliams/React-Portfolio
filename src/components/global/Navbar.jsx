@@ -43,6 +43,7 @@ const sections = [
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -50,17 +51,35 @@ const Navbar = () => {
 
   return (
     <>
-      <IconButton
-        onClick={handleToggleSidebar}
-        sx={{ display: { sm: "none" } }}
+      <div
+        style={{
+          position: "fixed",
+          top: "0",
+          left: "0",
+          width: "100%",
+          zIndex: "2",
+          backgroundColor: "transparent",
+        }}
       >
-        <MenuIcon />
-      </IconButton>
+        <IconButton
+          onClick={handleToggleSidebar}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            position: "fixed",
+            top: "0",
+            left: "0",
+            zIndex: "3",
+            color: "#fff",
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+      </div>
 
       <div
         style={{
-          width: sidebarOpen ? "250px" : "0",
-          // overflowX: "hidden",
+          width: sidebarOpen ? "75%" : "0",
+          overflowX: isSmallScreen ? "hidden" : "visible",
           transition: "width 0.3s",
           backgroundColor: "#111",
           color: "white",
@@ -78,6 +97,7 @@ const Navbar = () => {
           {sections.map((section) => (
             <ListItemButton
               key={section.label}
+              onClick={handleToggleSidebar}
               sx={{
                 paddingRight: "50px",
                 backgroundColor: section.backgroundColor,
@@ -91,7 +111,7 @@ const Navbar = () => {
               }}
             >
               {section.icon}
-              {/* <ListItemText>{section.label}</ListItemText> */}
+              <ListItemText>{section.label}</ListItemText>
             </ListItemButton>
           ))}
         </List>

@@ -30,7 +30,7 @@ import projects from "../global/projectsList";
 
 const PortfolioBrief = () => {
   return (
-    <Box>
+    <Box id="portfolio-section">
       <Typography variant="h2">Featured Projects</Typography>
       <Grid container spacing={{ xs: 1, md: 3 }}>
         {projects.map(
@@ -98,7 +98,7 @@ const PortfolioBrief = () => {
           )
         )}
       </Grid>
-      {/* <Button>Go to Portfolio</Button> */}
+      <Button>Go to Portfolio</Button>
     </Box>
   );
 };

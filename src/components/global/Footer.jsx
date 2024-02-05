@@ -65,28 +65,16 @@ const Copyright = () => {
 const Footer = () => {
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        // minHeight: "100vh",
-        color: "inherit",
-      }}
+    // sx={{
+    //   display: "flex",
+    //   flexDirection: "column",
+    //   color: "inherit",
+    // }}
     >
-      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-        <Typography variant="h4" component="h2" gutterBottom>
-          Footer
-        </Typography>
-
-        <Typography variant="body1" component="h3">
-          placeholder text
-        </Typography>
-      </Container>
       <Box
         component="footer"
         sx={{
           py: 3,
-          // px: 2,
-          // mt: "auto",
           backgroundColor: (theme) =>
             theme.palette.mode === "light"
               ? theme.palette.grey[200]
@@ -94,13 +82,11 @@ const Footer = () => {
         }}
       >
         <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
+          <Typography variant="body1" gutterBottom>
+            Andy Williams
           </Typography>
-          <Stack
-            direction="row"
-            // spacing={{ xs: 2, sm: 3 }}
-          >
+
+          <Stack direction="row" spacing={1}>
             {renderSocialLinks}
           </Stack>
           <Copyright />

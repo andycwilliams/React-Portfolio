@@ -21,12 +21,21 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
+// Material UI Icons imports
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
+// React Vertical Timeline imports
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 // TODO: Add icons from Icons8
 // https://icons8.com/icons/set/css
 
 const About = () => {
-  const handleResumeDownload = () => {};
+  // const handleResumeDownload = () => {};
 
   return (
     <Box id="about-section">

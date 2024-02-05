@@ -19,6 +19,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // Component Imports
 import {
   About,
+  BioBrief,
   ContactForm,
   Hero,
   PortfolioBrief,
@@ -30,6 +31,7 @@ const Home = () => {
     <>
       <Hero />
       <About />
+      <BioBrief />
       <Quote />
       <PortfolioBrief />
       <ContactForm />
