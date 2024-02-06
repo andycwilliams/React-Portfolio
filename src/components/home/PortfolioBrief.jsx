@@ -30,76 +30,78 @@ import projects from "../global/projectsList";
 
 const PortfolioBrief = () => {
   return (
-    <Box id="portfolio-section">
-      <Typography variant="h2">Featured Projects</Typography>
-      <Grid container spacing={{ xs: 1, md: 3 }}>
-        {projects.map(
-          (
-            {
-              title,
-              projectSize,
-              description,
-              role,
-              image,
-              date,
-              links,
-              techStack,
-            },
-            index
-          ) => (
-            <Grid item key={index} xs={12} md={4}>
-              <Card>
-                <CardContent>
-                  <Typography variant="h4" component="h3">
-                    {title ?? null}
-                  </Typography>
-                  <Chip label={role ?? null} />
-                  <Chip label={projectSize ?? null} />
-                  <CardMedia
-                    component="img"
-                    image={image ?? null}
-                    alt={`${title} image`}
-                    sx={{
-                      // mx: "auto",
-                      objectFit: "contain",
-                      // maxWidth: "90%",
-                      height: "70px",
-                      // mb: "15%",
-                    }}
-                  />
-                  {/* <Typography>Description</Typography> */}
-                  <Typography>{description ?? null}</Typography>
-                  {/* <Typography>Completion date</Typography> */}
-                  {/* <Typography>{date ?? null}</Typography> */}
-                  <Stack
-                  // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
-                  >
-                    {links.map(({ href, icon }, index) => (
-                      <Link
-                        // component={ReactRouterLink}
-                        key={index}
-                        to={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        // sx={linkStyle}
-                      >
-                        {icon}
-                      </Link>
-                    ))}
-                  </Stack>
-                  <Typography>Technology used</Typography>
-                  <Typography>{techStack ?? null}</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button>Learn More</Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          )
-        )}
-      </Grid>
-      <Button>Go to Portfolio</Button>
-    </Box>
+    <Container>
+      <Box id="portfolio-section">
+        <Typography variant="h2">Featured Projects</Typography>
+        <Grid container spacing={{ xs: 1, md: 3 }}>
+          {projects.map(
+            (
+              {
+                title,
+                projectSize,
+                description,
+                role,
+                image,
+                date,
+                links,
+                techStack,
+              },
+              index
+            ) => (
+              <Grid item key={index} xs={12} md={4}>
+                <Card>
+                  <CardContent>
+                    <Typography variant="h4" component="h3">
+                      {title ?? null}
+                    </Typography>
+                    <Chip label={role ?? null} />
+                    <Chip label={projectSize ?? null} />
+                    <CardMedia
+                      component="img"
+                      image={image ?? null}
+                      alt={`${title} image`}
+                      sx={{
+                        // mx: "auto",
+                        objectFit: "contain",
+                        // maxWidth: "90%",
+                        height: "70px",
+                        // mb: "15%",
+                      }}
+                    />
+                    {/* <Typography>Description</Typography> */}
+                    <Typography>{description ?? null}</Typography>
+                    {/* <Typography>Completion date</Typography> */}
+                    {/* <Typography>{date ?? null}</Typography> */}
+                    <Stack
+                    // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
+                    >
+                      {links.map(({ href, icon }, index) => (
+                        <Link
+                          // component={ReactRouterLink}
+                          key={index}
+                          to={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          // sx={linkStyle}
+                        >
+                          {icon}
+                        </Link>
+                      ))}
+                    </Stack>
+                    <Typography>Technology used</Typography>
+                    <Typography>{techStack ?? null}</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button>Learn More</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            )
+          )}
+        </Grid>
+        <Button>Go to Portfolio</Button>
+      </Box>
+    </Container>
   );
 };
 

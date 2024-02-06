@@ -38,25 +38,25 @@ const About = () => {
   // const handleResumeDownload = () => {};
 
   return (
-    <Box id="about-section">
-      {/* Bio */}
-      <Typography variant="h2" gutterBottom>
-        My name is Andy I do stuff sometimes
-      </Typography>
-      <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-        Full-stack Developer
-      </Typography>
-      <Typography variant="body1" paragraph>
-        Born in Silicon Valley, raised in Silicon Forest.
-      </Typography>
-      <Typography variant="body1" paragraph>
-        When I'm not doing that, I'm playing music, volunteering for open-source
-        projects, or learning some cool new tech.
-      </Typography>
-      <Typography variant="body1">
-        Always looking forward to what's next!
-      </Typography>
-    </Box>
+    <Container>
+      <Box id="about-section">
+        {/* Bio */}
+        <Typography variant="h2" gutterBottom>
+          My name is Andy I do stuff sometimes
+        </Typography>
+
+        <Typography variant="body1" paragraph>
+          Born in Silicon Valley, raised in Silicon Forest.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          When I'm not doing that, I'm playing music, volunteering for
+          open-source projects, or learning some cool new tech.
+        </Typography>
+        <Typography variant="body1">
+          Always looking forward to what's next!
+        </Typography>
+      </Box>
+    </Container>
   );
 };
 

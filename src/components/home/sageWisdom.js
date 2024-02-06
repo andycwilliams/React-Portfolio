@@ -5,7 +5,7 @@ const wisdom = [
   },
   {
     text: "The loneliest goat sees the last sunset last.",
-    author: "Unknown",
+    author: "Ancient proverb",
   },
 ];
 

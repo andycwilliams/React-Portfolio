@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 // Material UI Imports
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
@@ -60,19 +61,19 @@ const Hero = () => {
         backgroundSize: "cover",
         height: "700px",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         color: "white",
         textAlign: "center",
       }}
     >
-      <Typography>Andy</Typography>
-      <Stack
-        direction="row"
-        // spacing={{ xs: 2, sm: 3 }}
-      >
-        {renderSocialLinks}
-      </Stack>
+      <Typography sx={{ fontSize: "75px" }}>Andy</Typography>
+      {/* TODO: Add animation that combines "Front-end" and "Back-end" into "Full-stack" */}
+      <Typography variant="subtitle1" gutterBottom>
+        Full-stack Developer
+      </Typography>
+      <div style={{ display: "flex", gap: "10px" }}>{renderSocialLinks}</div>
     </div>
   );
 };

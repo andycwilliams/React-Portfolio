@@ -28,10 +28,14 @@ const Quote = () => {
   const item = sageWisdom[Math.floor(Math.random() * sageWisdom.length)];
 
   return (
-    <Box>
-      <Typography variant="body1">{item.text}</Typography>
-      <Typography variant="body2">{item.author}</Typography>
-    </Box>
+    <Container>
+      <Box>
+        <Typography sx={{ fontSize: 30 }}>{item.text}</Typography>
+        <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
+          {item.author}
+        </Typography>
+      </Box>
+    </Container>
   );
 };
 

@@ -43,6 +43,7 @@ const sections = [
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [hoveredSection, setHoveredSection] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   const handleToggleSidebar = () => {
@@ -94,13 +95,19 @@ const Navbar = () => {
         }}
       >
         <List>
-          {sections.map((section) => (
+          {sections.map((section, index) => (
             <ListItemButton
               key={section.label}
               onClick={handleToggleSidebar}
+              onMouseEnter={() => setHoveredSection(index)}
+              onMouseLeave={() => setHoveredSection(null)}
               sx={{
-                paddingRight: "50px",
-                backgroundColor: section.backgroundColor,
+                paddingRight: `10vw`,
+                backgroundColor:
+                  hoveredSection === index
+                    ? section.backgroundColor
+                    : "transparent",
+                transition: "background-color 0.3s",
                 "&:hover": {
                   backgroundColor: section.backgroundColor,
                 },
@@ -111,7 +118,9 @@ const Navbar = () => {
               }}
             >
               {section.icon}
-              <ListItemText>{section.label}</ListItemText>
+              <ListItemText sx={{ opacity: hoveredSection === index ? 1 : 0 }}>
+                {section.label}
+              </ListItemText>
             </ListItemButton>
           ))}
         </List>
