@@ -79,7 +79,7 @@ const Navbar = () => {
 
       <div
         style={{
-          width: sidebarOpen ? "75%" : "0",
+          width: sidebarOpen ? (isSmallScreen ? "100%" : "25%") : "0",
           overflowX: isSmallScreen ? "hidden" : "visible",
           transition: "width 0.3s",
           backgroundColor: "#111",

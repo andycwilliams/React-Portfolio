@@ -40,7 +40,7 @@ const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
     href={href}
     aria-label={`You can find me on ${ariaLabel} here`}
     target="_blank"
-    rel="noopener"
+    rel="noopener noreferrer"
   >
     {icon}
   </Link>

@@ -29,12 +29,18 @@ const Quote = () => {
 
   return (
     <Container>
-      <Box>
-        <Typography sx={{ fontSize: 30 }}>{item.text}</Typography>
-        <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
-          {item.author}
-        </Typography>
-      </Box>
+      <Card>
+        <Box sx={{ textAlign: "center" }}>
+          <Typography sx={{ fontSize: 30, fontStyle: "italic" }}>
+            {item.text}
+          </Typography>
+        </Box>
+        <Box sx={{ textAlign: "right", marginTop: 2 }}>
+          <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
+            {item.author}
+          </Typography>
+        </Box>
+      </Card>
     </Container>
   );
 };

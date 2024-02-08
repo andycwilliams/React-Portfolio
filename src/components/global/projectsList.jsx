@@ -14,11 +14,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/codeforpdx/PASS",
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon fontSize="large" />,
       },
       {
         href: "https://passsmartwallet-967e217a2652.herokuapp.com/",
-        icon: <PublicIcon />,
+        icon: <PublicIcon fontSize="large" />,
       },
     ],
     techStack: ["SOLID", "React", "Vite", "JSDocs", "MUI", "NPM", "ES Lint"],
@@ -33,11 +33,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/codeforpdx/codepdx_website",
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon fontSize="large" />,
       },
       {
         href: "https://codeforpdx.github.io/codepdx_website/",
-        icon: <PublicIcon />,
+        icon: <PublicIcon fontSize="large" />,
       },
     ],
     techStack: ["React", "Material UI", "ES Lint", "EmailJS", "etc? (Vitest?)"],
@@ -53,11 +53,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/andycwilliams/The-Fearless-Eater",
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon fontSize="large" />,
       },
       {
         href: "https://andycwilliams.github.io/The-Fearless-Eater/",
-        icon: <PublicIcon />,
+        icon: <PublicIcon fontSize="large" />,
       },
     ],
     techStack: ["React", "Bootstrap 5", "EmailJS"],
@@ -73,11 +73,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/andycwilliams/Your-Horoscope/",
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon fontSize="large" />,
       },
       {
         href: "https://andycwilliams.github.io/Your-Horoscope/",
-        icon: <PublicIcon />,
+        icon: <PublicIcon fontSize="large" />,
       },
     ],
     techStack: ["HTML", "CSS", "JavaScript", "W3"],
@@ -94,34 +94,15 @@ const projects = [
     links: [
       {
         href: "https://github.com/andycwilliams/To-Do-App/",
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon fontSize="large" />,
       },
       {
         href: "https://andycwilliams.github.io/To-Do-App/",
-        icon: <PublicIcon />,
+        icon: <PublicIcon fontSize="large" />,
       },
     ],
     techStack: ["HTML", "SASS", "JavaScript", "Express", "Node"],
   },
-  // {
-  //   title: "",
-  //   projectSize: "",
-  //   role: "",
-  //   description: ".",
-  //   image: "",
-  //   date: "",
-  //   links: [
-  //     {
-  //       href: "",
-  //       icon: <GitHubIcon />,
-  //     },
-  //     {
-  //       href: "",
-  //       icon: <PublicIcon />,
-  //     },
-  //   ],
-  //   techStack: ["", "", ""],
-  // },
 ];
 
 export default projects;

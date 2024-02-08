@@ -31,12 +31,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const socialMediaLinks = [
   {
     href: "https://github.com/andycwilliams",
-    icon: <GitHubIcon />,
+    icon: <GitHubIcon fontSize="large" />,
     ariaLabel: "Github",
   },
   {
     href: "https://www.linkedin.com/in/andrewcharleswilliams/",
-    icon: <LinkedInIcon />,
+    icon: <LinkedInIcon fontSize="large" />,
     ariaLabel: "Linked In",
   },
 ];
@@ -47,7 +47,7 @@ const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
     href={href}
     aria-label={`You can find me on ${ariaLabel} here`}
     target="_blank"
-    rel="noopener"
+    rel="noopener noreferrer"
   >
     {icon}
   </Link>

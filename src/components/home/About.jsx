@@ -41,10 +41,9 @@ const About = () => {
     <Container>
       <Box id="about-section">
         {/* Bio */}
-        <Typography variant="h2" gutterBottom>
+        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           My name is Andy I do stuff sometimes
         </Typography>
-
         <Typography variant="body1" paragraph>
           Born in Silicon Valley, raised in Silicon Forest.
         </Typography>

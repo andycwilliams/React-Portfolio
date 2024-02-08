@@ -32,7 +32,9 @@ const PortfolioBrief = () => {
   return (
     <Container>
       <Box id="portfolio-section">
-        <Typography variant="h2">Featured Projects</Typography>
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
+          Featured Projects
+        </Typography>
         <Grid container spacing={{ xs: 1, md: 3 }}>
           {projects.map(
             (
@@ -42,20 +44,33 @@ const PortfolioBrief = () => {
                 description,
                 role,
                 image,
-                date,
+                // date,
                 links,
                 techStack,
               },
               index
             ) => (
               <Grid item key={index} xs={12} md={4}>
-                <Card>
-                  <CardContent>
-                    <Typography variant="h4" component="h3">
+                <Card sx={{ height: "100%" }}>
+                  <CardContent
+                    sx={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Typography
+                      variant="h4"
+                      component="h3"
+                      sx={{ textAlign: "center" }}
+                    >
                       {title ?? null}
                     </Typography>
-                    <Chip label={role ?? null} />
-                    <Chip label={projectSize ?? null} />
+                    <Stack direction="row" spacing={1}>
+                      <Chip label={role ?? null} />
+                      <Chip label={projectSize ?? null} />
+                    </Stack>
                     <CardMedia
                       component="img"
                       image={image ?? null}
@@ -68,12 +83,9 @@ const PortfolioBrief = () => {
                         // mb: "15%",
                       }}
                     />
-                    {/* <Typography>Description</Typography> */}
-                    <Typography>{description ?? null}</Typography>
-                    {/* <Typography>Completion date</Typography> */}
-                    {/* <Typography>{date ?? null}</Typography> */}
                     <Stack
-                    // direction="row" justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
+                      direction="row"
+                      // justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
                     >
                       {links.map(({ href, icon }, index) => (
                         <Link
@@ -88,8 +100,11 @@ const PortfolioBrief = () => {
                         </Link>
                       ))}
                     </Stack>
+                    <Typography>{description ?? null}</Typography>
                     <Typography>Technology used</Typography>
-                    <Typography>{techStack ?? null}</Typography>
+                    <Typography>
+                      {techStack ? techStack.join(", ") : null}
+                    </Typography>
                   </CardContent>
                   <CardActions>
                     <Button>Learn More</Button>
@@ -99,7 +114,7 @@ const PortfolioBrief = () => {
             )
           )}
         </Grid>
-        <Button>Go to Portfolio</Button>
+        <Button sx={{ textAlign: "center" }}>Go to Portfolio</Button>
       </Box>
     </Container>
   );
