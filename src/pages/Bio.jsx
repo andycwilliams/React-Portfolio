@@ -142,13 +142,15 @@ const Bio = () => {
             </ListItem>
           </List>
         </div>
-        <Button
-          variant="contained"
-          // color="primary"
-          onClick={handleResumeDownload}
-        >
-          Download
-        </Button>
+        <Container sx={{ textAlign: "center", marginTop: "2rem" }}>
+          <Button
+            variant="contained"
+            sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
+            onClick={handleResumeDownload}
+          >
+            Download
+          </Button>
+        </Container>
       </Box>
     </>
   );

@@ -10,15 +10,14 @@ const projects = [
     description:
       "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
     image: "/assets/images/logos/pass_logo.png",
-    date: "",
     links: [
       {
         href: "https://github.com/codeforpdx/PASS",
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
       },
       {
         href: "https://passsmartwallet-967e217a2652.herokuapp.com/",
-        icon: <PublicIcon fontSize="large" />,
+        icon: <PublicIcon sx={{ fontSize: 50 }} />,
       },
     ],
     techStack: ["SOLID", "React", "Vite", "JSDocs", "MUI", "NPM", "ES Lint"],
@@ -29,15 +28,14 @@ const projects = [
     role: "Front-end Developer",
     description: "Website for CODE PDX built from the ground up.",
     image: "/assets/images/logos/codepdx_logo.png",
-    date: "",
     links: [
       {
         href: "https://github.com/codeforpdx/codepdx_website",
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
       },
       {
         href: "https://codeforpdx.github.io/codepdx_website/",
-        icon: <PublicIcon fontSize="large" />,
+        icon: <PublicIcon sx={{ fontSize: 50 }} />,
       },
     ],
     techStack: ["React", "Material UI", "ES Lint", "EmailJS", "etc? (Vitest?)"],
@@ -48,16 +46,15 @@ const projects = [
     role: "Full-stack Developer",
     description:
       "Web page for a fictional restaurant. Fully responsive with functioning contact form.",
-    image: "",
-    date: "",
+    image: "/assets/images/placeholder.png",
     links: [
       {
         href: "https://github.com/andycwilliams/The-Fearless-Eater",
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
       },
       {
         href: "https://andycwilliams.github.io/The-Fearless-Eater/",
-        icon: <PublicIcon fontSize="large" />,
+        icon: <PublicIcon sx={{ fontSize: 50 }} />,
       },
     ],
     techStack: ["React", "Bootstrap 5", "EmailJS"],
@@ -68,16 +65,16 @@ const projects = [
     role: "Front-end Developer",
     description:
       "Your daily horoscope. Or for whenever you want. The stars provide! Infallible and always true and 100% accurate. Made with vanilla HTML, CSS, and JavaScript, which are also infallible.",
-    image: "",
+    image: "/assets/images/placeholder.png",
     date: "2022",
     links: [
       {
         href: "https://github.com/andycwilliams/Your-Horoscope/",
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
       },
       {
         href: "https://andycwilliams.github.io/Your-Horoscope/",
-        icon: <PublicIcon fontSize="large" />,
+        icon: <PublicIcon sx={{ fontSize: 50 }} />,
       },
     ],
     techStack: ["HTML", "CSS", "JavaScript", "W3"],
@@ -89,16 +86,15 @@ const projects = [
     role: "Full-Stack Developer",
     description:
       "The requisite to-do app. No portfolio is presentable without one.",
-    image: "",
-    date: "",
+    image: "/assets/images/placeholder.png",
     links: [
       {
         href: "https://github.com/andycwilliams/To-Do-App/",
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
       },
       {
         href: "https://andycwilliams.github.io/To-Do-App/",
-        icon: <PublicIcon fontSize="large" />,
+        icon: <PublicIcon sx={{ fontSize: 50 }} />,
       },
     ],
     techStack: ["HTML", "SASS", "JavaScript", "Express", "Node"],

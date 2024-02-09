@@ -24,13 +24,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const socialMediaLinks = [
   {
     href: "https://github.com/andycwilliams",
-    icon: <GitHubIcon />,
-    ariaLabel: "Github",
+    icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+    ariaLabel: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/andrewcharleswilliams/",
-    icon: <LinkedInIcon />,
-    ariaLabel: "Linked In",
+    icon: <LinkedInIcon sx={{ fontSize: 50 }} />,
+    ariaLabel: "LinkedIn",
   },
 ];
 
@@ -38,60 +38,47 @@ const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
   <Link
     key={href}
     href={href}
-    aria-label={`You can find me on ${ariaLabel} here`}
+    aria-label={`Find me on ${ariaLabel}`}
     target="_blank"
     rel="noopener noreferrer"
+    // color="inherit"
+    // underline="hover"
   >
     {icon}
   </Link>
 ));
 
-const Copyright = () => {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      &copy; {new Date().getFullYear()} This website itself | Icons by{" "}
-      <Link
-        href="https://icons8.com"
-        color="inherit"
-        underline="hover"
-        target="_blank"
-      >
-        Icons8
-      </Link>
-    </Typography>
-  );
-};
+const Copyright = () => (
+  <Typography variant="body2" color="text.secondary" align="center">
+    &copy; {new Date().getFullYear()} This website itself | Icons by{" "}
+    <Link
+      href="https://icons8.com"
+      color="inherit"
+      underline="hover"
+      target="_blank"
+    >
+      Icons8
+    </Link>
+  </Typography>
+);
 
 const Footer = () => {
   return (
     <Box
-    // sx={{
-    //   display: "flex",
-    //   flexDirection: "column",
-    //   color: "inherit",
-    // }}
+      component="footer"
+      sx={{
+        py: 3,
+        backgroundColor: (theme) =>
+          theme.palette.mode === "light"
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+        textAlign: "center",
+      }}
     >
-      <Box
-        component="footer"
-        sx={{
-          py: 3,
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light"
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
-        }}
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1" gutterBottom>
-            Andy Williams
-          </Typography>
-
-          <Stack direction="row" spacing={1}>
-            {renderSocialLinks}
-          </Stack>
-          <Copyright />
-        </Container>
-      </Box>
+      <Stack direction="row" spacing={1} justifyContent="center">
+        {renderSocialLinks}
+      </Stack>
+      <Copyright />
     </Box>
   );
 };

@@ -29,7 +29,7 @@ const Quote = () => {
 
   return (
     <Container>
-      <Card>
+      <Card sx={{ p: "20px", borderRadius: "25px" }}>
         <Box sx={{ textAlign: "center" }}>
           <Typography sx={{ fontSize: 30, fontStyle: "italic" }}>
             {item.text}

@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const theme = (mode) =>
   createTheme({
@@ -15,6 +15,7 @@ const theme = (mode) =>
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(","),
+      h2: { marginTop: "2.5rem", marginBottom: "2.5rem" },
     },
     palette: {
       mode,

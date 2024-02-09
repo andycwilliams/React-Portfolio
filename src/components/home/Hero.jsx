@@ -27,32 +27,6 @@ import heroBackgroundImage from "/assets/images/heroBackground.jpg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-// Social Media links
-const socialMediaLinks = [
-  {
-    href: "https://github.com/andycwilliams",
-    icon: <GitHubIcon fontSize="large" />,
-    ariaLabel: "Github",
-  },
-  {
-    href: "https://www.linkedin.com/in/andrewcharleswilliams/",
-    icon: <LinkedInIcon fontSize="large" />,
-    ariaLabel: "Linked In",
-  },
-];
-
-const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
-  <Link
-    key={href}
-    href={href}
-    aria-label={`You can find me on ${ariaLabel} here`}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {icon}
-  </Link>
-));
-
 const Hero = () => {
   return (
     <div
@@ -66,14 +40,16 @@ const Hero = () => {
         justifyContent: "center",
         color: "white",
         textAlign: "center",
+        padding: "20px",
       }}
     >
-      <Typography sx={{ fontSize: "75px" }}>Andy</Typography>
+      <Typography variant="h1" sx={{ fontSize: "5rem", fontWeight: "bold" }}>
+        Andy
+      </Typography>
       {/* TODO: Add animation that combines "Front-end" and "Back-end" into "Full-stack" */}
-      <Typography variant="subtitle1" gutterBottom>
+      <Typography variant="subtitle1" sx={{ fontSize: "2.5rem" }} gutterBottom>
         Full-stack Developer
       </Typography>
-      <div style={{ display: "flex", gap: "10px" }}>{renderSocialLinks}</div>
     </div>
   );
 };

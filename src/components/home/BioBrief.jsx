@@ -158,14 +158,18 @@ const BioBrief = () => {
         <h4 className="vertical-timeline-element-subtitle">Bachelor of Arts</h4>
         <p>English Language and Literature major, Music minor</p>
       </VerticalTimelineElement>
-      <Button
-        component={RouterLink}
-        to="/bio"
-        variant="contained"
-        color="primary"
-      >
-        See full resume
-      </Button>
+
+      <Box sx={{ textAlign: "center", marginTop: "2rem", margin: "10px" }}>
+        <Button
+          component={RouterLink}
+          to="/bio"
+          variant="contained"
+          color="primary"
+          sx={{ fontSize: "1.5rem", padding: "1rem 2rem", color: "#fff" }}
+        >
+          Go to full resume
+        </Button>
+      </Box>
     </VerticalTimeline>
   );
 };

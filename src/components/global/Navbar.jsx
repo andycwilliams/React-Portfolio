@@ -1,5 +1,6 @@
 // React Imports
 import React, { useEffect, useState } from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
 // Material UI Imports
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
@@ -50,6 +51,13 @@ const Navbar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const handleSectionClick = (destination) => {
+    if (isSmallScreen) {
+      handleToggleSidebar();
+    }
+    console.log(`Navigating to ${destination}`);
+  };
+
   return (
     <>
       <div
@@ -98,18 +106,18 @@ const Navbar = () => {
           {sections.map((section, index) => (
             <ListItemButton
               key={section.label}
-              onClick={handleToggleSidebar}
+              onClick={() => handleSectionClick(section.destination)}
               onMouseEnter={() => setHoveredSection(index)}
               onMouseLeave={() => setHoveredSection(null)}
+              component={ReactRouterLink}
+              to={isSmallScreen ? section.destination : undefined}
               sx={{
-                paddingRight: `10vw`,
-                backgroundColor:
-                  hoveredSection === index
-                    ? section.backgroundColor
-                    : "transparent",
+                background: section.backgroundColor,
+                paddingRight: `5vw`,
                 transition: "background-color 0.3s",
                 "&:hover": {
                   backgroundColor: section.backgroundColor,
+                  paddingRight: `10vw`,
                 },
                 "& svg": {
                   fontSize: "40px",

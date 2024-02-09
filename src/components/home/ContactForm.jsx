@@ -59,13 +59,13 @@ const ContactForm = () => {
     <Box
       id="contact-section"
       sx={{
-        // marginTop: 5,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        mt: "2rem",
       }}
     >
-      <Typography component="h1" variant="h4">
+      <Typography component="h1" variant="h4" mb={2}>
         Contact Me
       </Typography>
       <Box
@@ -74,6 +74,7 @@ const ContactForm = () => {
         ref={form}
         onSubmit={handleContactFormSubmit}
         // sx={{ mt: 3 }}
+        sx={{ width: "100%", maxWidth: "600px" }}
       >
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -125,7 +126,7 @@ const ContactForm = () => {
           // disabled={formCompleted}
           fullWidth
           variant="contained"
-          sx={{ my: 3 }}
+          sx={{ mt: "1rem" }}
         >
           Send
         </Button>

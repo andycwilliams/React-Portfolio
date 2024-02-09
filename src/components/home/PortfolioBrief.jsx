@@ -28,6 +28,67 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // Data Imports
 import projects from "../global/projectsList";
 
+const ProjectCard = ({
+  title,
+  projectSize,
+  description,
+  role,
+  image,
+  links,
+  techStack,
+}) => (
+  <Grid item xs={12} md={4}>
+    <Card sx={{ height: "100%" }}>
+      <CardMedia
+        component="img"
+        image={image ?? null}
+        alt={`${title} image`}
+        sx={{
+          objectFit: "contain",
+          height: "200px",
+          width: "100%",
+        }}
+      />
+      <CardContent>
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{ textAlign: "center", mb: 2 }}
+        >
+          {title ?? "Untitled Project"}
+        </Typography>
+        <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
+          <Chip label={role ?? "Role"} />
+          <Chip label={projectSize ?? "Size"} />
+        </Stack>
+        <Typography variant="body2" color="textSecondary" paragraph>
+          {description ?? "No description available."}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" paragraph>
+          <strong>Technology used:</strong>{" "}
+          {techStack ? techStack.join(", ") : "N/A"}
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ justifyContent: "center" }}>
+        {links.map(({ href, icon }, index) => (
+          <Link
+            key={index}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            color="primary"
+          >
+            {icon}
+          </Link>
+        ))}
+        {/* <Button size="small" color="primary">
+          Learn More
+        </Button> */}
+      </CardActions>
+    </Card>
+  </Grid>
+);
+
 const PortfolioBrief = () => {
   return (
     <Container>
@@ -36,86 +97,19 @@ const PortfolioBrief = () => {
           Featured Projects
         </Typography>
         <Grid container spacing={{ xs: 1, md: 3 }}>
-          {projects.map(
-            (
-              {
-                title,
-                projectSize,
-                description,
-                role,
-                image,
-                // date,
-                links,
-                techStack,
-              },
-              index
-            ) => (
-              <Grid item key={index} xs={12} md={4}>
-                <Card sx={{ height: "100%" }}>
-                  <CardContent
-                    sx={{
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Typography
-                      variant="h4"
-                      component="h3"
-                      sx={{ textAlign: "center" }}
-                    >
-                      {title ?? null}
-                    </Typography>
-                    <Stack direction="row" spacing={1}>
-                      <Chip label={role ?? null} />
-                      <Chip label={projectSize ?? null} />
-                    </Stack>
-                    <CardMedia
-                      component="img"
-                      image={image ?? null}
-                      alt={`${title} image`}
-                      sx={{
-                        // mx: "auto",
-                        objectFit: "contain",
-                        // maxWidth: "90%",
-                        height: "70px",
-                        // mb: "15%",
-                      }}
-                    />
-                    <Stack
-                      direction="row"
-                      // justifyContent="space-evenly" pt={{ xs: 0, sm: '1rem' }}
-                    >
-                      {links.map(({ href, icon }, index) => (
-                        <Link
-                          // component={ReactRouterLink}
-                          key={index}
-                          to={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          // sx={linkStyle}
-                        >
-                          {icon}
-                        </Link>
-                      ))}
-                    </Stack>
-                    <Typography>{description ?? null}</Typography>
-                    <Typography>Technology used</Typography>
-                    <Typography>
-                      {techStack ? techStack.join(", ") : null}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button>Learn More</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            )
-          )}
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </Grid>
-        <Button sx={{ textAlign: "center" }}>Go to Portfolio</Button>
       </Box>
+      <Container sx={{ textAlign: "center", marginTop: "2rem" }}>
+        <Button
+          variant="contained"
+          sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
+        >
+          Go to Portfolio
+        </Button>
+      </Container>
     </Container>
   );
 };
