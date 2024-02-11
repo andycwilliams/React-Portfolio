@@ -19,17 +19,23 @@ const theme = (mode) =>
     },
     palette: {
       mode,
-      dark: {
-        main: "#121212",
-        contrastText: "#fff",
-      },
       primary: {
-        main: mode === "dark" ? "#121212" : "#be64f0",
-        contrastText: mode === "dark" ? "#fff" : "#121212",
+        main: mode === "dark" ? "#6c5ce7" : "#8e44ad",
+        contrastText: mode === "dark" ? "#ecf0f1" : "#ecf0f1",
       },
       secondary: {
-        main: "#7ae0d9",
-        contrastText: "#121212",
+        main: mode === "dark" ? "#27ae60" : "#2ecc71",
+        contrastText: mode === "dark" ? "#ecf0f1" : "#2d3436",
+      },
+      tertiary: {
+        main: mode === "dark" ? "#c0392b" : "#e74c3c",
+        contrastText: mode === "dark" ? "#ecf0f1" : "#2d3436",
+      },
+      background: {
+        default: mode === "dark" ? "#2c3e50" : "#ecf0f1",
+      },
+      text: {
+        primary: mode === "dark" ? "#ecf0f1" : "#2d3436",
       },
     },
   });

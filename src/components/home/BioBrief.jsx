@@ -49,6 +49,7 @@ const BioBrief = () => {
         date="Sep 2023 - Present"
         iconStyle={{ background: theme.palette.primary.main, color: "#fff" }}
         icon={<WorkIcon />}
+        style={{ borderRadius: "5px" }}
       >
         <h3 className="vertical-timeline-element-title">
           Full-stack Developer
