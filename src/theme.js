@@ -38,6 +38,18 @@ const theme = (mode) =>
         primary: mode === "dark" ? "#ecf0f1" : "#2d3436",
       },
     },
+    components: {
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            "&:hover": {
+              transform: "scale(1.2)",
+              transition: "transform 0.3s, textDecoration 0.3s",
+            },
+          },
+        },
+      },
+    },
   });
 
 export default theme;

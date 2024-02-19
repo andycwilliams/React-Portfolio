@@ -12,6 +12,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Fade from "@mui/material/Fade";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -56,82 +57,84 @@ const ContactForm = () => {
   };
 
   return (
-    <Box
-      id="contact-section"
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        mt: "2rem",
-      }}
-    >
-      <Typography component="h1" variant="h4" mb={2}>
-        Contact Me
-      </Typography>
+    <Fade in={true} timeout={1000}>
       <Box
-        component="form"
-        noValidate
-        ref={form}
-        onSubmit={handleContactFormSubmit}
-        // sx={{ mt: 3 }}
-        sx={{ width: "100%", maxWidth: "600px" }}
+        id="contact-section"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          mt: "2rem",
+        }}
       >
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <TextField
-              autoComplete="name"
-              name="name"
-              required
-              fullWidth
-              id="name"
-              label="Name"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              id="subject"
-              label="Subject"
-              name="subject"
-              autoComplete="subject"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              name="message"
-              label="Message"
-              type="message"
-              id="message"
-              autoComplete="message"
-              multiline
-              rows={5}
-            />
-          </Grid>
-        </Grid>
-        <Button
-          type="submit"
-          // disabled={formCompleted}
-          fullWidth
-          variant="contained"
-          sx={{ mt: "1rem" }}
+        <Typography component="h1" variant="h4" mb={2}>
+          Contact Me
+        </Typography>
+        <Box
+          component="form"
+          noValidate
+          ref={form}
+          onSubmit={handleContactFormSubmit}
+          // sx={{ mt: 3 }}
+          sx={{ width: "100%", maxWidth: "600px" }}
         >
-          Send
-        </Button>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField
+                autoComplete="name"
+                name="name"
+                required
+                fullWidth
+                id="name"
+                label="Name"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="subject"
+                label="Subject"
+                name="subject"
+                autoComplete="subject"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                name="message"
+                label="Message"
+                type="message"
+                id="message"
+                autoComplete="message"
+                multiline
+                rows={5}
+              />
+            </Grid>
+          </Grid>
+          <Button
+            type="submit"
+            // disabled={formCompleted}
+            fullWidth
+            variant="contained"
+            sx={{ mt: "1rem" }}
+          >
+            Send
+          </Button>
+        </Box>
       </Box>
-    </Box>
+    </Fade>
   );
 };
 

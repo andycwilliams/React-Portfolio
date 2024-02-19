@@ -10,6 +10,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Fade from "@mui/material/Fade";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -38,24 +39,26 @@ const About = () => {
   // const handleResumeDownload = () => {};
 
   return (
-    <Container>
-      <Box id="about-section">
-        {/* Bio */}
-        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
-          Accessible. Versatile. Efficient.
-        </Typography>
-        <Typography variant="body1" paragraph>
-          Born in Silicon Valley, raised in Silicon Forest.
-        </Typography>
-        <Typography variant="body1" paragraph>
-          When I'm not doing that, I'm playing music, volunteering for
-          open-source projects, or learning some cool new tech.
-        </Typography>
-        <Typography variant="body1">
-          Always looking forward to what's next!
-        </Typography>
-      </Box>
-    </Container>
+    <Fade in={true} timeout={1000}>
+      <Container>
+        <Box id="about-section">
+          {/* Bio */}
+          <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
+            Accessible. Versatile. Efficient.
+          </Typography>{" "}
+          <Typography variant="body1" paragraph>
+            Born in Silicon Valley, raised in Silicon Forest.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            When I'm not doing that, I'm playing music, volunteering for
+            open-source projects, or learning some cool new tech.
+          </Typography>
+          <Typography variant="body1">
+            Always looking forward to what's next!
+          </Typography>
+        </Box>
+      </Container>
+    </Fade>
   );
 };
 

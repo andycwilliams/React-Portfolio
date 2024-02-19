@@ -50,15 +50,24 @@ const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
 
 const Copyright = () => (
   <Typography variant="body2" color="text.secondary" align="center">
-    &copy; {new Date().getFullYear()} This website itself | Icons by{" "}
-    <Link
-      href="https://icons8.com"
-      color="inherit"
-      underline="hover"
-      target="_blank"
+    &copy; {new Date().getFullYear()} name All rights reserved
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      component="span"
+      display="block"
+      sx={{ my: 1 }}
     >
-      Icons8
-    </Link>
+      Icons by{" "}
+      <Link
+        href="https://icons8.com"
+        color="inherit"
+        underline="hover"
+        target="_blank"
+      >
+        Icons8
+      </Link>
+    </Typography>
   </Typography>
 );
 

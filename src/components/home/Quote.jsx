@@ -10,6 +10,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Fade from "@mui/material/Fade";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -28,20 +29,22 @@ const Quote = () => {
   const item = sageWisdom[Math.floor(Math.random() * sageWisdom.length)];
 
   return (
-    <Container>
-      <Card sx={{ p: "20px", borderRadius: "25px" }}>
-        <Box sx={{ textAlign: "center" }}>
-          <Typography sx={{ fontSize: 30, fontStyle: "italic" }}>
-            {item.text}
-          </Typography>
-        </Box>
-        <Box sx={{ textAlign: "right", marginTop: 2 }}>
-          <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
-            {item.author}
-          </Typography>
-        </Box>
-      </Card>
-    </Container>
+    <Fade in={true} timeout={1000}>
+      <Container>
+        <Card sx={{ p: "20px", borderRadius: "25px" }}>
+          <Box sx={{ textAlign: "center" }}>
+            <Typography sx={{ fontSize: 30, fontStyle: "italic" }}>
+              {item.text}
+            </Typography>
+          </Box>
+          <Box sx={{ textAlign: "right", marginTop: 2 }}>
+            <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
+              {item.author}
+            </Typography>
+          </Box>
+        </Card>
+      </Container>
+    </Fade>
   );
 };
 

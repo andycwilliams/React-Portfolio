@@ -11,6 +11,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Fade from "@mui/material/Fade";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -43,13 +44,29 @@ const Hero = () => {
         padding: "20px",
       }}
     >
-      <Typography variant="h1" sx={{ fontSize: "5rem", fontWeight: "bold" }}>
-        Andy
-      </Typography>
-      {/* TODO: Add animation that combines "Front-end" and "Back-end" into "Full-stack" */}
-      <Typography variant="subtitle1" sx={{ fontSize: "2.5rem" }} gutterBottom>
-        Full-stack Developer
-      </Typography>
+      <Fade in={true} timeout={1000}>
+        <div>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: "5rem", fontWeight: "bold" }}
+          >
+            Andy
+          </Typography>
+        </div>
+      </Fade>
+
+      <Fade in={true} timeout={1000} style={{ transitionDelay: "200ms" }}>
+        <div>
+          {/* TODO: Add animation that combines "Front-end" and "Back-end" into "Full-stack" */}
+          <Typography
+            variant="subtitle1"
+            sx={{ fontSize: "2.5rem" }}
+            gutterBottom
+          >
+            Full-stack Developer
+          </Typography>
+        </div>
+      </Fade>
     </div>
   );
 };

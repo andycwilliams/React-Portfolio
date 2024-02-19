@@ -13,6 +13,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Fade from "@mui/material/Fade";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -91,26 +92,28 @@ const ProjectCard = ({
 
 const PortfolioBrief = () => {
   return (
-    <Container>
-      <Box id="portfolio-section">
-        <Typography variant="h2" sx={{ textAlign: "center" }}>
-          Featured Projects
-        </Typography>
-        <Grid container spacing={{ xs: 1, md: 3 }}>
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </Grid>
-      </Box>
-      <Container sx={{ textAlign: "center", marginTop: "2rem" }}>
-        <Button
-          variant="contained"
-          sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
-        >
-          Go to Portfolio
-        </Button>
+    <Fade in={true} timeout={1000}>
+      <Container>
+        <Box id="portfolio-section">
+          <Typography variant="h2" sx={{ textAlign: "center" }}>
+            Featured Projects
+          </Typography>
+          <Grid container spacing={{ xs: 1, md: 3 }}>
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </Grid>
+        </Box>
+        <Container sx={{ textAlign: "center", marginTop: "2rem" }}>
+          <Button
+            variant="contained"
+            sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
+          >
+            Go to Portfolio
+          </Button>
+        </Container>
       </Container>
-    </Container>
+    </Fade>
   );
 };
 
