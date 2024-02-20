@@ -22,10 +22,10 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Material UI Icons imports
+// Material UI Icons Imports
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
-// React Vertical Timeline imports
+// React Vertical Timeline Imports
 import {
   VerticalTimeline,
   VerticalTimelineElement,
