@@ -64,7 +64,8 @@ const ContactForm = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          mt: "2rem",
+          my: "2rem",
+          mx: "1rem",
         }}
       >
         <Typography component="h1" variant="h4" mb={2}>
@@ -76,7 +77,7 @@ const ContactForm = () => {
           ref={form}
           onSubmit={handleContactFormSubmit}
           // sx={{ mt: 3 }}
-          sx={{ width: "100%", maxWidth: "600px" }}
+          // sx={{ width: "100%", maxWidth: "600px" }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12}>

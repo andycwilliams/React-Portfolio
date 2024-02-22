@@ -67,6 +67,7 @@ const resumeData = [
       line2:
         "Trained in between projects, strengthening existing skills such as Java, SQL, and microservices",
     },
+    icon: <SchoolIcon />,
   },
   {
     title: "University of Oregon",

@@ -23,6 +23,7 @@ import {
   Hero,
   PortfolioBrief,
   ResumeBrief,
+  Skills,
   Quote,
 } from "../components/home";
 
@@ -31,8 +32,9 @@ const Home = () => {
     <>
       <Hero />
       <About />
+      <Skills />
       <ResumeBrief />
-      <Quote />
+      {/* <Quote /> */}
       <PortfolioBrief />
       <ContactForm />
     </>

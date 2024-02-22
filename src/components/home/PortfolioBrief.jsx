@@ -60,7 +60,7 @@ const ProjectCard = ({
         </Typography>
         <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} />
-          <Chip label={projectSize ?? "Size"} />
+          {/* <Chip label={projectSize ?? "Size"} /> */}
         </Stack>
         <Typography variant="body2" color="textSecondary" paragraph>
           {description ?? "No description available."}

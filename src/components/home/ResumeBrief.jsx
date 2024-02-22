@@ -43,7 +43,9 @@ const cardStyle = {
   // alignItems: "center",
   // flexDirection: "column",
   p: "20px",
-  m: "10px",
+  // m: "0 100px 0 100px",
+  mx: "100px",
+  my: "10px",
 };
 
 const PreviousStyle = () => {
@@ -228,24 +230,29 @@ const PreviousStyle = () => {
 };
 
 const ResumeItem = () => (
-  <>
-    {/* <Fade></Fade> */}
-    {resumeData.map(({ title, location, description, date, icon }, index) => (
-      <Card key={index} sx={cardStyle}>
-        <Typography variant="h6" component="h3">
-          {icon}
-          {title}
-        </Typography>
-        <Typography variant="body1">{location}</Typography>
-        {Object.keys(description).map((key) => (
-          <Typography key={key}>
-            {description[key] !== null ? description[key] : "N/A"}
+  <Fade in={true} timeout={1000}>
+    <div>
+      {resumeData.map(({ title, location, description, date, icon }, index) => (
+        <Card key={index} sx={cardStyle}>
+          <Typography
+            variant="h6"
+            component="h3"
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            {icon ?? null}
+            {title ?? null}
           </Typography>
-        ))}
-        <Typography variant="subtitle1">{date}</Typography>
-      </Card>
-    ))}
-  </>
+          <Typography variant="body1">{location ?? null}</Typography>
+          {Object.keys(description).map((key) => (
+            <Typography key={key} variant="body2">
+              {description[key] !== null ? description[key] : null}
+            </Typography>
+          ))}
+          <Typography variant="body2">{date ?? null}</Typography>
+        </Card>
+      ))}
+    </div>
+  </Fade>
 );
 
 const ResumeBrief = () => {
