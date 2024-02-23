@@ -27,6 +27,8 @@ import heroBackgroundImage from "/assets/images/heroBackground.jpg";
 // Material UI Icons Imports
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// React Animation Imports
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -57,13 +59,17 @@ const Hero = () => {
 
       <Fade in={true} timeout={1000} style={{ transitionDelay: "200ms" }}>
         <div>
-          {/* TODO: Add animation that combines "Front-end" and "Back-end" into "Full-stack" */}
           <Typography
             variant="subtitle1"
             sx={{ fontSize: "2.5rem" }}
             gutterBottom
           >
-            Full-stack Developer
+            <TypeAnimation
+              sequence={["Front-end ", 2000, "Back-end ", 2000, "Full-stack "]}
+              wrapper="span"
+              cursor={false}
+            />
+            Developer
           </Typography>
         </div>
       </Fade>

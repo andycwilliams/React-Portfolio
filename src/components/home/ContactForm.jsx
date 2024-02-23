@@ -68,7 +68,8 @@ const ContactForm = () => {
           mx: "1rem",
         }}
       >
-        <Typography component="h1" variant="h4" mb={2}>
+        {/* <Typography component="h1" variant="h4" mb={2}> */}
+        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Contact Me
         </Typography>
         <Box

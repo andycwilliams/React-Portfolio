@@ -11,6 +11,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Checkbox from "@mui/material/Checkbox";
 import Chip from "@mui/material/Chip";
+import Collapse from "@mui/material/Collapse";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Fade from "@mui/material/Fade";
@@ -27,6 +28,166 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
+// Material UI Icons Library
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import IconButton from "@mui/material/IconButton";
+
+const ExpandComponent = ({ defaultContent, additionalContent }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleShowMore = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <Box>
+      {defaultContent}
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        {additionalContent}
+      </Collapse>
+      <IconButton
+        onClick={toggleShowMore}
+        aria-expanded={expanded}
+        aria-label="show more"
+      >
+        {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+      </IconButton>
+    </Box>
+  );
+};
+
+const defaultContent = (
+  <Box>
+    <div>
+      <Typography>Front End</Typography>
+    </div>
+    <div>
+      <Typography>JavaScript</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>CSS</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>HTML</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>React</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Material UI</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Bootstrap</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Materialize</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>SASS</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Bulma</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+  </Box>
+);
+
+const additionalContent = (
+  <Box>
+    <div>
+      <Typography>Back End</Typography>
+    </div>
+    <div>
+      <Typography>Java</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>MongoDB</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Express</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Node.js</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>REST API</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>MySQL</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>NoSQL</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Spring Framework</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Maven</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>JPA</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Firebase</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+
+    <div>
+      <Typography>Applications</Typography>
+    </div>
+    <div>
+      <Typography>Heroku</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Netlify</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Apollo GraphQL</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Insomnia</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Postman</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>Docker</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>RabbitMQ</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+    <div>
+      <Typography>MySQL Workbench</Typography>
+      <LinearProgress variant="determinate" value={75} />
+    </div>
+  </Box>
+);
 
 const Skills = () => {
   return (
@@ -36,130 +197,10 @@ const Skills = () => {
           <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
             Skills
           </Typography>
-
-          <div>
-            <Typography>Front End</Typography>
-          </div>
-          <div>
-            <Typography>JavaScript</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>CSS</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>HTML</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>React</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Material UI</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Bootstrap</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Materialize</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>SASS</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Bulma</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-
-          <div>
-            <Typography>Back End</Typography>
-          </div>
-          <div>
-            <Typography>Java</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>MongoDB</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Express</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Node.js</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>REST API</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>MySQL</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>NoSQL</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Spring Framework</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Maven</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>JPA</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Firebase</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-
-          <div>
-            <Typography>Applications</Typography>
-          </div>
-          <div>
-            <Typography>Heroku</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Netlify</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Apollo GraphQL</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Insomnia</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Postman</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>Docker</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>RabbitMQ</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
-          <div>
-            <Typography>MySQL Workbench</Typography>
-            <LinearProgress variant="determinate" value={75} />
-          </div>
+          <ExpandComponent
+            defaultContent={defaultContent}
+            additionalContent={additionalContent}
+          />
         </Box>
       </Container>
     </Fade>
