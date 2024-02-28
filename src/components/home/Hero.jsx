@@ -31,6 +31,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
+  const theme = useTheme();
+
   return (
     <div
       style={{
@@ -61,11 +63,22 @@ const Hero = () => {
         <div>
           <Typography
             variant="subtitle1"
-            sx={{ fontSize: "2.5rem" }}
+            sx={{
+              fontSize: "2.5rem",
+              // color: theme.palette.primary.main
+            }}
             gutterBottom
           >
             <TypeAnimation
-              sequence={["Front-end ", 2000, "Back-end ", 2000, "Full-stack "]}
+              sequence={[
+                "Web ",
+                1000,
+                "Front-end ",
+                1000,
+                "Back-end ",
+                1000,
+                "Full-stack ",
+              ]}
               wrapper="span"
               cursor={false}
             />

@@ -45,20 +45,26 @@ const About = () => {
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
-        <Paper>
+        <Paper sx={{ p: 5 }}>
           <Grid container>
             <Grid item xs={12} md={6}>
               {/* Bio */}
               <CardMedia
                 component="img"
                 image={"/assets/images/placeholder.png"}
-                alt={`Headshot of Andy`}
+                alt={`Profile of Andy`}
                 sx={{
                   objectFit: "contain",
                   height: "200px",
                   width: "100%",
                 }}
               />
+              <Typography variant="body1">Name: Andy Williams</Typography>
+              <Typography variant="body1">Title: Web Developer</Typography>
+              <Typography variant="body1">
+                Email: andywilliamscoding@gmail.com
+              </Typography>
+              <Typography variant="body1">Phone:</Typography>
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="body1" paragraph>
@@ -88,12 +94,6 @@ const About = () => {
               <Typography variant="body1">
                 Always looking forward to what's next!
               </Typography>
-              <Typography variant="body1">Name: Andy Williams</Typography>
-              <Typography variant="body1">Title: Web Developer</Typography>
-              <Typography variant="body1">
-                Email: andywilliamscoding@gmail.com
-              </Typography>
-              <Typography variant="body1">Phone:</Typography>
             </Grid>
           </Grid>
         </Paper>

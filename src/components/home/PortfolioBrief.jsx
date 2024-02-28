@@ -28,6 +28,8 @@ import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Data Imports
 import projects from "../global/projectsList";
+// Dependency Imports
+import axios from "axios";
 
 const ProjectCard = ({
   title,
@@ -59,7 +61,7 @@ const ProjectCard = ({
           {title ?? "Untitled Project"}
         </Typography>
         <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
-          <Chip label={role ?? "Role"} />
+          <Chip label={role ?? "Role"} color="primary" />
           {/* <Chip label={projectSize ?? "Size"} /> */}
         </Stack>
         <Typography variant="body2" color="textSecondary" paragraph>

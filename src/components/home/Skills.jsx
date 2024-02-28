@@ -31,7 +31,6 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // Material UI Icons Library
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import IconButton from "@mui/material/IconButton";
 
 const ExpandComponent = ({ defaultContent, additionalContent }) => {
   const [expanded, setExpanded] = useState(false);
@@ -46,161 +45,132 @@ const ExpandComponent = ({ defaultContent, additionalContent }) => {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         {additionalContent}
       </Collapse>
-      <IconButton
+      <Button
         onClick={toggleShowMore}
         aria-expanded={expanded}
-        aria-label="show more"
+        variant="contained"
+        sx={{
+          width: "100%",
+          mt: "10px",
+        }}
       >
-        {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-      </IconButton>
+        {expanded ? "Show Less" : "Show More"}
+        {expanded ? (
+          <ExpandLessIcon sx={{ ml: 1 }} />
+        ) : (
+          <ExpandMoreIcon sx={{ ml: 1 }} />
+        )}
+      </Button>
     </Box>
   );
 };
 
-const defaultContent = (
+const primarySkillsData = [
+  { name: "JavaScript", level: 75 },
+  { name: "CSS", level: 75 },
+  { name: "HTML", level: 75 },
+  { name: "React", level: 75 },
+  { name: "Java", level: 75 },
+  { name: "MongoDB", level: 75 },
+  { name: "Express", level: 75 },
+  { name: "Node.js", level: 75 },
+];
+
+const fullSkillsData = [
+  {
+    type: "Front End",
+    skills: [
+      // { name: "JavaScript", level: 75 },
+      // { name: "CSS", level: 75 },
+      // { name: "HTML", level: 75 },
+      // { name: "React", level: 75 },
+      { name: "Material UI", level: 75 },
+      { name: "Bootstrap", level: 75 },
+      { name: "Materialize", level: 75 },
+      { name: "SASS", level: 75 },
+      { name: "Bulma", level: 75 },
+    ],
+  },
+  {
+    type: "Back End",
+    skills: [
+      // { name: "Java", level: 75 },
+      // { name: "MongoDB", level: 75 },
+      // { name: "Express", level: 75 },
+      // { name: "Node.js", level: 75 },
+      { name: "REST API", level: 75 },
+      { name: "MySQL", level: 75 },
+      { name: "NoSQL", level: 75 },
+      { name: "Spring Framework", level: 75 },
+      { name: "Maven", level: 75 },
+      { name: "JPA", level: 75 },
+      { name: "Firebase", level: 75 },
+    ],
+  },
+  {
+    type: "Applications",
+    skills: [
+      { name: "Heroku", level: 75 },
+      { name: "Netlify", level: 75 },
+      { name: "Apollo GraphQL", level: 75 },
+      { name: "Insomnia", level: 75 },
+      { name: "Postman", level: 75 },
+      { name: "Docker", level: 75 },
+      { name: "RabbitMQ", level: 75 },
+      { name: "MySQL Workbench", level: 75 },
+    ],
+  },
+];
+
+const RenderPrimarySkills = () => (
   <Box>
-    <div>
-      <Typography>Front End</Typography>
-    </div>
-    <div>
-      <Typography>JavaScript</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>CSS</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>HTML</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>React</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Material UI</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Bootstrap</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Materialize</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>SASS</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Bulma</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
+    {primarySkillsData.map(({ name, level }, index) => (
+      <Box key={index}>
+        <Typography>{name}</Typography>
+        <LinearProgress variant="determinate" value={level} />
+      </Box>
+    ))}
   </Box>
 );
 
-const additionalContent = (
+const RenderFullSkills = () => (
   <Box>
-    <div>
-      <Typography>Back End</Typography>
-    </div>
-    <div>
-      <Typography>Java</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>MongoDB</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Express</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Node.js</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>REST API</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>MySQL</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>NoSQL</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Spring Framework</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Maven</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>JPA</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Firebase</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-
-    <div>
-      <Typography>Applications</Typography>
-    </div>
-    <div>
-      <Typography>Heroku</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Netlify</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Apollo GraphQL</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Insomnia</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Postman</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>Docker</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>RabbitMQ</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
-    <div>
-      <Typography>MySQL Workbench</Typography>
-      <LinearProgress variant="determinate" value={75} />
-    </div>
+    {fullSkillsData.map(({ type, skills }, index) => (
+      <Box key={index}>
+        <Typography variant="h5" component="h3" sx={{ textAlign: "center" }}>
+          {type}
+        </Typography>
+        {skills.map(({ name, level }, index) => (
+          <Box key={index}>
+            <Typography>{name}</Typography>
+            <LinearProgress variant="determinate" value={level} />
+          </Box>
+        ))}
+      </Box>
+    ))}
   </Box>
 );
+
+
 
 const Skills = () => {
   return (
     <Fade in={true} timeout={1000}>
       <Container>
-        <Box>
+        <Box
+          sx={
+            {
+              // p: { xs: "10px", sm: "20px" },
+              // mx: { xs: "0px", sm: "50px" },
+              // my: "10px",
+            }
+          }
+        >
           <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
             Skills
           </Typography>
-          <ExpandComponent
-            defaultContent={defaultContent}
-            additionalContent={additionalContent}
-          />
+          <RenderPrimarySkills />
+          <RenderFullSkills />
         </Box>
       </Container>
     </Fade>

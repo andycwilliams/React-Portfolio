@@ -43,17 +43,18 @@ const cardStyle = {
   // justifyContent: "center",
   // alignItems: "center",
   // flexDirection: "column",
-  p: "20px",
+  p: { xs: "10px", sm: "20px" },
   // m: "0 100px 0 100px",
-  mx: "100px",
+  mx: { xs: "10px", sm: "140px" },
   my: "10px",
 };
 
 const ResumeItem = () => {
   const theme = useTheme();
+
   return (
     <Fade in={true} timeout={1000}>
-      <div>
+      <Box>
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Resume
         </Typography>
@@ -65,12 +66,21 @@ const ResumeItem = () => {
                 component="h3"
                 sx={{
                   display: "flex",
-                  alignItems: "center",
                   color: theme.palette.primary.main,
                 }}
               >
-                {icon ?? null}
-                {title ?? null}
+                {icon && (
+                  <span
+                    style={{
+                      marginRight: "8px",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    {icon}
+                  </span>
+                )}
+                {title}
               </Typography>
               <Typography variant="body1">{location ?? null}</Typography>
               {Object.keys(description).map((key) => (
@@ -82,7 +92,7 @@ const ResumeItem = () => {
             </Paper>
           )
         )}
-      </div>
+      </Box>
     </Fade>
   );
 };
