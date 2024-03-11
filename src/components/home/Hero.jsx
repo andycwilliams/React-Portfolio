@@ -35,6 +35,7 @@ const Hero = () => {
 
   return (
     <div
+      id="home-section"
       style={{
         backgroundImage: `url(${heroBackgroundImage})`,
         backgroundSize: "cover",

@@ -88,7 +88,7 @@ const fullSkillsData = [
       { name: "Bootstrap", level: 75 },
       { name: "Materialize", level: 75 },
       { name: "SASS", level: 75 },
-      { name: "Bulma", level: 75 },
+      { name: "Bulma", level: 50 },
     ],
   },
   {
@@ -99,12 +99,12 @@ const fullSkillsData = [
       // { name: "Express", level: 75 },
       // { name: "Node.js", level: 75 },
       { name: "REST API", level: 75 },
-      { name: "MySQL", level: 75 },
-      { name: "NoSQL", level: 75 },
       { name: "Spring Framework", level: 75 },
-      { name: "Maven", level: 75 },
-      { name: "JPA", level: 75 },
-      { name: "Firebase", level: 75 },
+      { name: "MySQL", level: 75 },
+      { name: "NoSQL", level: 50 },
+      { name: "Maven", level: 50 },
+      { name: "JPA", level: 50 },
+      { name: "Firebase", level: 50 },
     ],
   },
   {
@@ -112,12 +112,12 @@ const fullSkillsData = [
     skills: [
       { name: "Heroku", level: 75 },
       { name: "Netlify", level: 75 },
-      { name: "Apollo GraphQL", level: 75 },
       { name: "Insomnia", level: 75 },
       { name: "Postman", level: 75 },
       { name: "Docker", level: 75 },
-      { name: "RabbitMQ", level: 75 },
       { name: "MySQL Workbench", level: 75 },
+      { name: "RabbitMQ", level: 50 },
+      { name: "Apollo GraphQL", level: 50 },
     ],
   },
 ];
@@ -150,8 +150,6 @@ const RenderFullSkills = () => (
     ))}
   </Box>
 );
-
-
 
 const Skills = () => {
   return (

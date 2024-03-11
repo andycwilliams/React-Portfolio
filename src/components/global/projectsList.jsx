@@ -34,7 +34,7 @@ const projects = [
         icon: <GitHubIcon sx={{ fontSize: 50 }} />,
       },
       {
-        href: "https://codeforpdx.github.io/codepdx_website/",
+        href: "https://www.codepdx.org/",
         icon: <PublicIcon sx={{ fontSize: 50 }} />,
       },
     ],

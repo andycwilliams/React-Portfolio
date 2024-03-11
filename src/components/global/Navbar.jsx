@@ -26,6 +26,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -36,105 +37,90 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import MailIcon from "@mui/icons-material/Mail";
 
-const sections = [
-  { label: "Home", icon: <HomeIcon />, backgroundColor: "#2196f3" },
-  { label: "About", icon: <InfoIcon />, backgroundColor: "#4caf50" },
-  { label: "Resume", icon: <ArticleIcon />, backgroundColor: "#ff9800" },
-  { label: "Contact", icon: <MailIcon />, backgroundColor: "#e91e63" },
+const sidebarItems = [
+  { label: "Home", icon: <HomeIcon />, id: "home", backgroundColor: "#2196f3" },
+  {
+    label: "About",
+    icon: <InfoIcon />,
+    id: "about",
+    backgroundColor: "#4caf50",
+  },
+  {
+    label: "Resume",
+    icon: <ArticleIcon />,
+    id: "resume",
+    backgroundColor: "#ff9800",
+  },
+  {
+    label: "Contact",
+    icon: <MailIcon />,
+    id: "contact",
+    backgroundColor: "#e91e63",
+  },
 ];
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [hoveredSection, setHoveredSection] = useState(null);
+  // const [hoveredSection, setHoveredSection] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const handleSectionClick = (destination) => {
+  const scrollToSection = (id) => {
     if (isSmallScreen) {
       handleToggleSidebar();
     }
-    console.log(`Navigating to ${destination}`);
+
+    const element = document.getElementById(`${id}-section`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <>
-      <div
-        style={{
-          position: "fixed",
-          top: "0",
-          left: "0",
-          width: "100%",
-          zIndex: "2",
-          backgroundColor: "transparent",
-        }}
-      >
-        <IconButton
-          onClick={handleToggleSidebar}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            position: "fixed",
-            top: "0",
-            left: "0",
-            zIndex: "3",
-            color: "#fff",
-          }}
-        >
-          <MenuIcon />
-        </IconButton>
-      </div>
-
-      <div
-        style={{
-          width: sidebarOpen ? (isSmallScreen ? "100%" : "25%") : "0",
-          overflowX: isSmallScreen ? "hidden" : "visible",
-          transition: "width 0.3s",
-          backgroundColor: "#111",
-          color: "white",
-          position: "fixed",
-          top: "0",
-          left: "0",
-          bottom: "0",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          zIndex: "1",
-        }}
-      >
-        <List>
-          {sections.map((section, index) => (
-            <ListItemButton
-              key={section.label}
-              onClick={() => handleSectionClick(section.destination)}
-              onMouseEnter={() => setHoveredSection(index)}
-              onMouseLeave={() => setHoveredSection(null)}
-              component={ReactRouterLink}
-              to={isSmallScreen ? section.destination : undefined}
-              sx={{
-                background: section.backgroundColor,
-                paddingRight: `5vw`,
-                transition: "background-color 0.3s",
-                "&:hover": {
-                  backgroundColor: section.backgroundColor,
-                  paddingRight: `10vw`,
-                },
-                "& svg": {
-                  fontSize: "40px",
-                  color: "white",
-                },
+    <Paper
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        height: "100%",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 2,
+        width: isSmallScreen ? "100%" : "auto",
+        backgroundColor: "transparent", // Set the background color to transparent
+      }}
+    >
+      <List>
+        {sidebarItems.map((item, index) => (
+          <ListItem
+            key={index}
+            sx={{
+              background: item.backgroundColor,
+              // display: "flex",
+              // alignItems: "center",
+            }}
+          >
+            {item.icon}
+            <ReactRouterLink
+              to={`#${item.id}-section`}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                display: "flex",
+                alignItems: "center",
               }}
+              onClick={() => scrollToSection(item.id)}
             >
-              {section.icon}
-              <ListItemText sx={{ opacity: hoveredSection === index ? 1 : 0 }}>
-                {section.label}
-              </ListItemText>
-            </ListItemButton>
-          ))}
-        </List>
-      </div>
-    </>
+              <ListItemText primary={item.label} sx={{ ml: 1 }} />
+            </ReactRouterLink>
+          </ListItem>
+        ))}
+      </List>
+    </Paper>
   );
 };
 

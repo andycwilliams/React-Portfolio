@@ -28,11 +28,11 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 // React Vertical Timeline Imports
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+// import {
+//   VerticalTimeline,
+//   VerticalTimelineElement,
+// } from "react-vertical-timeline-component";
+// import "react-vertical-timeline-component/style.min.css";
 // Data Imports
 import resumeData from "./resumeData";
 
@@ -54,7 +54,7 @@ const ResumeItem = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Box>
+      <Box id="resume-section">
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Resume
         </Typography>

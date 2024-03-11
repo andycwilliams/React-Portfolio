@@ -62,7 +62,7 @@ const ProjectCard = ({
         </Typography>
         <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} color="primary" />
-          {/* <Chip label={projectSize ?? "Size"} /> */}
+          <Chip label={projectSize ?? "Size"} color="secondary" />
         </Stack>
         <Typography variant="body2" color="textSecondary" paragraph>
           {description ?? "No description available."}
@@ -106,14 +106,14 @@ const PortfolioBrief = () => {
             ))}
           </Grid>
         </Box>
-        <Container sx={{ textAlign: "center", marginTop: "2rem" }}>
+        <Box sx={{ textAlign: "center", marginTop: "2rem" }}>
           <Button
             variant="contained"
             sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
           >
             Go to Portfolio
           </Button>
-        </Container>
+        </Box>
       </Container>
     </Fade>
   );

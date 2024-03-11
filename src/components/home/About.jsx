@@ -23,25 +23,23 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-// Material UI Icons Imports
-import SchoolIcon from "@mui/icons-material/School";
-import WorkIcon from "@mui/icons-material/Work";
-// React Vertical Timeline Imports
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 
 // TODO: Add icons from Icons8
 // https://icons8.com/icons/set/css
+
+const contactInfo = [
+  { label: "Name", value: "Name" },
+  { label: "Title", value: "Web Developer" },
+  { label: "Email", value: "Email" },
+  { label: "Phone", value: "" },
+];
 
 const About = () => {
   // const handleResumeDownload = () => {};
 
   return (
     <Fade in={true} timeout={1000}>
-      <Container>
+      <Container id="about-section">
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
@@ -59,12 +57,12 @@ const About = () => {
                   width: "100%",
                 }}
               />
-              <Typography variant="body1">Name: Andy Williams</Typography>
-              <Typography variant="body1">Title: Web Developer</Typography>
-              <Typography variant="body1">
-                Email: andywilliamscoding@gmail.com
-              </Typography>
-              <Typography variant="body1">Phone:</Typography>
+              {contactInfo.map(({ label, value }, index) => (
+                <Typography key={index} variant="body1">
+                  <span style={{ fontWeight: "bold" }}>{label}: </span>
+                  {value}
+                </Typography>
+              ))}
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="body1" paragraph>
