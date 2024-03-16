@@ -66,14 +66,14 @@ const ExpandComponent = ({ defaultContent, additionalContent }) => {
 };
 
 const primarySkillsData = [
-  { name: "JavaScript", level: 75 },
-  { name: "CSS", level: 75 },
-  { name: "HTML", level: 75 },
-  { name: "React", level: 75 },
-  { name: "Java", level: 75 },
-  { name: "MongoDB", level: 75 },
-  { name: "Express", level: 75 },
-  { name: "Node.js", level: 75 },
+  { name: "JavaScript", level: 90 },
+  { name: "CSS", level: 90 },
+  { name: "HTML", level: 90 },
+  { name: "React", level: 80 },
+  { name: "Java", level: 80 },
+  { name: "MongoDB", level: 80 },
+  { name: "Express", level: 90 },
+  { name: "Node.js", level: 90 },
 ];
 
 const fullSkillsData = [
@@ -156,19 +156,17 @@ const Skills = () => {
     <Fade in={true} timeout={1000}>
       <Container>
         <Box
-          sx={
-            {
-              // p: { xs: "10px", sm: "20px" },
-              // mx: { xs: "0px", sm: "50px" },
-              // my: "10px",
-            }
-          }
+          sx={{
+            // p: { xs: "10px", sm: "20px" },
+            mx: { xs: "0px", sm: "150px" },
+            // my: "10px",
+          }}
         >
           <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
             Skills
           </Typography>
           <RenderPrimarySkills />
-          <RenderFullSkills />
+          {/* <RenderFullSkills /> */}
         </Box>
       </Container>
     </Fade>

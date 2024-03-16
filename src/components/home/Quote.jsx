@@ -23,7 +23,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Data Imports
-import sageWisdom from "./sageWisdom";
+import sageWisdom from "../data/sageWisdom";
 
 const Quote = () => {
   const item = sageWisdom[Math.floor(Math.random() * sageWisdom.length)];

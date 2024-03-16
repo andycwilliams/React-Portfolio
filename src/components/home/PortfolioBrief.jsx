@@ -27,9 +27,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Data Imports
-import projects from "../global/projectsList";
-// Dependency Imports
-import axios from "axios";
+import projects from "../data/projectsList";
 
 const ProjectCard = ({
   title,
@@ -50,6 +48,10 @@ const ProjectCard = ({
           objectFit: "contain",
           height: "200px",
           width: "100%",
+          transition: "transform 0.3s ease",
+          "&:hover": {
+            transform: "scale(1.05)",
+          },
         }}
       />
       <CardContent>
@@ -62,9 +64,13 @@ const ProjectCard = ({
         </Typography>
         <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} color="primary" />
-          <Chip label={projectSize ?? "Size"} color="secondary" />
+          <Chip
+            label={projectSize ?? "Size"}
+            color={projectSize === "Group" ? "secondary" : "tertiary"}
+          />
         </Stack>
         <Typography variant="body2" color="textSecondary" paragraph>
+          <strong>Description:</strong>{" "}
           {description ?? "No description available."}
         </Typography>
         <Typography variant="body2" color="textSecondary" paragraph>
@@ -107,12 +113,12 @@ const PortfolioBrief = () => {
           </Grid>
         </Box>
         <Box sx={{ textAlign: "center", marginTop: "2rem" }}>
-          <Button
+          {/* <Button
             variant="contained"
             sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
           >
             Go to Portfolio
-          </Button>
+          </Button> */}
         </Box>
       </Container>
     </Fade>

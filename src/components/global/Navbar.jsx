@@ -31,33 +31,71 @@ import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
+import { alpha } from "@mui/material/styles";
 // Material UI Icons Imports
 import ArticleIcon from "@mui/icons-material/Article";
+import CollectionsIcon from "@mui/icons-material/Collections";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import MailIcon from "@mui/icons-material/Mail";
+// Component Imports
+import NavbarMobile from "./NavbarMobile";
 
 const sidebarItems = [
-  { label: "Home", icon: <HomeIcon />, id: "home", backgroundColor: "#2196f3" },
+  {
+    label: "Home",
+    icon: <HomeIcon />,
+    id: "home",
+  },
   {
     label: "About",
     icon: <InfoIcon />,
     id: "about",
-    backgroundColor: "#4caf50",
   },
   {
     label: "Resume",
     icon: <ArticleIcon />,
     id: "resume",
-    backgroundColor: "#ff9800",
+  },
+  {
+    label: "Portfolio",
+    icon: <CollectionsIcon />,
+    id: "portfolio",
   },
   {
     label: "Contact",
     icon: <MailIcon />,
     id: "contact",
-    backgroundColor: "#e91e63",
   },
 ];
+
+const NavItem = ({ item, index, isMobile, scrollToSection }) => (
+  <ListItem
+    key={index}
+    sx={{
+      cursor: "pointer",
+      background: "#f8f9fa",
+      transition: "background-color 0.3s ease",
+      "&:hover": {
+        background: "#8e44ad",
+      },
+    }}
+    onClick={() => scrollToSection(item.id)}
+  >
+    {item.icon}
+    <ReactRouterLink
+      to={`#${item.id}-section`}
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <ListItemText primary={item.label} sx={{ ml: 1 }} />
+    </ReactRouterLink>
+  </ListItem>
+);
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -69,10 +107,9 @@ const Navbar = () => {
   };
 
   const scrollToSection = (id) => {
-    if (isSmallScreen) {
-      handleToggleSidebar();
-    }
-
+    // if (isSmallScreen) {
+    //   handleToggleSidebar();
+    // }
     const element = document.getElementById(`${id}-section`);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -80,7 +117,7 @@ const Navbar = () => {
   };
 
   return (
-    <Paper
+    <Box
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -91,36 +128,31 @@ const Navbar = () => {
         left: 0,
         zIndex: 2,
         width: isSmallScreen ? "100%" : "auto",
-        backgroundColor: "transparent", // Set the background color to transparent
+        backgroundColor: "transparent",
       }}
     >
-      <List>
-        {sidebarItems.map((item, index) => (
-          <ListItem
-            key={index}
-            sx={{
-              background: item.backgroundColor,
-              // display: "flex",
-              // alignItems: "center",
-            }}
-          >
-            {item.icon}
-            <ReactRouterLink
-              to={`#${item.id}-section`}
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-                display: "flex",
-                alignItems: "center",
-              }}
-              onClick={() => scrollToSection(item.id)}
-            >
-              <ListItemText primary={item.label} sx={{ ml: 1 }} />
-            </ReactRouterLink>
-          </ListItem>
-        ))}
-      </List>
-    </Paper>
+      {isSmallScreen && (
+        <NavbarMobile
+          sidebarItems={sidebarItems}
+          scrollToSection={scrollToSection}
+          NavItem={(props) => <NavItem {...props} isMobile />}
+        />
+      )}
+
+      {!isSmallScreen && (
+        <List>
+          {sidebarItems.map((item, index) => (
+            <NavItem
+              key={index}
+              item={item}
+              index={index}
+              isMobile={false}
+              scrollToSection={scrollToSection}
+            />
+          ))}
+        </List>
+      )}
+    </Box>
   );
 };
 
