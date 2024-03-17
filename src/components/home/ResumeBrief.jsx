@@ -34,9 +34,10 @@ const cardStyle = {
   // justifyContent: "center",
   // alignItems: "center",
   // flexDirection: "column",
-  p: { xs: "10px", sm: "20px" },
   // m: "0 100px 0 100px",
-  mx: { xs: "10px", sm: "140px" },
+  //
+  p: { xs: "10px", sm: "20px" },
+  // mx: { xs: "10px", sm: "140px" },
   my: "10px",
 };
 
@@ -45,7 +46,7 @@ const ResumeItem = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Box id="resume-section">
+      <Box id="resume-section" sx={{ mx: { xs: "0px", sm: "150px" } }}>
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Resume
         </Typography>
@@ -76,7 +77,7 @@ const ResumeItem = () => {
               <Typography variant="body1">{location ?? null}</Typography>
               {Object.keys(description).map((key) => (
                 <Typography key={key} variant="body2">
-                  {description[key] !== null ? description[key] : null}
+                  - {description[key] !== null ? description[key] : null}
                 </Typography>
               ))}
               <Typography variant="body2">{date ?? null}</Typography>

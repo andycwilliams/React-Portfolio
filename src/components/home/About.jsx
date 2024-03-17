@@ -15,6 +15,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import List from "@mui/material/List";
+import LinearProgress from "@mui/material/LinearProgress";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -28,10 +29,21 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // https://icons8.com/icons/set/css
 
 const contactInfo = [
-  { label: "Name", value: "Name" },
-  { label: "Title", value: "Web Developer" },
-  { label: "Email", value: "Email" },
+  { label: "Name", value: "Andy Williams" },
+  { label: "Title", value: "Full-stack Developer" },
+  { label: "Email", value: "" },
   { label: "Phone", value: "" },
+];
+
+const primarySkillsData = [
+  { name: "JavaScript", level: 90 },
+  { name: "CSS", level: 90 },
+  { name: "HTML", level: 90 },
+  { name: "React", level: 80 },
+  { name: "Java", level: 80 },
+  { name: "MongoDB", level: 80 },
+  { name: "Express", level: 90 },
+  { name: "Node.js", level: 90 },
 ];
 
 const About = () => {
@@ -39,13 +51,15 @@ const About = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Container id="about-section">
+      <Box id="about-section" sx={{ mx: { xs: "0px", sm: "150px" } }}>
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
-        <Paper sx={{ p: 5 }}>
+        <Paper
+        // sx={{ p: 5 }}
+        >
           <Grid container>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} sx={{ p: 5 }}>
               {/* Bio */}
               <CardMedia
                 component="img"
@@ -55,6 +69,7 @@ const About = () => {
                   objectFit: "contain",
                   height: "200px",
                   width: "100%",
+                  mb: "10px",
                 }}
               />
               {contactInfo.map(({ label, value }, index) => (
@@ -63,8 +78,14 @@ const About = () => {
                   {value}
                 </Typography>
               ))}
+              {primarySkillsData.map(({ name, level }, index) => (
+                <Box key={index}>
+                  <Typography>{name}</Typography>
+                  <LinearProgress variant="determinate" value={level} />
+                </Box>
+              ))}
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} sx={{ p: 5 }}>
               <Typography variant="body1" paragraph>
                 Born in Silicon Valley, raised in Silicon Forest.
               </Typography>
@@ -95,7 +116,7 @@ const About = () => {
             </Grid>
           </Grid>
         </Paper>
-      </Container>
+      </Box>
     </Fade>
   );
 };

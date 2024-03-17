@@ -101,8 +101,8 @@ const ProjectCard = ({
 const PortfolioBrief = () => {
   return (
     <Fade in={true} timeout={1000}>
-      <Container>
-        <Box id="portfolio-section">
+      <Box sx={{ mx: { xs: "0px", sm: "150px" } }}>
+        <Box id="portfolio-section" className="sections">
           <Typography variant="h2" sx={{ textAlign: "center" }}>
             Featured Projects
           </Typography>
@@ -120,7 +120,7 @@ const PortfolioBrief = () => {
             Go to Portfolio
           </Button> */}
         </Box>
-      </Container>
+      </Box>
     </Fade>
   );
 };

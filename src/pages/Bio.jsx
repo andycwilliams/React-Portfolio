@@ -142,7 +142,7 @@ const Bio = () => {
             </ListItem>
           </List>
         </div>
-        <Container sx={{ textAlign: "center", marginTop: "2rem" }}>
+        <Box sx={{ textAlign: "center", marginTop: "2rem" }}>
           <Button
             variant="contained"
             sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
@@ -150,7 +150,7 @@ const Bio = () => {
           >
             Download
           </Button>
-        </Container>
+        </Box>
       </Box>
     </>
   );

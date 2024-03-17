@@ -19,7 +19,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Dependency Imports
-import axios from "axios";
+// import axios from "axios";
 
 // https://github.com/codeforpdx/codepdx_website
 // https://codeforpdx.github.io/
@@ -28,17 +28,17 @@ import axios from "axios";
 const Portfolio = () => {
   const [repo, setRepo] = useState("");
 
-  const getData = () => {
-    axios
-      .get("https://api.github.com/users/andycwilliams/repos")
-      .then((res) => {
-        console.log(res.data);
-        setRepo(res.data[7].description);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const getData = () => {
+  //   axios
+  //     .get("https://api.github.com/users/andycwilliams/repos")
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       setRepo(res.data[7].description);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   return (
     <Box>

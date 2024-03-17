@@ -30,7 +30,7 @@ const Quote = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Container>
+      <Box sx={{ mx: { xs: "0px", sm: "150px" } }}>
         <Card sx={{ p: "20px", borderRadius: "25px" }}>
           <Box sx={{ textAlign: "center" }}>
             <Typography sx={{ fontSize: 30, fontStyle: "italic" }}>
@@ -43,7 +43,7 @@ const Quote = () => {
             </Typography>
           </Box>
         </Card>
-      </Container>
+      </Box>
     </Fade>
   );
 };

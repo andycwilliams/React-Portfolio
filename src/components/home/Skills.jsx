@@ -154,21 +154,19 @@ const RenderFullSkills = () => (
 const Skills = () => {
   return (
     <Fade in={true} timeout={1000}>
-      <Container>
-        <Box
-          sx={{
-            // p: { xs: "10px", sm: "20px" },
-            mx: { xs: "0px", sm: "150px" },
-            // my: "10px",
-          }}
-        >
-          <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
-            Skills
-          </Typography>
-          <RenderPrimarySkills />
-          {/* <RenderFullSkills /> */}
-        </Box>
-      </Container>
+      <Box
+        sx={{
+          // p: { xs: "10px", sm: "20px" },
+          mx: { xs: "0px", sm: "150px" },
+          // my: "10px",
+        }}
+      >
+        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
+          Skills
+        </Typography>
+        <RenderPrimarySkills />
+        {/* <RenderFullSkills /> */}
+      </Box>
     </Fade>
   );
 };

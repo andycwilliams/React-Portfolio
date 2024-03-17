@@ -32,7 +32,7 @@ const Home = () => {
     <>
       <Hero />
       <About />
-      <Skills />
+      {/* <Skills /> */}
       <ResumeBrief />
       {/* <Quote /> */}
       <PortfolioBrief />

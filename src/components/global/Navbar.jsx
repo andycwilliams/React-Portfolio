@@ -74,7 +74,10 @@ const NavItem = ({ item, index, isMobile, scrollToSection }) => (
     key={index}
     sx={{
       cursor: "pointer",
-      background: "#f8f9fa",
+      borderRadius: isMobile ? 0 : "25px",
+      margin: "5px",
+      border: "solid 1px #000",
+      background: "#fff",
       transition: "background-color 0.3s ease",
       "&:hover": {
         background: "#8e44ad",
