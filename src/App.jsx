@@ -1,6 +1,7 @@
 // React Imports
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Material UI Imports
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
@@ -14,14 +15,12 @@ import Portfolio from "./pages/Portfolio";
 // Theme Imports
 import getTheme from "./theme";
 
-const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
+const App = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <CssBaseline />
       <ThemeProvider theme={getTheme(darkMode ? "dark" : "light")}>
-        <BrowserRouter darkMode={darkMode} setDarkMode={setDarkMode}>
+        <Router>
           <Navbar />
           <main>
             <Routes>
@@ -32,10 +31,9 @@ const App = () => {
             </Routes>
           </main>
           <Footer />
-        </BrowserRouter>
+        </Router>
       </ThemeProvider>
     </>
   );
 };
-
 export default App;

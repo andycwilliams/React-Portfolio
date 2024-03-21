@@ -24,6 +24,8 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
+// Assets Imports
+import profileImage from "/assets/images/profile_picture.webp";
 
 // TODO: Add icons from Icons8
 // https://icons8.com/icons/set/css
@@ -51,55 +53,71 @@ const About = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Box id="about-section" sx={{ mx: { xs: "0px", sm: "150px" } }}>
+      <Box id="about-section" sx={{ mx: { xs: "0px", sm: "75px" } }}>
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
-        <Paper
+        <Box
         // sx={{ p: 5 }}
         >
           <Grid container>
-            <Grid item xs={12} md={6} sx={{ p: 5 }}>
-              {/* Bio */}
-              <CardMedia
-                component="img"
-                image={"/assets/images/placeholder.png"}
-                alt={`Profile of Andy`}
-                sx={{
-                  objectFit: "contain",
-                  height: "200px",
-                  width: "100%",
-                  mb: "10px",
-                }}
-              />
-              {contactInfo.map(({ label, value }, index) => (
-                <Typography key={index} variant="body1">
-                  <span style={{ fontWeight: "bold" }}>{label}: </span>
-                  {value}
-                </Typography>
-              ))}
-              {primarySkillsData.map(({ name, level }, index) => (
-                <Box key={index}>
-                  <Typography>{name}</Typography>
-                  <LinearProgress variant="determinate" value={level} />
+            <Grid item xs={12} md={6} sx={{ px: 5, py: 2 }}>
+              <Box>
+                {/* Bio */}
+                <CardMedia
+                  component="img"
+                  image={profileImage}
+                  alt={`Profile of Andy Williams`}
+                  sx={{
+                    objectFit: "contain",
+                    height: "200px",
+                    width: "100%",
+                    mb: "10px",
+                  }}
+                />
+                {contactInfo.map(({ label, value }, index) => (
+                  <Typography key={index} variant="body1">
+                    <span style={{ fontWeight: "bold" }}>{label}: </span>
+                    {value}
+                  </Typography>
+                ))}
+              </Box>
+              <Box>
+                {/* Skills */}
+                <Box sx={{ textAlign: "center" }}>
+                  <Typography variant="h5">Primary Skills</Typography>
                 </Box>
-              ))}
+                {primarySkillsData.map(({ name, level }, index) => (
+                  <Box key={index}>
+                    <Typography>{name}</Typography>
+                    <LinearProgress variant="determinate" value={level} />
+                  </Box>
+                ))}
+              </Box>
             </Grid>
-            <Grid item xs={12} md={6} sx={{ p: 5 }}>
+            <Grid item xs={12} md={6} sx={{ px: 5, py: 2 }}>
               <Typography variant="body1" paragraph>
                 Born in Silicon Valley, raised in Silicon Forest.
               </Typography>
               <Typography variant="body1" paragraph>
-                Front and back end developer utilizing an extensive and diverse
-                background in communication and technical knowledge. Experienced
-                in both self-directed work and collaborating across departments,
-                communicating technical issues to non-technical clients. Earned
-                full-stack development certificate from the University of Oregon
-                with a focus on JavaScript and keeping pace with newer
-                technologies such as React and MongoDB. Additionally graduated
-                from Southern Methodist University for Java React Native.
-                Collaborated on key programming projects as well as pursuing
-                independent endeavors, such as supervising a team of
+                Front and back end developer specializing in React and Java, yet
+                also implementing numerous other tools and technology.
+                Certificates in MERN (from the University of Oreogn) as well as
+                Java React Native (from Southern Methodist University). Oracle
+                logo Oracle Cloud Infrastructure 2022 Certified Foundations
+                AssociateOracle Cloud Infrastructure 2022 Certified Foundations
+                Associate Oracle Volunteering for Portland civic tech. Always
+                looking to contribute more for sustainability, universal
+                education, and ethics in technology. utilizing an extensive and
+                diverse background in communication and technical knowledge.
+                Experienced in both self-directed work and collaborating across
+                departments, communicating technical issues to non-technical
+                clients. Earned full-stack development certificate from the
+                University of Oregon with a focus on JavaScript and keeping pace
+                with newer technologies such as React and MongoDB. Additionally
+                graduated from Southern Methodist University for Java React
+                Native. Collaborated on key programming projects as well as
+                pursuing independent endeavors, such as supervising a team of
                 multilingual workers and coding apps individually. Leveraging
                 problem-solving abilities and creativity to adapt and remain
                 competitive in the ever-evolving tech landscape. Eager to
@@ -115,7 +133,7 @@ const About = () => {
               </Typography>
             </Grid>
           </Grid>
-        </Paper>
+        </Box>
       </Box>
     </Fade>
   );

@@ -23,7 +23,8 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
-import heroBackgroundImage from "/assets/images/heroBackground.jpg";
+// Assets Imports
+import heroBackgroundImage from "/assets/images/hero.webp";
 // Material UI Icons Imports
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -37,6 +38,7 @@ const Hero = () => {
     <div
       id="home-section"
       style={{
+        position: "relative",
         backgroundImage: `url(${heroBackgroundImage})`,
         backgroundSize: "cover",
         height: "700px",
@@ -49,44 +51,59 @@ const Hero = () => {
         padding: "20px",
       }}
     >
-      <Fade in={true} timeout={1000}>
-        <div>
-          <Typography
-            variant="h1"
-            sx={{ fontSize: "5rem", fontWeight: "bold" }}
-          >
-            Andy
-          </Typography>
-        </div>
-      </Fade>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Fade in={true} timeout={1000}>
+          <div>
+            <Typography
+              variant="h1"
+              sx={{ fontSize: "5rem", fontWeight: "bold" }}
+            >
+              Andy
+            </Typography>
+          </div>
+        </Fade>
 
-      <Fade in={true} timeout={1000} style={{ transitionDelay: "200ms" }}>
-        <div>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontSize: "2.5rem",
-              // color: theme.palette.primary.main
-            }}
-            gutterBottom
-          >
-            <TypeAnimation
-              sequence={[
-                "Web ",
-                1000,
-                "Front-end ",
-                1000,
-                "Back-end ",
-                1000,
-                "Full-stack ",
-              ]}
-              wrapper="span"
-              cursor={false}
-            />
-            Developer
-          </Typography>
-        </div>
-      </Fade>
+        <Fade in={true} timeout={1000} style={{ transitionDelay: "200ms" }}>
+          <div>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                fontSize: "2.5rem",
+                // color: theme.palette.primary.main
+              }}
+              gutterBottom
+            >
+              <TypeAnimation
+                sequence={[
+                  "Web ",
+                  1000,
+                  "Front-end ",
+                  1000,
+                  "Back-end ",
+                  1000,
+                  "Full-stack ",
+                ]}
+                wrapper="span"
+                cursor={false}
+              />
+              Developer
+            </Typography>
+          </div>
+        </Fade>
+      </div>
     </div>
   );
 };

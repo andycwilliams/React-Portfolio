@@ -15,13 +15,14 @@ const theme = (mode) =>
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(","),
-      h2: { marginTop: "2.5rem", marginBottom: "2.5rem" },
+      // h2: { margin: "2.5rem 0 2.5rem 0" },
     },
     palette: {
       mode,
       primary: {
         main: mode === "dark" ? "#6c5ce7" : "#8e44ad",
-        contrastText: mode === "dark" ? "#ecf0f1" : "#ecf0f1",
+        // contrastText: mode === "dark" ? "#fff" : "#fff",
+        contrastText: "#fff",
       },
       secondary: {
         main: mode === "dark" ? "#27ae60" : "#2ecc71",

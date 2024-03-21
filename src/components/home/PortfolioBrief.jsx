@@ -40,6 +40,13 @@ const ProjectCard = ({
 }) => (
   <Grid item xs={12} md={4}>
     <Card sx={{ height: "100%" }}>
+      <Typography
+        variant="h5"
+        component="div"
+        sx={{ textAlign: "center", mb: 2 }}
+      >
+        {title ?? "Untitled Project"}
+      </Typography>
       <CardMedia
         component="img"
         image={image ?? null}
@@ -55,20 +62,26 @@ const ProjectCard = ({
         }}
       />
       <CardContent>
-        <Typography
-          variant="h5"
-          component="div"
-          sx={{ textAlign: "center", mb: 2 }}
-        >
-          {title ?? "Untitled Project"}
-        </Typography>
-        <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
+        {/* <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} color="primary" />
           <Chip
             label={projectSize ?? "Size"}
             color={projectSize === "Group" ? "secondary" : "tertiary"}
           />
-        </Stack>
+        </Stack> */}
+        <CardActions sx={{ justifyContent: "center" }}>
+          {links.map(({ href, icon }, index) => (
+            <Link
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              color="primary"
+            >
+              {icon}
+            </Link>
+          ))}
+        </CardActions>
         <Typography variant="body2" color="textSecondary" paragraph>
           <strong>Description:</strong>{" "}
           {description ?? "No description available."}
@@ -78,22 +91,10 @@ const ProjectCard = ({
           {techStack ? techStack.join(", ") : "N/A"}
         </Typography>
       </CardContent>
-      <CardActions sx={{ justifyContent: "center" }}>
-        {links.map(({ href, icon }, index) => (
-          <Link
-            key={index}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            color="primary"
-          >
-            {icon}
-          </Link>
-        ))}
-        {/* <Button size="small" color="primary">
+
+      {/* <Button size="small" color="primary">
           Learn More
         </Button> */}
-      </CardActions>
     </Card>
   </Grid>
 );
@@ -101,7 +102,7 @@ const ProjectCard = ({
 const PortfolioBrief = () => {
   return (
     <Fade in={true} timeout={1000}>
-      <Box sx={{ mx: { xs: "0px", sm: "150px" } }}>
+      <Box sx={{ px: { xs: 5, sm: 0 }, mx: { xs: "0px", sm: "75px" } }}>
         <Box id="portfolio-section" className="sections">
           <Typography variant="h2" sx={{ textAlign: "center" }}>
             Featured Projects
@@ -112,14 +113,14 @@ const PortfolioBrief = () => {
             ))}
           </Grid>
         </Box>
-        <Box sx={{ textAlign: "center", marginTop: "2rem" }}>
-          {/* <Button
+        {/* <Box sx={{ textAlign: "center", marginTop: "2rem" }}>
+          <Button
             variant="contained"
             sx={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
           >
             Go to Portfolio
-          </Button> */}
-        </Box>
+          </Button>
+        </Box> */}
       </Box>
     </Fade>
   );

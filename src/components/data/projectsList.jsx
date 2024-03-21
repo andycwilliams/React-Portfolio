@@ -46,7 +46,7 @@ const projects = [
     role: "Full-stack Developer",
     description:
       "Web page for a fictional restaurant. Fully responsive with functioning contact form.",
-    image: "/assets/images/placeholder.png",
+    image: "/assets/images/placeholder.webp",
     links: [
       {
         href: "https://github.com/andycwilliams/The-Fearless-Eater",
@@ -65,7 +65,7 @@ const projects = [
     role: "Front-end Developer",
     description:
       "Your daily horoscope. Or for whenever you want. The stars provide! Infallible and always true and 100% accurate. Made with vanilla HTML, CSS, and JavaScript, which are also infallible.",
-    image: "/assets/images/placeholder.png",
+    image: "/assets/images/placeholder.webp",
     date: "2022",
     links: [
       {
@@ -86,7 +86,7 @@ const projects = [
     role: "Full-Stack Developer",
     description:
       "The requisite to-do app. No portfolio is presentable without one.",
-    image: "/assets/images/placeholder.png",
+    image: "/assets/images/placeholder.webp",
     links: [
       {
         href: "https://github.com/andycwilliams/To-Do-App/",

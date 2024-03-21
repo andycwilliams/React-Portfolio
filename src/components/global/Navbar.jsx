@@ -16,6 +16,7 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import Fade from "@mui/material/Fade";
 import Grid from "@mui/material/Grid";
+import Grow from "@mui/material/Grow";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import List from "@mui/material/List";
@@ -30,8 +31,8 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { styled } from "@mui/system";
 import { useMediaQuery, useTheme } from "@mui/material";
-import { alpha } from "@mui/material/styles";
 // Material UI Icons Imports
 import ArticleIcon from "@mui/icons-material/Article";
 import CollectionsIcon from "@mui/icons-material/Collections";
@@ -44,75 +45,107 @@ import NavbarMobile from "./NavbarMobile";
 const sidebarItems = [
   {
     label: "Home",
-    icon: <HomeIcon />,
+    icon: <HomeIcon fontSize="large" />,
     id: "home",
   },
   {
     label: "About",
-    icon: <InfoIcon />,
+    icon: <InfoIcon fontSize="large" />,
     id: "about",
   },
   {
     label: "Resume",
-    icon: <ArticleIcon />,
+    icon: <ArticleIcon fontSize="large" />,
     id: "resume",
   },
   {
     label: "Portfolio",
-    icon: <CollectionsIcon />,
+    icon: <CollectionsIcon fontSize="large" />,
     id: "portfolio",
   },
   {
     label: "Contact",
-    icon: <MailIcon />,
+    icon: <MailIcon fontSize="large" />,
     id: "contact",
   },
 ];
 
-const NavItem = ({ item, index, isMobile, scrollToSection }) => (
-  <ListItem
-    key={index}
-    sx={{
-      cursor: "pointer",
-      borderRadius: isMobile ? 0 : "25px",
-      margin: "5px",
-      border: "solid 1px #000",
-      background: "#fff",
-      transition: "background-color 0.3s ease",
-      "&:hover": {
-        background: "#8e44ad",
-      },
-    }}
-    onClick={() => scrollToSection(item.id)}
-  >
-    {item.icon}
-    <ReactRouterLink
-      to={`#${item.id}-section`}
-      style={{
-        textDecoration: "none",
-        color: "inherit",
-        display: "flex",
-        alignItems: "center",
+const NavItem = ({ item, isMobile, scrollToSection }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const theme = useTheme();
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <ListItem
+      sx={{
+        cursor: "pointer",
+        color: isHovered
+          ? theme.palette.primary.contrastText
+          : theme.palette.primary.main,
+        borderRadius: isMobile ? 0 : "25px",
+        m: "5px",
+        background: isMobile
+          ? theme.palette.primary.main
+          : isHovered
+          ? theme.palette.primary.main
+          : null,
+        // display: "flex",
+        // alignItems: "center",
+        // justifyContent: "flex-start",
+        // width: "fit-content",
+        // "&:hover": {
+        //   "& .label": {
+        //     width: "auto",
+        //     opacity: 1,
+        //     ml: 1,
+        //   },
+        // },
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={() => scrollToSection(item.id)}
     >
-      <ListItemText primary={item.label} sx={{ ml: 1 }} />
-    </ReactRouterLink>
-  </ListItem>
-);
+      {item.icon}
+      <Grow in={isHovered}>
+        <ReactRouterLink
+          to={`#${item.id}-section`}
+          style={{
+            textDecoration: "none",
+            // color: "inherit",
+            // display: "flex",
+            // alignItems: "center",
+            // overflow: "hidden",
+          }}
+        >
+          <ListItemText
+            primary={item.label}
+            sx={{
+              // width: 0,
+              // opacity: 0,
+              // transition: "width 0.3s, opacity 0.3s",
+              ml: 1,
+              color: theme.palette.primary.contrastText,
+            }}
+            // className="label"
+          />
+        </ReactRouterLink>
+      </Grow>
+    </ListItem>
+  );
+};
 
 const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   // const [hoveredSection, setHoveredSection] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
-  const handleToggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
   const scrollToSection = (id) => {
-    // if (isSmallScreen) {
-    //   handleToggleSidebar();
-    // }
     const element = document.getElementById(`${id}-section`);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

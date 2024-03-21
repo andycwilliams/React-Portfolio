@@ -9,7 +9,7 @@
 
 Personal portfolio built using React. Contains bio, resume, list of projects, and contact form.
 
-<!-- ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshot.png?raw=true "Screenshot of deployed application") -->
+<!-- ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshotcardmedia?raw=true "Screenshot of deployed application") -->
 
 ## Table of Contents
 

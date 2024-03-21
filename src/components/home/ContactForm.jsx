@@ -60,14 +60,15 @@ const ContactForm = () => {
     <Fade in={true} timeout={1000}>
       <Box
         id="contact-section"
-        className="customName"
+        // className="customName"
         sx={{
           // display: "flex",
           // flexDirection: "column",
           // alignItems: "center",
           // my: "2rem",
           // mx: "1rem",
-          mx: { xs: "0px", sm: "150px" },
+          mx: { xs: "0px", sm: "200px" },
+          px: { xs: 5, sm: 0 },
         }}
       >
         {/* <Typography component="h1" variant="h4" mb={2}> */}

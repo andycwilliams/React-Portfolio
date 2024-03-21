@@ -46,7 +46,10 @@ const ResumeItem = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Box id="resume-section" sx={{ mx: { xs: "0px", sm: "150px" } }}>
+      <Box
+        id="resume-section"
+        sx={{ px: { xs: 5, sm: 0 }, mx: { xs: "0px", sm: "75px" } }}
+      >
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Resume
         </Typography>
