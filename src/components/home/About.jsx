@@ -53,7 +53,7 @@ const About = () => {
 
   return (
     <Fade in={true} timeout={1000}>
-      <Box id="about-section" sx={{ mx: { xs: "0px", sm: "75px" } }}>
+      <Box id="about-section" sx={{ mx: { xs: "0px", sm: "100px" } }}>
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
@@ -61,9 +61,9 @@ const About = () => {
         // sx={{ p: 5 }}
         >
           <Grid container>
-            <Grid item xs={12} md={6} sx={{ px: 5, py: 2 }}>
+            <Grid item xs={12} md={6} sx={{ px: 1, py: 1 }}>
               <Box>
-                {/* Bio */}
+                {/* Photo */}
                 <CardMedia
                   component="img"
                   image={profileImage}
@@ -85,7 +85,9 @@ const About = () => {
               <Box>
                 {/* Skills */}
                 <Box sx={{ textAlign: "center" }}>
-                  <Typography variant="h5">Primary Skills</Typography>
+                  <Typography variant="h5" component="h3">
+                    Primary Skills
+                  </Typography>
                 </Box>
                 {primarySkillsData.map(({ name, level }, index) => (
                   <Box key={index}>
@@ -95,40 +97,33 @@ const About = () => {
                 ))}
               </Box>
             </Grid>
-            <Grid item xs={12} md={6} sx={{ px: 5, py: 2 }}>
-              <Typography variant="body1" paragraph>
-                Born in Silicon Valley, raised in Silicon Forest.
+            {/* Bio */}
+            <Grid item xs={12} md={6} sx={{ px: 1, py: 1 }}>
+              <Typography variant="h6" component="h3" paragraph>
+                Born in Silicon Valley, raised in Silicon Forest
               </Typography>
               <Typography variant="body1" paragraph>
-                Front and back end developer specializing in React and Java, yet
-                also implementing numerous other tools and technology.
-                Certificates in MERN (from the University of Oreogn) as well as
-                Java React Native (from Southern Methodist University). Oracle
-                logo Oracle Cloud Infrastructure 2022 Certified Foundations
-                AssociateOracle Cloud Infrastructure 2022 Certified Foundations
-                Associate Oracle Volunteering for Portland civic tech. Always
-                looking to contribute more for sustainability, universal
-                education, and ethics in technology. utilizing an extensive and
-                diverse background in communication and technical knowledge.
-                Experienced in both self-directed work and collaborating across
-                departments, communicating technical issues to non-technical
-                clients. Earned full-stack development certificate from the
-                University of Oregon with a focus on JavaScript and keeping pace
-                with newer technologies such as React and MongoDB. Additionally
-                graduated from Southern Methodist University for Java React
-                Native. Collaborated on key programming projects as well as
-                pursuing independent endeavors, such as supervising a team of
-                multilingual workers and coding apps individually. Leveraging
-                problem-solving abilities and creativity to adapt and remain
-                competitive in the ever-evolving tech landscape. Eager to
-                continue promoting sustainability, universal education, and
-                ethics in technology.
+                Hello, I'm Andy, a Portland-based full stack developer
+                specializing in React and Java. I have experience with both
+                front and back end, including UI and applying accessibility
+                standards.
               </Typography>
               <Typography variant="body1" paragraph>
-                When I'm not doing that, I'm playing music, volunteering for
-                open-source projects, or learning some cool new tech.
+                I have certificates in MERN (from the University of Oregon),
+                Java React Native (from Southern Methodist University), as well
+                as Cloud Infrastructure 2022 Certified Foundations Associate.
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" paragraph>
+                My goal is to help make tech more accessible and efficient for
+                everyone. Always looking to contribute more for sustainability,
+                universal education, and ethics in technology.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                When I'm not doing that I'm practicing music, volunteering with
+                local civic tech organizations, or failing to read through my
+                book collection.
+              </Typography>
+              <Typography variant="body1" paragraph>
                 Always looking forward to what's next!
               </Typography>
             </Grid>

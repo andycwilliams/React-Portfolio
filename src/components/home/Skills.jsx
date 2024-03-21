@@ -157,7 +157,7 @@ const Skills = () => {
       <Box
         sx={{
           // p: { xs: "10px", sm: "20px" },
-          mx: { xs: "0px", sm: "75px" },
+          mx: { xs: "0px", sm: "100px" },
           // my: "10px",
         }}
       >

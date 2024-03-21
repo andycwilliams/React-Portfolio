@@ -89,6 +89,9 @@ const NavItem = ({ item, isMobile, scrollToSection }) => {
         color: isHovered
           ? theme.palette.primary.contrastText
           : theme.palette.primary.main,
+        // color: isHovered
+        //   ? theme.palette.primary.contrastText
+        //   : theme.palette.primary.main,
         borderRadius: isMobile ? 0 : "25px",
         m: "5px",
         background: isMobile

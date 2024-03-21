@@ -31,78 +31,83 @@ import projects from "../data/projectsList";
 
 const ProjectCard = ({
   title,
-  projectSize,
+  // projectSize,
   description,
-  role,
+  // role,
   image,
   links,
   techStack,
-}) => (
-  <Grid item xs={12} md={4}>
-    <Card sx={{ height: "100%" }}>
-      <Typography
-        variant="h5"
-        component="div"
-        sx={{ textAlign: "center", mb: 2 }}
-      >
-        {title ?? "Untitled Project"}
-      </Typography>
-      <CardMedia
-        component="img"
-        image={image ?? null}
-        alt={`${title} image`}
-        sx={{
-          objectFit: "contain",
-          height: "200px",
-          width: "100%",
-          transition: "transform 0.3s ease",
-          "&:hover": {
-            transform: "scale(1.05)",
-          },
-        }}
-      />
-      <CardContent>
-        {/* <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
+}) => {
+  const theme = useTheme();
+
+  return (
+    <Grid item xs={12} md={4}>
+      <Card sx={{ height: "100%" }}>
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{ textAlign: "center", mb: 2 }}
+        >
+          {title ?? "Untitled Project"}
+        </Typography>
+        <CardMedia
+          component="img"
+          image={image ?? null}
+          alt={`${title} image`}
+          sx={{
+            objectFit: "contain",
+            height: "200px",
+            width: "100%",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+        />
+        <CardContent>
+          {/* <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} color="primary" />
           <Chip
             label={projectSize ?? "Size"}
             color={projectSize === "Group" ? "secondary" : "tertiary"}
           />
         </Stack> */}
-        <CardActions sx={{ justifyContent: "center" }}>
-          {links.map(({ href, icon }, index) => (
-            <Link
-              key={index}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="primary"
-            >
-              {icon}
-            </Link>
-          ))}
-        </CardActions>
-        <Typography variant="body2" color="textSecondary" paragraph>
-          <strong>Description:</strong>{" "}
-          {description ?? "No description available."}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" paragraph>
-          <strong>Technology used:</strong>{" "}
-          {techStack ? techStack.join(", ") : "N/A"}
-        </Typography>
-      </CardContent>
+          <CardActions sx={{ justifyContent: "center" }}>
+            {links.map(({ href, icon }, index) => (
+              <Link
+                key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                // color="primary"
+                sx={{ color: theme.palette.accent.main }}
+              >
+                {icon}
+              </Link>
+            ))}
+          </CardActions>
+          <Typography variant="body2" color="textSecondary" paragraph>
+            <strong>Description:</strong>{" "}
+            {description ?? "No description available."}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" paragraph>
+            <strong>Technology used:</strong>{" "}
+            {techStack ? techStack.join(", ") : "N/A"}
+          </Typography>
+        </CardContent>
 
-      {/* <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           Learn More
         </Button> */}
-    </Card>
-  </Grid>
-);
+      </Card>
+    </Grid>
+  );
+};
 
 const PortfolioBrief = () => {
   return (
     <Fade in={true} timeout={1000}>
-      <Box sx={{ px: { xs: 5, sm: 0 }, mx: { xs: "0px", sm: "75px" } }}>
+      <Box sx={{ px: { xs: 2, sm: 0 }, mx: { xs: "0px", sm: "100px" } }}>
         <Box id="portfolio-section" className="sections">
           <Typography variant="h2" sx={{ textAlign: "center" }}>
             Featured Projects

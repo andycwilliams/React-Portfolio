@@ -1,35 +1,15 @@
 // React Imports
 import { useRef } from "react";
 // Material UI Imports
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Checkbox from "@mui/material/Checkbox";
-import Chip from "@mui/material/Chip";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Fade from "@mui/material/Fade";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // emailjs Imports
 import emailjs from "@emailjs/browser";
-
-// const { REACT_APP_API_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_SERVICE_ID } = process.env;
-
-// console.log(REACT_APP_API_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_SERVICE_ID);
 
 const ContactForm = () => {
   const form = useRef();
@@ -38,22 +18,18 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      // .send(
-      //   `${REACT_APP_SERVICE_ID}`,
-      //   `${REACT_APP_TEMPLATE_ID}`,
-      //   form.current,
-      //   `${REACT_APP_API_KEY}`
-      // )
-      .send(
+      .sendForm(
         "service_co2agxf",
         "template_20pnwni",
         form.current,
         "AkBl59Ya3226OfPyQ"
       )
-      .then((result) => {
-        console.log(result.text);
-      }, console.error());
-    e.target.reset();
+      .then(() => {
+        e.target.reset();
+      }),
+      () => {
+        console.error();
+      };
   };
 
   return (
@@ -67,11 +43,10 @@ const ContactForm = () => {
           // alignItems: "center",
           // my: "2rem",
           // mx: "1rem",
-          mx: { xs: "0px", sm: "200px" },
-          px: { xs: 5, sm: 0 },
+          mx: { xs: "0px", sm: "300px" },
+          px: { xs: 2, sm: 0 },
         }}
       >
-        {/* <Typography component="h1" variant="h4" mb={2}> */}
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Contact Me
         </Typography>
@@ -130,7 +105,6 @@ const ContactForm = () => {
           </Grid>
           <Button
             type="submit"
-            // disabled={formCompleted}
             fullWidth
             variant="contained"
             sx={{ mt: "1rem" }}

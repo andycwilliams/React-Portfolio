@@ -11,12 +11,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const socialMediaLinks = [
   {
     href: "https://github.com/andycwilliams",
-    icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+    icon: <GitHubIcon sx={{ fontSize: 35 }} />,
     ariaLabel: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/andrewcharleswilliams/",
-    icon: <LinkedInIcon sx={{ fontSize: 50 }} />,
+    icon: <LinkedInIcon sx={{ fontSize: 35 }} />,
     ariaLabel: "LinkedIn",
   },
 ];

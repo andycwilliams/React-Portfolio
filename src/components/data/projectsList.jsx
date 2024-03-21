@@ -13,11 +13,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/codeforpdx/PASS",
-        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
       },
       {
         href: "https://passsmartwallet-967e217a2652.herokuapp.com/",
-        icon: <PublicIcon sx={{ fontSize: 50 }} />,
+        icon: <PublicIcon sx={{ fontSize: 40 }} />,
       },
     ],
     techStack: ["SOLID", "React", "Vite", "JSDocs", "MUI", "NPM", "ES Lint"],
@@ -31,11 +31,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/codeforpdx/codepdx_website",
-        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
       },
       {
         href: "https://www.codepdx.org/",
-        icon: <PublicIcon sx={{ fontSize: 50 }} />,
+        icon: <PublicIcon sx={{ fontSize: 40 }} />,
       },
     ],
     techStack: ["React", "Material UI", "ES Lint", "EmailJS", "etc? (Vitest?)"],
@@ -50,11 +50,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/andycwilliams/The-Fearless-Eater",
-        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
       },
       {
         href: "https://andycwilliams.github.io/The-Fearless-Eater/",
-        icon: <PublicIcon sx={{ fontSize: 50 }} />,
+        icon: <PublicIcon sx={{ fontSize: 40 }} />,
       },
     ],
     techStack: ["React", "Bootstrap 5", "EmailJS"],
@@ -70,11 +70,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/andycwilliams/Your-Horoscope/",
-        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
       },
       {
         href: "https://andycwilliams.github.io/Your-Horoscope/",
-        icon: <PublicIcon sx={{ fontSize: 50 }} />,
+        icon: <PublicIcon sx={{ fontSize: 40 }} />,
       },
     ],
     techStack: ["HTML", "CSS", "JavaScript", "W3"],
@@ -90,11 +90,11 @@ const projects = [
     links: [
       {
         href: "https://github.com/andycwilliams/To-Do-App/",
-        icon: <GitHubIcon sx={{ fontSize: 50 }} />,
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
       },
       {
         href: "https://andycwilliams.github.io/To-Do-App/",
-        icon: <PublicIcon sx={{ fontSize: 50 }} />,
+        icon: <PublicIcon sx={{ fontSize: 40 }} />,
       },
     ],
     techStack: ["HTML", "SASS", "JavaScript", "Express", "Node"],

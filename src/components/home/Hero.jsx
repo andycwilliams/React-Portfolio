@@ -1,41 +1,20 @@
-import { useState, useEffect } from "react";
 // Material UI Imports
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Checkbox from "@mui/material/Checkbox";
-import Chip from "@mui/material/Chip";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Fade from "@mui/material/Fade";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Assets Imports
 import heroBackgroundImage from "/assets/images/hero.webp";
-// Material UI Icons Imports
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // React Animation Imports
 import { TypeAnimation } from "react-type-animation";
+const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
 
 const Hero = () => {
   const theme = useTheme();
 
   return (
-    <div
+    <Box
       id="home-section"
       style={{
         position: "relative",
@@ -51,14 +30,14 @@ const Hero = () => {
         padding: "20px",
       }}
     >
-      <div
+      <Box
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          backgroundColor: "rgba(0, 0, 0, 0.65)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -66,45 +45,59 @@ const Hero = () => {
         }}
       >
         <Fade in={true} timeout={1000}>
-          <div>
-            <Typography
-              variant="h1"
-              sx={{ fontSize: "5rem", fontWeight: "bold" }}
-            >
-              Andy
-            </Typography>
-          </div>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: "5rem", fontWeight: "bold" }}
+          >
+            Andy
+          </Typography>
         </Fade>
 
         <Fade in={true} timeout={1000} style={{ transitionDelay: "200ms" }}>
-          <div>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                fontSize: "2.5rem",
-                // color: theme.palette.primary.main
-              }}
-              gutterBottom
+          <Typography
+            variant="h3"
+            component="h2"
+            // sx={{ fontSize: "2.5rem" }}
+            gutterBottom
+          >
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={{ xs: 1, sm: 2 }}
+              // sx={{ display: "flex", alignItems: "center" }}
             >
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={
+                  {
+                    // marginLeft: "10px",
+                    // color: theme.palette.primary.main,
+                  }
+                }
+              >
+                Developing
+              </Typography>
               <TypeAnimation
+                className={CURSOR_CLASS_NAME}
                 sequence={[
-                  "Web ",
+                  "Web design",
                   1000,
-                  "Front-end ",
+                  "Front-end",
                   1000,
-                  "Back-end ",
+                  "Back-end",
                   1000,
-                  "Full-stack ",
+                  "Full-stack",
+                  (el) => el.classList.remove(CURSOR_CLASS_NAME),
                 ]}
-                wrapper="span"
-                cursor={false}
+                wrapper="p"
+                // cursor={false}
+                style={{ color: theme.palette.primary.main }}
               />
-              Developer
-            </Typography>
-          </div>
+            </Stack>
+          </Typography>
         </Fade>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

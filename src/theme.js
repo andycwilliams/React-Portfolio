@@ -20,24 +20,24 @@ const theme = (mode) =>
     palette: {
       mode,
       primary: {
-        main: mode === "dark" ? "#6c5ce7" : "#8e44ad",
+        main: mode === "dark" ? "#1D4373" : "#3A77AF",
         // contrastText: mode === "dark" ? "#fff" : "#fff",
         contrastText: "#fff",
       },
       secondary: {
-        main: mode === "dark" ? "#27ae60" : "#2ecc71",
+        main: mode === "dark" ? "#666666" : "#D3D3D3",
         contrastText: mode === "dark" ? "#ecf0f1" : "#2d3436",
       },
-      tertiary: {
-        main: mode === "dark" ? "#c0392b" : "#e74c3c",
+      accent: {
+        main: mode === "dark" ? "#2F7D7D" : "#388E8E",
         contrastText: mode === "dark" ? "#ecf0f1" : "#2d3436",
       },
-      background: {
-        default: mode === "dark" ? "#2c3e50" : "#ecf0f1",
+      neutral: {
+        default: mode === "dark" ? "#222222" : "#F5F5F5",
       },
-      text: {
-        primary: mode === "dark" ? "#ecf0f1" : "#2d3436",
-      },
+      // text: {
+      //   primary: mode === "dark" ? "#ecf0f1" : "#2d3436",
+      // },
     },
     components: {
       MuiLink: {

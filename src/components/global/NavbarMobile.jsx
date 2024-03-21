@@ -56,7 +56,8 @@ const NavbarMobile = ({ sidebarItems, scrollToSection, NavItem }) => {
           top: "0",
           left: "0",
           zIndex: "3",
-          color: theme.palette.mode === "dark" ? "#fff" : "#000",
+          // color: theme.palette.mode === "dark" ? "#fff" : "#000",
+          shadow: 1,
         }}
       >
         <MenuIcon />
@@ -86,7 +87,7 @@ const NavbarMobile = ({ sidebarItems, scrollToSection, NavItem }) => {
             <NavItem
               key={index}
               item={item}
-              index={index}
+              // index={index}
               isMobile={true}
               scrollToSection={scrollToSection}
             />
