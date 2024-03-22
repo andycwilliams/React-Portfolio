@@ -43,11 +43,11 @@ const ContactForm = () => {
           // alignItems: "center",
           // my: "2rem",
           // mx: "1rem",
-          mx: { xs: "0px", sm: "300px" },
+          mx: { xs: "0px", sm: "150px", md: "200px", lg: "300px" },
           px: { xs: 2, sm: 0 },
         }}
       >
-        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
+        <Typography variant="h2" sx={{ m: "2rem", textAlign: "center" }}>
           Contact Me
         </Typography>
         <Box

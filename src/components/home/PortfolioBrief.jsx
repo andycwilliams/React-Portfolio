@@ -24,10 +24,11 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
+import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Data Imports
-import projects from "../data/projectsList";
+import projects from "../data/portfolioData";
 
 const ProjectCard = ({
   title,
@@ -41,30 +42,32 @@ const ProjectCard = ({
   const theme = useTheme();
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} sm={6} md={4}>
       <Card sx={{ height: "100%" }}>
-        <Typography
-          variant="h5"
-          component="div"
-          sx={{ textAlign: "center", mb: 2 }}
-        >
-          {title ?? "Untitled Project"}
-        </Typography>
-        <CardMedia
-          component="img"
-          image={image ?? null}
-          alt={`${title} image`}
-          sx={{
-            objectFit: "contain",
-            height: "200px",
-            width: "100%",
-            transition: "transform 0.3s ease",
-            "&:hover": {
-              transform: "scale(1.05)",
-            },
-          }}
-        />
         <CardContent>
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ textAlign: "center", mb: 2 }}
+          >
+            {title ?? "Untitled Project"}
+          </Typography>
+          <CardMedia
+            component="img"
+            image={image ?? null}
+            alt={`${title} image`}
+            sx={{
+              objectFit: "contain",
+              height: "200px",
+              width: "100%",
+              mb: 1,
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          />
+
           {/* <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} color="primary" />
           <Chip
@@ -74,16 +77,20 @@ const ProjectCard = ({
         </Stack> */}
           <CardActions sx={{ justifyContent: "center" }}>
             {links.map(({ href, icon }, index) => (
-              <Link
+              <Tooltip
                 key={index}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                // color="primary"
-                sx={{ color: theme.palette.accent.main }}
+                title={index === 0 ? "GitHub link" : "Live deployment link"}
               >
-                {icon}
-              </Link>
+                <Link
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  // color="primary"
+                  sx={{ color: theme.palette.primary.main }}
+                >
+                  {icon}
+                </Link>
+              </Tooltip>
             ))}
           </CardActions>
           <Typography variant="body2" color="textSecondary" paragraph>
@@ -94,11 +101,15 @@ const ProjectCard = ({
             <strong>Technology used:</strong>{" "}
             {techStack ? techStack.join(", ") : "N/A"}
           </Typography>
+          <Button
+            variant="outlined"
+            color="accent"
+            fullWidth
+            // onClick={() => {}}
+          >
+            Learn More
+          </Button>
         </CardContent>
-
-        {/* <Button size="small" color="primary">
-          Learn More
-        </Button> */}
       </Card>
     </Grid>
   );
@@ -107,12 +118,21 @@ const ProjectCard = ({
 const PortfolioBrief = () => {
   return (
     <Fade in={true} timeout={1000}>
-      <Box sx={{ px: { xs: 2, sm: 0 }, mx: { xs: "0px", sm: "100px" } }}>
+      <Box
+        sx={{
+          px: { xs: 2, sm: 0 },
+          mx: { xs: "0px", sm: "75px", md: "100px" },
+        }}
+      >
         <Box id="portfolio-section" className="sections">
-          <Typography variant="h2" sx={{ textAlign: "center" }}>
+          <Typography variant="h2" sx={{ m: "2rem", textAlign: "center" }}>
             Featured Projects
           </Typography>
-          <Grid container spacing={{ xs: 1, md: 3 }}>
+          <Grid
+            container
+            spacing={{ xs: 1, sm: 2, md: 3 }}
+            justifyContent="center"
+          >
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}

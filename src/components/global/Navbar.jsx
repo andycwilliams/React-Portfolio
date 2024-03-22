@@ -36,8 +36,10 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // Material UI Icons Imports
 import ArticleIcon from "@mui/icons-material/Article";
 import CollectionsIcon from "@mui/icons-material/Collections";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import MailIcon from "@mui/icons-material/Mail";
 // Component Imports
 import NavbarMobile from "./NavbarMobile";

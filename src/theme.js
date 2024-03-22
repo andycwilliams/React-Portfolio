@@ -15,7 +15,6 @@ const theme = (mode) =>
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(","),
-      // h2: { margin: "2.5rem 0 2.5rem 0" },
     },
     palette: {
       mode,

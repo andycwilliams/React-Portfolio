@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Fade from "@mui/material/Fade";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 // Assets Imports
 import heroBackgroundImage from "/assets/images/hero.webp";
 // React Animation Imports

@@ -26,35 +26,21 @@ import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Assets Imports
 import profileImage from "/assets/images/profile_picture.webp";
+import { contactData, primarySkillsData } from "../data/aboutData";
 
 // TODO: Add icons from Icons8
 // https://icons8.com/icons/set/css
-
-const contactInfo = [
-  { label: "Name", value: "Andy Williams" },
-  { label: "Title", value: "Full-stack Developer" },
-  { label: "Email", value: "" },
-  { label: "Phone", value: "" },
-];
-
-const primarySkillsData = [
-  { name: "JavaScript", level: 90 },
-  { name: "CSS", level: 90 },
-  { name: "HTML", level: 90 },
-  { name: "React", level: 80 },
-  { name: "Java", level: 80 },
-  { name: "MongoDB", level: 80 },
-  { name: "Express", level: 90 },
-  { name: "Node.js", level: 90 },
-];
 
 const About = () => {
   // const handleResumeDownload = () => {};
 
   return (
     <Fade in={true} timeout={1000}>
-      <Box id="about-section" sx={{ mx: { xs: "0px", sm: "100px" } }}>
-        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
+      <Box
+        id="about-section"
+        sx={{ mx: { xs: "0px", sm: "75px", md: "100px" } }}
+      >
+        <Typography variant="h2" sx={{ m: "2.5rem", textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
         <Box
@@ -75,7 +61,7 @@ const About = () => {
                     mb: "10px",
                   }}
                 />
-                {contactInfo.map(({ label, value }, index) => (
+                {contactData.map(({ label, value }, index) => (
                   <Typography key={index} variant="body1">
                     <span style={{ fontWeight: "bold" }}>{label}: </span>
                     {value}
