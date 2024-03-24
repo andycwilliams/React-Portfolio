@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material";
 // Material UI Icons Imports
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -59,17 +60,20 @@ const Copyright = () => (
 );
 
 const Footer = () => {
+  const theme = useTheme();
+
   return (
     <Box
       component="footer"
       sx={{
-        mt: 3,
+        // mt: 3,
         py: 3,
-        backgroundColor: (theme) =>
-          theme.palette.mode === "light"
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800],
+        // backgroundColor: (theme) =>
+        //   theme.palette.mode === "light"
+        //     ? theme.palette.grey[200]
+        //     : theme.palette.grey[800],
         textAlign: "center",
+        backgroundColor: theme.palette.neutral.default,
       }}
     >
       <Stack direction="row" spacing={1} justifyContent="center">

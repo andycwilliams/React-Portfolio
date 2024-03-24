@@ -46,7 +46,7 @@ const ProjectCard = ({
       <Card sx={{ height: "100%" }}>
         <CardContent>
           <Typography
-            variant="h5"
+            variant="h4"
             component="div"
             sx={{ textAlign: "center", mb: 2 }}
           >
@@ -106,6 +106,7 @@ const ProjectCard = ({
             color="accent"
             fullWidth
             // onClick={() => {}}
+            disabled
           >
             Learn More
           </Button>

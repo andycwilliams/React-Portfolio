@@ -62,13 +62,17 @@ const About = () => {
                   }}
                 />
                 {contactData.map(({ label, value }, index) => (
-                  <Typography key={index} variant="body1">
+                  <Typography
+                    key={index}
+                    variant="body1"
+                    textAlign={{ xs: "center", sm: "left" }}
+                  >
                     <span style={{ fontWeight: "bold" }}>{label}: </span>
                     {value}
                   </Typography>
                 ))}
               </Box>
-              <Box>
+              <Box sx={{ py: 2 }}>
                 {/* Skills */}
                 <Box sx={{ textAlign: "center" }}>
                   <Typography variant="h5" component="h3">
@@ -84,7 +88,13 @@ const About = () => {
               </Box>
             </Grid>
             {/* Bio */}
-            <Grid item xs={12} md={6} sx={{ px: 1, py: 1 }}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{ px: 1, py: 1 }}
+              textAlign={{ xs: "center", sm: "left" }}
+            >
               <Typography variant="h6" component="h3" paragraph>
                 Born in Silicon Valley, raised in Silicon Forest
               </Typography>

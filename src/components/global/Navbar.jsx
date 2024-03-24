@@ -146,15 +146,35 @@ const NavItem = ({ item, isMobile, scrollToSection }) => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   // const [hoveredSection, setHoveredSection] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const theme = useTheme();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(`${id}-section`);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const ToggleDarkMode = () => {
+    const handleToggle = () => {
+      setDarkMode((prevMode) => !prevMode);
+    };
+
+    return (
+      <IconButton
+        onClick={handleToggle}
+        sx={{ color: theme.palette.primary.main }}
+      >
+        {darkMode ? (
+          <LightModeIcon fontSize="large" />
+        ) : (
+          <DarkModeIcon fontSize="large" />
+        )}
+      </IconButton>
+    );
   };
 
   return (
@@ -179,7 +199,6 @@ const Navbar = () => {
           NavItem={(props) => <NavItem {...props} isMobile />}
         />
       )}
-
       {!isSmallScreen && (
         <List>
           {sidebarItems.map((item, index) => (
@@ -191,6 +210,16 @@ const Navbar = () => {
               scrollToSection={scrollToSection}
             />
           ))}
+          <ListItem
+            sx={{
+              cursor: "pointer",
+              // color: theme.palette.primary.main,
+              // m: "5px",
+              // background: theme.palette.primary.contrastText,
+            }}
+          >
+            <ToggleDarkMode />
+          </ListItem>
         </List>
       )}
     </Box>

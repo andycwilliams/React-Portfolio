@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 const theme = (mode) =>
   createTheme({
@@ -20,7 +20,6 @@ const theme = (mode) =>
       mode,
       primary: {
         main: mode === "dark" ? "#1D4373" : "#3A77AF",
-        // contrastText: mode === "dark" ? "#fff" : "#fff",
         contrastText: "#fff",
       },
       secondary: {
@@ -34,9 +33,10 @@ const theme = (mode) =>
       neutral: {
         default: mode === "dark" ? "#222222" : "#F5F5F5",
       },
-      // text: {
-      //   primary: mode === "dark" ? "#ecf0f1" : "#2d3436",
-      // },
+      background: {
+        main: mode === "dark" ? "#000" : "#fff",
+        contrastText: mode === "dark" ? "#fff" : "#000",
+      },
     },
     components: {
       MuiLink: {
