@@ -4,23 +4,8 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material";
-// Material UI Icons Imports
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
-// Social Media links
-const socialMediaLinks = [
-  {
-    href: "https://github.com/andycwilliams",
-    icon: <GitHubIcon sx={{ fontSize: 35 }} />,
-    ariaLabel: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/andrewcharleswilliams/",
-    icon: <LinkedInIcon sx={{ fontSize: 35 }} />,
-    ariaLabel: "LinkedIn",
-  },
-];
+// Data Imports
+import { socialMediaLinks } from "../data/aboutData";
 
 const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
   <Link
@@ -29,8 +14,6 @@ const renderSocialLinks = socialMediaLinks.map(({ ariaLabel, href, icon }) => (
     aria-label={`Find me on ${ariaLabel}`}
     target="_blank"
     rel="noopener noreferrer"
-    // color="inherit"
-    // underline="hover"
   >
     {icon}
   </Link>
@@ -66,12 +49,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        // mt: 3,
         py: 3,
-        // backgroundColor: (theme) =>
-        //   theme.palette.mode === "light"
-        //     ? theme.palette.grey[200]
-        //     : theme.palette.grey[800],
         textAlign: "center",
         backgroundColor: theme.palette.neutral.default,
       }}

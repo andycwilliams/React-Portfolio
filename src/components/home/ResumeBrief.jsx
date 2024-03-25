@@ -1,47 +1,13 @@
-import { Link as RouterLink } from "react-router-dom";
 // Material UI Imports
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Checkbox from "@mui/material/Checkbox";
-import Chip from "@mui/material/Chip";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Fade from "@mui/material/Fade";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 // Data Imports
 import resumeData from "../data/resumeData";
 
-const cardStyle = {
-  // xs: 12,
-  // md: 6,
-  // display: "flex",
-  // justifyContent: "center",
-  // alignItems: "center",
-  // flexDirection: "column",
-  // m: "0 100px 0 100px",
-  //
-  p: { xs: "10px", sm: "20px" },
-  // mx: { xs: "10px", sm: "140px" },
-  my: "10px",
-};
-
-const ResumeItem = () => {
+const ResumeBrief = () => {
   const theme = useTheme();
 
   return (
@@ -58,7 +24,10 @@ const ResumeItem = () => {
         </Typography>
         {resumeData.map(
           ({ title, location, description, date, icon }, index) => (
-            <Paper key={index} sx={cardStyle}>
+            <Paper
+              key={index}
+              sx={{ p: { xs: "10px", sm: "20px" }, my: "10px" }}
+            >
               <Typography
                 variant="h6"
                 component="h3"
@@ -92,14 +61,6 @@ const ResumeItem = () => {
         )}
       </Box>
     </Fade>
-  );
-};
-
-const ResumeBrief = () => {
-  return (
-    <>
-      <ResumeItem />
-    </>
   );
 };
 

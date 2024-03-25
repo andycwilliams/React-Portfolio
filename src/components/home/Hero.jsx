@@ -8,6 +8,7 @@ import { useTheme } from "@mui/material";
 import heroBackgroundImage from "/assets/images/hero.webp";
 // React Animation Imports
 import { TypeAnimation } from "react-type-animation";
+
 const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
 
 const Hero = () => {
@@ -57,23 +58,14 @@ const Hero = () => {
           <Typography
             variant="h3"
             component="h2"
-            // sx={{ fontSize: "2.5rem" }}
             gutterBottom
           >
             <Stack
               direction={{ xs: "column", sm: "row" }}
               spacing={{ xs: 1, sm: 2 }}
-              // sx={{ display: "flex", alignItems: "center" }}
             >
               <Typography
                 variant="h3"
-                component="h2"
-                sx={
-                  {
-                    // marginLeft: "10px",
-                    // color: theme.palette.primary.main,
-                  }
-                }
               >
                 Developing
               </Typography>
@@ -90,7 +82,6 @@ const Hero = () => {
                   (el) => el.classList.remove(CURSOR_CLASS_NAME),
                 ]}
                 wrapper="p"
-                // cursor={false}
                 style={{ color: theme.palette.primary.main }}
               />
             </Stack>

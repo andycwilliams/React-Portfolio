@@ -1,31 +1,13 @@
 // Material UI Imports
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Checkbox from "@mui/material/Checkbox";
-import Chip from "@mui/material/Chip";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Fade from "@mui/material/Fade";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import List from "@mui/material/List";
 import LinearProgress from "@mui/material/LinearProgress";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { useMediaQuery, useTheme } from "@mui/material";
 // Assets Imports
 import profileImage from "/assets/images/profile_picture.webp";
+// Data Imports
 import { contactData, primarySkillsData } from "../data/aboutData";
 
 // TODO: Add icons from Icons8
@@ -43,9 +25,7 @@ const About = () => {
         <Typography variant="h2" sx={{ m: "2.5rem", textAlign: "center" }}>
           Accessible. Versatile. Efficient.
         </Typography>
-        <Box
-        // sx={{ p: 5 }}
-        >
+        <Box>
           <Grid container>
             <Grid item xs={12} md={6} sx={{ px: 1, py: 1 }}>
               <Box>

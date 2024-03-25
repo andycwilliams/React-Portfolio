@@ -7,7 +7,6 @@ import Fade from "@mui/material/Fade";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { useMediaQuery, useTheme } from "@mui/material";
 // emailjs Imports
 import emailjs from "@emailjs/browser";
 
@@ -36,13 +35,7 @@ const ContactForm = () => {
     <Fade in={true} timeout={1000}>
       <Box
         id="contact-section"
-        // className="customName"
         sx={{
-          // display: "flex",
-          // flexDirection: "column",
-          // alignItems: "center",
-          // my: "2rem",
-          // mx: "1rem",
           mx: { xs: "0px", sm: "150px", md: "200px", lg: "300px" },
           px: { xs: 2, sm: 0 },
         }}
@@ -55,8 +48,6 @@ const ContactForm = () => {
           noValidate
           ref={form}
           onSubmit={handleContactFormSubmit}
-          // sx={{ mt: 3 }}
-          // sx={{ width: "100%", maxWidth: "600px" }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -103,12 +94,7 @@ const ContactForm = () => {
               />
             </Grid>
           </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: "1rem" }}
-          >
+          <Button type="submit" fullWidth variant="contained" sx={{ my: 2 }}>
             Send
           </Button>
         </Box>
