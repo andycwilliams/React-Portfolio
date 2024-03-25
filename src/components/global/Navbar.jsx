@@ -1,37 +1,13 @@
 // React Imports
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
 // Material UI Imports
-import AppBar from "@mui/material/AppBar";
-import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Chip from "@mui/material/Chip";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import Fade from "@mui/material/Fade";
-import Grid from "@mui/material/Grid";
 import Grow from "@mui/material/Grow";
 import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { styled } from "@mui/system";
 import { useMediaQuery, useTheme } from "@mui/material";
 // Material UI Icons Imports
 import ArticleIcon from "@mui/icons-material/Article";
@@ -72,46 +48,32 @@ const sidebarItems = [
   },
 ];
 
-const NavItem = ({ item, isMobile, scrollToSection }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const NavItem = ({
+  item,
+  isMobile,
+  isHovered,
+  handleMouseEnter,
+  handleMouseLeave,
+  scrollToSection,
+}) => {
   const theme = useTheme();
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   return (
     <ListItem
       sx={{
         cursor: "pointer",
-        color: isHovered
-          ? theme.palette.primary.contrastText
-          : theme.palette.primary.main,
-        // color: isHovered
-        //   ? theme.palette.primary.contrastText
-        //   : theme.palette.primary.main,
         borderRadius: isMobile ? 0 : "25px",
         m: "5px",
-        background: isMobile
+        backgroundColor: isMobile
           ? theme.palette.primary.main
           : isHovered
           ? theme.palette.primary.main
-          : null,
-        // display: "flex",
-        // alignItems: "center",
-        // justifyContent: "flex-start",
-        // width: "fit-content",
-        // "&:hover": {
-        //   "& .label": {
-        //     width: "auto",
-        //     opacity: 1,
-        //     ml: 1,
-        //   },
-        // },
+          : "transparent",
+        color: !isMobile
+          ? theme.palette.primary.main
+          : isHovered
+          ? theme.palette.primary.contrastText
+          : theme.palette.text.primary,
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -123,23 +85,13 @@ const NavItem = ({ item, isMobile, scrollToSection }) => {
           to={`#${item.id}-section`}
           style={{
             textDecoration: "none",
-            // color: "inherit",
-            // display: "flex",
-            // alignItems: "center",
-            // overflow: "hidden",
+            marginLeft: "8px",
+            color: isHovered
+              ? theme.palette.primary.contrastText
+              : theme.palette.text.primary,
           }}
         >
-          <ListItemText
-            primary={item.label}
-            sx={{
-              // width: 0,
-              // opacity: 0,
-              // transition: "width 0.3s, opacity 0.3s",
-              ml: 1,
-              color: theme.palette.primary.contrastText,
-            }}
-            // className="label"
-          />
+          <ListItemText primary={item.label} />
         </ReactRouterLink>
       </Grow>
     </ListItem>
@@ -147,7 +99,7 @@ const NavItem = ({ item, isMobile, scrollToSection }) => {
 };
 
 const Navbar = ({ darkMode, setDarkMode }) => {
-  // const [hoveredSection, setHoveredSection] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const theme = useTheme();
 
@@ -175,6 +127,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         )}
       </IconButton>
     );
+  };
+
+  const handleMouseEnter = (itemId) => {
+    setHoveredItem(itemId);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
   };
 
   return (
@@ -205,17 +165,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <NavItem
               key={index}
               item={item}
-              index={index}
               isMobile={false}
+              isHovered={item.id === hoveredItem}
+              handleMouseEnter={() => handleMouseEnter(item.id)}
+              handleMouseLeave={handleMouseLeave}
               scrollToSection={scrollToSection}
             />
           ))}
           <ListItem
             sx={{
               cursor: "pointer",
-              // color: theme.palette.primary.main,
-              // m: "5px",
-              // background: theme.palette.primary.contrastText,
             }}
           >
             <ToggleDarkMode />

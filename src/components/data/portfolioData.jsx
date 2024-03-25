@@ -8,7 +8,7 @@ const projects = [
     projectSize: "Group",
     role: "UI Developer",
     description:
-      "PASS is an open source digital wallet for providing home insecure individuals a safe place to store documents within their control. PASS additionally assists caseworkers with processing and providing documents needed to complete the housing assistance application process.",
+      "An open source digital wallet that gives users control of their own data.",
     image: "/assets/images/logos/pass_logo.png",
     links: [
       {
@@ -46,7 +46,7 @@ const projects = [
     role: "Full-stack Developer",
     description:
       "Web page for a fictional restaurant. Fully responsive with functioning contact form.",
-    image: "/assets/images/placeholder.webp",
+    image: "/assets/images/screenshots/TheFearlessEater.png",
     links: [
       {
         href: "https://andycwilliams.github.io/The-Fearless-Eater/",
@@ -64,8 +64,8 @@ const projects = [
     projectSize: "Solo",
     role: "Front-end Developer",
     description:
-      "Your daily horoscope. Or for whenever you want. The stars provide! Infallible and always true and 100% accurate. Made with vanilla HTML, CSS, and JavaScript, which are also infallible.",
-    image: "/assets/images/placeholder.webp",
+      "Your daily or whenever horoscope. The stars provide! Infallible and always true.",
+    image: "/assets/images/screenshots/YourHoroscope.png",
     date: "2022",
     links: [
       {
@@ -86,7 +86,7 @@ const projects = [
     role: "Full-Stack Developer",
     description:
       "The requisite to-do app. No portfolio is presentable without one.",
-    image: "/assets/images/placeholder.webp",
+    image: "/assets/images/screenshots/ToDoApp.png",
     links: [
       {
         href: "https://andycwilliams.github.io/To-Do-App/",
