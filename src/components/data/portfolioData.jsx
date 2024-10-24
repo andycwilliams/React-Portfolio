@@ -9,6 +9,7 @@ const projects = [
     role: "UI Developer",
     description:
       "An open source digital wallet that gives users control of their own data.",
+    descriptionFull: "",
     image: "/assets/images/logos/pass_logo.png",
     links: [
       {
@@ -23,10 +24,45 @@ const projects = [
     techStack: ["SOLID", "React", "Vite", "JSDocs", "MUI", "NPM", "ES Lint"],
   },
   {
+    title: "Secure Signin",
+    projectSize: "Solo",
+    role: "Full-stack Developer",
+    description:
+      "MERN app for account creation. Features modern front and backend security measures.",
+    descriptionFull:
+      "Full-stack app. Implements authentication, authorization, persistent login, access and refresh tokens. Security features: access tokens stored in state instead of local storage, refresh tokens stored in secure httpOnly cookie, disables React DevTools in production, and more.",
+    // image: "/assets/images/logos/pass_logo.png",
+    links: [
+      // {
+      //   href: "https://passsmartwallet-967e217a2652.herokuapp.com/",
+      //   icon: <PublicIcon sx={{ fontSize: 40 }} />,
+      // },
+      {
+        href: "https://github.com/andycwilliams/Secure-Signup",
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
+      },
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "MUI",
+      "NPM",
+      "ES Lint",
+      "JWT",
+      "bcrypt",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "UUID",
+      "Axios",
+    ],
+  },
+  {
     title: "CODE PDX Website",
     projectSize: "Group",
     role: "Front-end Developer",
     description: "Website for CODE PDX built from the ground up.",
+    descriptionFull: "",
     image: "/assets/images/logos/codepdx_logo.png",
     links: [
       {
@@ -46,6 +82,7 @@ const projects = [
     role: "Full-stack Developer",
     description:
       "Web page for a fictional restaurant. Fully responsive with functioning contact form.",
+    descriptionFull: "",
     image: "/assets/images/screenshots/TheFearlessEater.png",
     links: [
       {
@@ -65,6 +102,7 @@ const projects = [
     role: "Front-end Developer",
     description:
       "Your daily or whenever horoscope. The stars provide! Infallible and always true.",
+    descriptionFull: "",
     image: "/assets/images/screenshots/YourHoroscope.png",
     date: "2022",
     links: [
@@ -86,6 +124,7 @@ const projects = [
     role: "Full-Stack Developer",
     description:
       "The requisite to-do app. No portfolio is presentable without one.",
+    descriptionFull: "",
     image: "/assets/images/screenshots/ToDoApp.png",
     links: [
       {

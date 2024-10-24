@@ -1,3 +1,5 @@
+// React Imports
+import { useState } from "react";
 // Material UI Imports
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -8,22 +10,40 @@ import CardMedia from "@mui/material/CardMedia";
 import Fade from "@mui/material/Fade";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
+import Modal from "@mui/material/Modal";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material";
 // Data Imports
 import projects from "../data/portfolioData";
 
+const learnMoreModalStyling = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  // width: "750px",
+  // bgcolor: "background.paper",
+  // border: "1px solid #000",
+  // boxShadow: 12,
+  p: 3,
+};
+
 const ProjectCard = ({
   title,
-  // projectSize,
+  projectSize,
   description,
-  // role,
+  descriptionFull,
+  role,
   image,
   links,
   techStack,
 }) => {
   const theme = useTheme();
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -36,22 +56,19 @@ const ProjectCard = ({
           >
             {title ?? "Untitled Project"}
           </Typography>
-          <CardMedia
-            component="img"
-            image={image ?? null}
-            alt={`${title} image`}
-            sx={{
-              objectFit: "contain",
-              height: "200px",
-              width: "100%",
-              mb: 1,
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          />
-
+          {image && (
+            <CardMedia
+              component="img"
+              image={image ?? null}
+              alt={`${title} image`}
+              sx={{
+                objectFit: "contain",
+                height: "200px",
+                width: "100%",
+                mb: 1,
+              }}
+            />
+          )}
           {/* <Stack direction="row" spacing={1} justifyContent="center" mb={2}>
           <Chip label={role ?? "Role"} color="primary" />
           <Chip
@@ -89,11 +106,78 @@ const ProjectCard = ({
             variant="outlined"
             color="accent"
             fullWidth
-            // onClick={() => {}}
-            disabled
+            onClick={handleOpen}
+            // disabled
           >
             Learn More
           </Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Card sx={learnMoreModalStyling}>
+              <CardContent>
+                <Typography
+                  variant="h4"
+                  component="div"
+                  sx={{ textAlign: "center", mb: 2 }}
+                >
+                  {title ?? "Untitled Project"}
+                </Typography>
+                {/* TODO: Consider replacing single image with gallery, carousel, video, etc. */}
+                {image && (
+                  <CardMedia
+                    component="img"
+                    image={image ?? null}
+                    alt={`${title} image`}
+                    sx={{
+                      objectFit: "contain",
+                      height: "200px",
+                      width: "100%",
+                      mb: 1,
+                    }}
+                  />
+                )}
+                <CardActions sx={{ justifyContent: "center" }}>
+                  {links.map(({ href, icon }, index) => (
+                    <Tooltip
+                      key={index}
+                      title={
+                        index === 0 ? "GitHub link" : "Live deployment link"
+                      }
+                    >
+                      <Link
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        // color="primary"
+                        sx={{ color: theme.palette.primary.main }}
+                      >
+                        {icon}
+                      </Link>
+                    </Tooltip>
+                  ))}
+                </CardActions>
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  <strong>Project Size:</strong>{" "}
+                  {projectSize ?? "No description available."}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  <strong>Role:</strong> {role ?? "No role available."}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  <strong>Description:</strong>{" "}
+                  {descriptionFull ?? "No description available."}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  <strong>Technology used:</strong>{" "}
+                  {techStack ? techStack.join(", ") : "N/A"}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Modal>
         </CardContent>
       </Card>
     </Grid>
