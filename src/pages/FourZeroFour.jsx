@@ -1,3 +1,5 @@
+// React Router Imports
+// import { Link } from "react-router-dom";
 // Material UI Imports
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
@@ -23,7 +25,36 @@ import Typography from "@mui/material/Typography";
 import { useMediaQuery, useTheme } from "@mui/material";
 
 const FourZeroFour = () => {
-  return <Box>Uh oh</Box>;
+  return (
+    <Box>
+      <Card
+        sx={{
+          height: "100%",
+        }}
+      >
+        <CardContent>
+          <Typography
+            variant="h4"
+            component="div"
+            sx={{
+              textAlign: "center",
+              mb: 2,
+            }}
+          >
+            UH OH
+          </Typography>
+          <CardActions sx={{ justifyContent: "center" }}>
+            {/* <Link to="/" className="btn primary">
+              Take Me Home
+            </Link> */}
+            <Link color="text.secondary" href="/">
+              Take Me Back
+            </Link>
+          </CardActions>
+        </CardContent>
+      </Card>
+    </Box>
+  );
 };
 
 export default FourZeroFour;

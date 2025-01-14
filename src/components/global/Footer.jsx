@@ -50,8 +50,12 @@ const Footer = () => {
       component="footer"
       sx={{
         py: 3,
-        textAlign: "center",
+        // textAlign: "center",
         backgroundColor: theme.palette.neutral.default,
+        // mb: 0,
+        // display: "flex",
+        // alignItems: "center",
+        // justifyContent: "center",
       }}
     >
       <Stack direction="row" spacing={1} justifyContent="center">

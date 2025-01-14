@@ -21,7 +21,48 @@ const projects = [
         icon: <GitHubIcon sx={{ fontSize: 40 }} />,
       },
     ],
-    techStack: ["SOLID", "React", "Vite", "JSDocs", "MUI", "NPM", "ES Lint"],
+    techStack: [
+      "SOLID",
+      "React",
+      "Vite",
+      "JSDocs",
+      "Material UI",
+      "NPM",
+      "ES Lint",
+    ],
+  },
+  {
+    title: "MERN Blog",
+    projectSize: "Solo",
+    role: "Full-stack Developer",
+    description:
+      "MERN app for a blog. Includes, account creation, modern front and backend security measures.",
+    descriptionFull:
+      "Full-stack app. Implements authentication, authorization, persistent login, access and refresh tokens.",
+    image: "",
+    links: [
+      {
+        href: "",
+        icon: <PublicIcon sx={{ fontSize: 40 }} />,
+      },
+      {
+        href: "https://github.com/andycwilliams/MERN-Blog",
+        icon: <GitHubIcon sx={{ fontSize: 40 }} />,
+      },
+    ],
+    techStack: [
+      "React",
+      "Axios",
+      "React-Quill",
+      "Express",
+      "Mongoose",
+      "JsonWebToken",
+      "Bcrypt",
+      "Dotenv",
+      "Cors",
+      "UUID",
+      "Nodemon",
+    ],
   },
   {
     title: "Secure Signin",
@@ -45,10 +86,10 @@ const projects = [
     techStack: [
       "React",
       "TypeScript",
-      "MUI",
+      "Material UI",
       "NPM",
       "ES Lint",
-      "JWT",
+      "JsonWebToken",
       "bcrypt",
       "MongoDB",
       "Express.js",

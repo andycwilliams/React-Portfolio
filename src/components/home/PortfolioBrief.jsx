@@ -107,15 +107,14 @@ const ProjectCard = ({
             color="accent"
             fullWidth
             onClick={handleOpen}
-            // disabled
           >
             Learn More
           </Button>
           <Modal
             open={open}
             onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
+            aria-labelledby="portfolio-modal-title"
+            aria-describedby="portfolio-modal-description"
           >
             <Card sx={learnMoreModalStyling}>
               <CardContent>
